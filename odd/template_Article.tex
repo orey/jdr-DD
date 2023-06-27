@@ -1,5 +1,5 @@
 % A compiler avec xelatex
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
@@ -7,30 +7,32 @@
 % Pour inclure la page de garde
 \usepackage{pdfpages}
 
-
-\usepackage[vmargin=0.8in,hmargin=1in]{geometry}
+%geometry of the page
+\usepackage[vmargin=0.6in,hmargin=1in]{geometry}
 
 \setlength{\parindent}{1cm}
 
-% Police de caractères OD&D QuentinCaps
-\newcommand{\ODDtitlefont}{\fontsize{38}{40}\fontspec{QuentinCaps}\selectfont}
+%========================================= FONTS
+\usepackage{fontspec}
+
+% Police de caractères OD&D Saloon Girl Inline
+%\newcommand{\ODDtitlefont}{\fontsize{38}{40}\fontspec{QuentinCaps}\selectfont}
+\newcommand{\ODDtitlefont}{\fontsize{60}{40}\fontspec{Saloon Girl Inline}\selectfont}
+
 % Police de caractères OD&D OPTIChisel-Normal:style=Regular
 \newcommand{\ODDtitlebisfont}{\fontsize{52}{70}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 \newcommand{\ODDsectionfont}{\fontsize{42}{50}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 
+\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
 
-
-\usepackage{fontspec}
 %- \usepackage{xcolor}
 \usepackage{titlesec}
 \defaultfontfeatures{Ligatures=TeX}
 % Set sans serif font to Calibri
 %- \setsansfont{Calibri}
-% Set serifed font to Cambria
-%\setmainfont{Times New Roman:style=Regular}
-%\setmainfont{Times New Roman}
-%\setmainfont{Arial}
-\setmainfont{DejaVu Sans}
+
+% Set main font
+\setmainfont{Futura Std}
 
 % Define light and dark Microsoft blue colours
 %- \definecolor{MSBlue}{rgb}{.204,.353,.541}
@@ -49,6 +51,10 @@
 %- \titleformat*{\subsection}{\large\bfseries\sffamily\color{MSLightBlue}}
 %- \titleformat*{\subsubsection}{\itshape\subsubsectionfont}
 
+% pour le (R)
+\usepackage{fontspec}
+
+
 \begin{document}
 
 \includepdf{pagedegarde.pdf}
@@ -60,7 +66,7 @@
 
 \thispagestyle{empty}
 \begin{center}
-{\Huge \ODDtitlefont{Donjons \& Dragons}}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
 
 \vspace{1.8cm}
 
@@ -88,36 +94,41 @@
 
 \vspace{3cm}
 
-{\small Remerciements spéciaux à l'aîné Steve Marsh, Dennis Sustare (le Super Druide),
+Remerciements spéciaux à l'aîné Steve Marsh, Dennis Sustare (le Super Druide),
 
-Jim Ward \& Tim Kask pour leurs suggestions et contributions !}
+Jim Ward \& Tim Kask pour leurs suggestions et contributions !
 
 \vspace{0.8cm}
 
-{\small Illustrations de Dave Sutherland, Tracy Lesch \& Gary Kwapisz
+Illustrations de Dave Sutherland, Tracy Lesch \& Gary Kwapisz
 
-Couverture par Deborah Larson}
+Couverture par Deborah Larson
 
 \vspace{1cm}
 
-{\small \textbf{2023}}
+{\small \textbf{\ODDtimes{2023}}}
 
 \vspace{0.5cm}
 
-{\small \textbf{\textcopyright\ 1976 - TSR GAMES}
+{\small \ODDtimes{\textbf{\textcopyright\ 1976 - TSR GAMES}
 
 \textbf{9\textsuperscript{ème} impression, novembre 1979}
 
-\textbf{Imprimé aux U.S.A}}
+\textbf{Imprimé aux U.S.A}}}
+\end{center}
 
 \vfill
 
-{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (https://rouboudou.itch.io) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan, gratuite et ne pouvant être vendue.}}
+{\small \noindent LES QUESTIONS SUR LES REGLES DOIVENT ETRE ACCOMPAGNEES D'UNE ENVELOPPE TIMBREE A L'ADRESSE DE L'EXPEDITEUR ET ENVOYEES A TACTICAL STUDIES RULES, POB 756, LAKE GENEVA, WISCONSIN 53247}
 
-\end{center}
+
 \newpage
-
+%====================================================
 {\color{white}a}
+
+\vfill
+
+\noindent {\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (https://rouboudou.itch.io) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan, gratuite et ne pouvant être vendue.}}
 
 \newpage
 
@@ -127,8 +138,25 @@ Le livre que vous tenez maintenant dans vos mains présente de nouvelles dimensi
 
 Ce livre présente aussi une nouvelle mode dans l'art subtil d'être Maître de Donjon. Fidèle à sa conception d'origine, D\&D n'était limité dans son périmètre que par l'imagination et la dévotion des Maîtres de Donjons où qu'ils soient. Les suppléments ont répondu au besoin d'idées nouvelles et de mécanismes de simulation additionnels. Mais progressivement, D\&D a perdu un peu de sa saveur, et a commencé à devenir prévisible. Cela était dû à la prolifération d'ensembles de règles ; alors que c'était très bien pour nous en tant de compagnie, c'était compliqué pour le MD. Quand tous les joueurs avaient toutes les règles en face d'eux, il devenait presque qu'impossible de les séduire à affronter le danger ou les pièges.
 
-Le nouveau concept innovant présenté dans ces pages devrait faire long feu en réintroduisant un peu de mystère, d'incertitude et de danger, qui refont de D\&D le défi sans équivalent qu'il a toujours été.
+Le nouveau concept innovant présenté dans ces pages devrait faire long feu en réintroduisant un peu de mystère, d'incertitude et de danger, qui refont de D\&D le défi sans équivalent qu'il a toujours été. La légende retrouve sa magie inestimable originale. On ne verra plus d'aventurier imprudent descendre dans un donjon , trouver quelque chose et savoir immédiatement ce que cela fait et comment cela fonctionne. De même, les joueurs ne pourront plus envoyer un de leurs infortunés serviteurs à une mort précoce en le forçant à expérimenter à sa place.
 
+L'introduction du combat psionique est destiné à revivifier des parties devenues stagnantes. Il ouvre de nouvelles possibilités à la fois aux joueurs et au MD, tout en intégrant un des sujets favoris des auteurs de science-fiction et de fantastique : les pouvoirs inconnus de l'esprit.
+
+Comme pour les deux précédents suppléments, le matériel contenu dans ce livret propose le même format que les trois livrets originaux de D\&D. Les corrections et les ajouts sont indiqués dans le texte de sorte qu'ils puissent être intégrés facilement dans les règles originales.
+
+Comme vous pourrez le noter sur la page de titre, ce supplément est le fruit de plusieurs contributeurs. Telle est la nature de la chose que vous tenez entre vos mains. D\&D a été conçu pour être un jeu libre, lié aux règles de manière souple. Nous pensons que ELDRITCH WIZARDRY favorise les principes originaux de danger, d'excitation et d'incertitude. Que vous réussissiez toujours vos jets de sauvegarde.
+
+\vspace{1cm}
+
+\noindent Timothy J. Kask
+
+\noindent TSR Publications Editor
+
+\noindent Lake Geneva, Wisconsin
+
+\noindent 23 avril 1976
+
+\newpage
 \begin{verbatim}
 ---
 tags:
