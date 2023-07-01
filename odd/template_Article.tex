@@ -46,6 +46,7 @@
 %\titleformat{\section}{\fontspec{QuentinCaps}\selectfont}{\thesection}{1em}{}
 
 \titleformat{\section}{\centering\ODDsectionfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
 
 
 %- \titleformat*{\subsection}{\large\bfseries\sffamily\color{MSLightBlue}}
@@ -53,6 +54,11 @@
 
 % pour le (R)
 \usepackage{fontspec}
+
+%Macro pour réduire l'espace sous le titre
+\newcommand{\myunderline}[1]{\underline{\smash{#1}}}
+
+
 
 
 \begin{document}
@@ -132,7 +138,7 @@ Couverture par Deborah Larson
 
 \newpage
 
-\section*{Introduction}
+\section*{Préface}
 
 Le livre que vous tenez maintenant dans vos mains présente de nouvelles dimensions à un système de jeu déjà fascinant. Il s'agit du troisième supplément à DONJONS \& DRAGONS, produit comme conséquence à une demande toujours croissante de nouveau matériel.
 
@@ -157,6 +163,262 @@ Comme vous pourrez le noter sur la page de titre, ce supplément est le fruit de
 \noindent 23 avril 1976
 
 \newpage
+
+\section*{Introduction}
+
+Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dans une nouvelle de science-fiction écrite par Jack Williamson, \texttt{The Greatest Invention}, publié dans le magazine \texttt{Astounding Science Fiction}. Il est la compression de deux deux termes, \texttt{psi} dans le sens de phénomène psychique et \texttt{electronics}. \texttt{Psionics} devient un terme décrivant la discipline qui étudie les phénomènes psychiques avec les moyens de l'ingénierie moderne de l'époque, soit l'électronique. Malgré la promotion de personnes comme John W. Campbell, le terme restera utilisé uniquement dans le monde de la science-fiction, avant d'être intégré dans le monde des jeux de rôles.
+
+La version originale de Donjons \& Dragons, dite OD\&D, est publié en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le second livret, \texttt{Monstres et Trésors}, traduit en français par Porphyre et disponible sur le site de \texttt{La Forge de Papier}(la-forge-de-papier.over-blog.com), on trouve les premières références à des pouvoirs psychiques, dans le chapitre sur les épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
+
+Ensuite, en 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des PJs et des PNJs. Les règles sont présentée de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer en extension à un jeu médiéval-fantastique des règles plus proches de la science-fiction.
+
+Nous proposons ici une nouvelle présentation des règles psioniques du supplément \texttt{Eldritch Wizardry}. Les règles présentées sont exhaustives, précisées et réorganisées. La consultation de certains sites en américain a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
+
+Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très "gygaxien" (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de psioniques proposant une façon nouvelle de voir les pouvoirs, très différente de la magie de OD\&D, façon qui inspirera beaucoup d'autres systèmes de pouvoirs dont l'utilisation est basée sur la consommation de points.
+
+\vspace{1cm}
+
+\noindent Rouboudou
+
+\noindent https://orey.github.io/blog
+
+\noindent Juillet 2023
+
+\newpage
+
+\section*{Index}
+
+\newpage
+
+\section*{Hommes \& Magie}
+
+
+\newpage
+
+\section*{Monstres \& Trésors}
+
+\subsection*{ÉPÉES}
+{\parindent0pt
+
+Parmi les armes magiques, seules les épées possèdent certains attributs humains (et surhumains) ;les épées ont un alignement (Loyal, Neutre ou Chaotique), un facteur d’\myunderline{intelligence}, et un score d’\myunderline{Ego} (ainsi que la détermination optionnelle de leur origine/ﬁnalité). Ces déterminations sont faites de la manière suivante :
+
+\bigskip
+
+\textbf{Alignement} : lancez un dé de pourcentage pour déterminer l’alignement.
+
+\bigskip
+
+{\parindent2.5cm
+\begin{tabular}{p{2.8cm}l}
+01 - 65& L’épée est loyale \\
+66 - 90& L’épée est neutre \\
+91 - 00& L’épée est chaotique \\
+\end{tabular}}
+
+\medskip
+
+Notons que les pourcentages ci-dessus sont inversés pour les épées ayant des capacités de drainage del’énergie vitale (83 sur la Table des Épées\footnote{Se référer au manuel \texttt{Eldritch Wizardry} original dans la section des objets magiques (NdT).}). Si l’épée est Chaotique, elle affecte les créatures notées entre parenthèses (clercs, pégases,hippogriffes, ents) au lieu de ceux indiqués en premier (trolls, morts-vivants).
+
+\medskip
+
+Si un personnage se saisit d’une épée qui n’est pas du même alignement, il subit les dégâts suivants :
+
+\medskip
+
+Loi - Chaos : 2 Dés (2-12 points)
+
+Neutralité - Loi/Chaos : 1 Dé (1-6 Points)
+
+\medskip
+
+Si un PNJ se voit ordonner de prendre une épée, les dégâts ne seront que la moitié de ceux indiqués ci-dessus, le personnage n’agissant pas de son propre chef. De plus, l’épée pourrait libérer celui qui l’a ramasséed’un sortilège, le faire changer d’alignement, ou lui faire gagner des pouvoirs qui le feraient échapper aucontrôle de son précédent maître.
+
+\medskip
+
+De plus, si l‘Intelligence/Égoïsme (voir ci-dessous) de l’épée est supérieur de 6 points ou plus que celle decelui/celle qui la prend, l’épée contrôlera le personnage, lui faisant prendre le même alignement et agir enconséquence immédiatement. Cela voudrait dire, par exemple, que le servant d’un personnage Loyal à quil’on ordonnerait de prendre une épée Neutre, et qui serait possédé par cette dernière, pourrait délibérémentmentir sur ses pouvoirs, tandis que, dans le cas d’une épée chaotique, il attaquerait !
+
+\medskip
+
+Après avoir déterminé l’alignement, c’est à l’intelligence de l’épée d’être lancée.
+
+\medskip
+
+\myunderline{Intelligence} : deux facteurs dépendent de l’Intelligence : les pouvoirs mentaux et l’aptitude à communiquer.Tous deux sont déterminés par le même jet de dé.
+
+\medskip
+
+\begin{tabular}{p{2.5cm} l p{2cm}}
+Intelligence & &\myunderline{Capacités de} \\
+(\myunderline{Dé}) & \myunderline{Pouvoirs mentaux} & \myunderline{communication} \\
+1-6& Aucun & Aucune* \\
+7& Un pouvoir primaire & Empathie \\
+8& Deux pouvoirs primaires & Empathie \\
+9& Trois pouvoirs primaires & Empathie \\
+10& Trois pouvoirs primaires et l’usage de langues** & Parole \\
+11& Comme 10 ci-dessus et aussi Lecture de la magie & Parole \\
+12& Comme 11 ci-dessus et aussi un pouvoir extraordinaire & Télépathie \\
+\end{tabular}
+
+\medskip
+
+* Même incapable de communiquer, l’épée confère au porteur ses pouvoirs, mais ceux-ci devront être découverts par l’utilisateur.
+
+** Le nombre de langues parlées en \myunderline{plus de la langue d’alignement de l’épée} est déterminé par un jet de dé :
+
+\medskip
+
+\myunderline{Table des Pouvoirs primaires}
+
+
+Dé
+01-15
+16-30
+31-40
+41-50
+51-60
+61-70
+71-80
+81-90
+91-95
+96-99
+00
+28
+Pouvoir
+Détection des parois \& salles coulissantes
+Détection des passages inclinés
+Détection des portes secrètes
+Détection des pièges
+Détecter l'invisible
+Détection du mal ou de l'or
+Détection du métal \& de quelle sorte
+Détection de la magie
+Détection des gemmes
+Relancer deux fois, ignorer les scores supérieurs à 95
+sauf 00
+Lancer un jet sur la table des pouvoirs extraordinaires
+Dé
+01-50
+51-70
+71-85
+86-90
+90-99
+00
+\# langues parlées
+Un
+Deux
+Trois
+Quatre
+Cinq
+Lancer deux fois,
+ignorer les 00
+
+
+Table des Pouvoirs extraordinaires
+Dé
+01-10
+11-20
+21-30
+31-40
+41-50
+51-59
+60-68
+69-77
+78-82
+83-87
+88-92
+93-97
+98-99
+00
+Capacités
+Clairaudience
+Clairvoyance
+ESP
+Télépathie
+Télékinésie
+Téléportation
+Vision rayon X
+Génération d'illusion
+Lévitation
+Vol
+Soins (1point/6 tours ou 6 points/jr)
+1-4 fois la force normale pendant 1-10 jours, une fois par jour
+Relancer deux fois, ignorer les jets au-dessus de 97
+Relancer trois fois, ignorer les jets au-dessus de 97
+Tous les pouvoirs primaires et pouvoirs extraordinaires sont transmis à l’utilisateur de l’épée. Si la même
+capacité est tirée deux fois aux dés, cela indique qu’elle est au double de la normale en termes de force,
+portée, exactitude, etc.
+Ego : seules les épées avec une Intelligence de 7 ou plus ont un score d’Égo. L’Égo va de 1 à 12. L’Ego de
+l’épée peut provoquer les choses suivantes :
+1. Obliger l’utilisateur à se défaire d’autres meilleures armes.
+2. Conduire l’utilisateur dans des situations dangereuses afin d’exalter ses prouesses au combat
+3. Se laisser capturer par un personnage/une créature de niveau plus élevé, considéré plus digne du
+pouvoir de l’épée
+4. Se rendre à une créature/un personnage de niveau inférieur pour pouvoir plus facilement contrô-
+ler son utilisateur
+5. Exiger qu’une partie des trésors conquis soit consacrée à l’achat d’un fourreau de qualité, d’in-
+crustations de pierreries ou en protections magiques.
+Lorsque survient une situation où existe l‘une des possibilités décrites ci-dessus, l’Ego de l’épée rentre en
+jeu. Celui-ci s’exercera tout au long de sa relation avec son utilisateur, bien qu’une vraie relation puisse
+se mettre en place si l’alignement et les objectifs du personnage-joueur coïncide avec les origines / les
+objectifs de l’épée.
+Déterminer chacun comme suit :
+Influence de l’Ego dans des situations critiques. L’arbitre additionne l’Intelligence et l’Ego de l’épée
+(résultat de 8 à 24), et ajoute un point supplémentaire pour chaque pouvoir extraordinaire (de 1
+à 4). Ce total (allant de 8 à 28) est comparé au total de la force et intelligence du personnage,
+éventuellement modifié en fonction de l’état de santé de ce dernier. Si le personnage est reposé et
+relativement indemne de tout dommage (moins de 10 % de dégâts) de 1-6 points sont ajoutés à
+ce total (de 7-42).
+S’il est fatigué mentalement ou physiquement, ou si les dégâts subis sont entre 10 % et 50 %, de
+
+1 – 4 points sont soustraits à ce total (de 2 – 35). Si les dégâts subis sont au-dessus de 50 %, ou
+si le personnage est soumis à une sérieuse tension mentale par quelque forme de magie de 2 – 8
+points sont soustraits à ce total (de 0 -34).
+Différence
+6 ou plus
+2 à 5
+0 à 1
+Résultat
+Le score le plus élevé l’emporte
+75 % de chances que le score le plus élevé l’emporte
+50 % pour chaque cas
+Influence de l’Ego dans les relations au long cours avec l’utilisateur. Cette détermination est très
+simple, il s’agit juste de comparer le score d’Ego de l’épée (1–12) avec le niveau du combattant
+qui l’utilise. Consulter la table des situations critiques ci-dessus. Si l’une ou l’autre partie a une
+différence de 6 ou plus, la partie en question prévaut toujours, et aucun autre jet (y compris dans
+les situations critiques) ne sera nécessaire. Une différence positive de 2–5 indique que la partie
+avec le score le plus élevé l’emporte généralement, et les jets n’auront à être faits que dans les si-
+tuations critiques. Une différence de 0-1 indique qu’une lutte permanente existe entre l’épée et son
+utilisateur, et en cas de situation critique, chacun devra faire un jet pour savoir lequel l’emporte.
+Origines et objectifs : chaque épée est certes d’origine loyale, neutre ou chaotique, mais certaines armes
+ont été forgées par des puissances supérieures dans un but précis. Déterminez par un jet de pourcentage si
+une épée à une telle raison d’être : un résultat de 91 ou plus indique que l’épée est investie d’une mission
+spécifique. Les épées ayant un objectif précis voient leur Intelligence et Ego automatiquement portés au score
+maximum, et gagnent un pouvoir spécial :
+Loi : pouvoir de paralyser les adversaires chaotiques.
+Neutralité : bonus de +1 aux jets de sauvegarde.
+Chaos : pouvoir de désintégrer les adversaires loyaux.
+Ces pouvoirs spéciaux ne s’exercent que contre ceux que l’épée a pour mission de détruire, ou bien ceux qui
+servent de telle créature.
+Objectifs :
+Tuer les magiciens
+Tuer des clercs
+Tuer des combattants
+Tuer des monstres
+Défaire la Loi
+Défaire le Chaos
+De cette façon, une épée habitée par la Loi dans le but de tuer des magiciens (chaotiques) paralysera ces person-
+nages magiques ainsi que leurs séides, mais n’utilisera pas ses pouvoirs de paralysie contre un géant de passage.
+Les épées ayant des objectifs d’ordre général, par contre, utiliseront leurs pouvoirs pour triompher de tout ennemi
+de nature loyale/chaotique. Les épées neutres avec un objectif spécial agissent de la même façon, que ce soit
+contre la Loi ou le Chaos.
+Les épées ayant un objectif désigné seront toujours toutes à leur tâche, et toute tentative par leur utilisateur d’aller
+à leur encontre provoquera immédiatement un jet d’influence.
+BONUS AUX DÉGÂTS DES ÉPÉES. Les épées ont toutes un bonus en ce qui concerne la probabilité de toucher un
+adversaire, mais certaines ont également un bonus aux points de dégâts qu’elles infligent quand elles touchent. Ce
+sont les épées +2 ou +3 contre une créature spécifique, mais non celles qui ont un bonus générique de +2 ou +3.
+
+}% parindent
+
 \begin{verbatim}
 ---
 tags:
