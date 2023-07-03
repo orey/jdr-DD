@@ -23,7 +23,10 @@
 \newcommand{\ODDtitlebisfont}{\fontsize{52}{70}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 \newcommand{\ODDsectionfont}{\fontsize{42}{50}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 
-\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
+% Pour le PC 64 bits
+%\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
+% Pour le PC 32 bits
+\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
 
 %- \usepackage{xcolor}
 \usepackage{titlesec}
@@ -174,7 +177,7 @@ Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dan
 
 La version originale de Donjons \& Dragons, dite OD\&D, est publié en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le second livret, \texttt{Monstres et Trésors}, traduit en français par Porphyre et disponible sur le site de \texttt{La Forge de Papier}(la-forge-de-papier.over-blog.com), on trouve les premières références à des pouvoirs psychiques, dans le chapitre sur les épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
 
-Ensuite, en 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des PJs et des PNJs. Les règles sont présentée de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer en extension à un jeu médiéval-fantastique des règles plus proches de la science-fiction.
+Ensuite, en 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentée de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer en extension à un jeu médiéval-fantastique des règles plus proches de la science-fiction.
 
 Nous proposons ici une nouvelle présentation des règles psioniques du supplément \texttt{Eldritch Wizardry}. Les règles présentées sont exhaustives, précisées et réorganisées. La consultation de certains sites en américain a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
 
@@ -196,11 +199,11 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 
 \section*{Hommes \& Magie}
 
-\subsection*{PERSONNAGES :}
+\subsection*{{\normalsize PERSONNAGES :}}
 
 {\parindent0pt
 
-Il existe une catégorie spéciale de personnages qui traverse les quatre classes majeures de PJs. Ceux qui possèdent des \textbf{capacités psioniques} peuvent être trouvés parmi les combattants, les magiciens, les clercs et même les voleurs.
+Il existe une catégorie spéciale de personnages qui traverse les quatre classes majeures de personnages-joueurs. Ceux qui possèdent des \textbf{capacités psioniques} peuvent être trouvés parmi les combattants, les magiciens, les clercs et même les voleurs.
 
 \bigskip
 
@@ -208,45 +211,91 @@ Plus de détails concernant les capacités psioniques et comment déterminer sur
 
 \bigskip
 
-[...]
+Il est important de garder à l'esprit ce qu'est un \og monstre \fg{}. Pour le jeu D\&D, un monstre est toute entité contrôlée par le MD. Les personnages-joueurs et les personnages-non-joueurs contrôlés par les joueurs ne sont pas des monstres : tout le reste, par contre, l'est. Un monstre à D\&D peut être n'importe quoi depuis un démon de Type VI jusqu'à un clerc gentiment Loyal Bon.
 
+\bigskip
 
+Tous les joueurs avec des aptitude psioniques doivent être humains.
 
-}
-There is a special category of character which crosses all four major player-character classes.
-Those with psionic ability may be found amongst ﬁghting-men, magic-users, clerics or even
-thieves.
-Further details of psionic abilities and how to determine if this potential exists will be found in
-the section DETERMINATION OF ABILITIES.
-To the major class of clerics there is also a new subclass, the DRUID. These are similar to
-the monster of the same name as described in GREYHAWK (Book IV), and if the subclass is
-allowed in the campaign the monster should be expanded to correspond to the new subclass.
-It is important to keep in mind just what a “monster” is. For DD purposes, a monster is any
-entity that is controlled by the DM. Player characters, and nonplayer characters controlled by
-players, are not monsters; everything else is. A “monster,” in DD, can be anything from a
-Type VI Demon to a kindly good/lawful cleric.
-All player-characters with psionic ability or desiring to become druids must be of human origin.
-Fighting-Men with psionic ability are basically attuned to the powers commonly known here
-as Yoga. There are 20 possible “devotions” they may be able to perform (the 18 Siddhis and
-the 2 Sciences) if they follow the course of developing their mental prowess. However, for
-every ability they gain they must lose the services of 1 of their followers, and for every four
-abilities gained 1 point of strength is permanently lost. (Furthermore, they also become suscep-
-tible to certain types of monsters and monster attacks not suffered by non-psychic characters as
-will be detailed later.)
+\bigskip
 
+Les \textbf{combattants} sont essentiellement sensibles aux pouvoirs communément connus sous le nom de Yoga. Il y a 20 \og dévotions \fg{} possibles qu'ils peuvent accomplir (les 18 Siddhis et les 2 Sciences) s'ils suivent le développement de leurs talents mentaux. Cependant, pour \textbf{chaque} aptitude qu'ils gagnent, ils doivent perdre un de leurs suivants et un point de Force est perdu de manière permanente pour chaque ensemble de \textbf{quatre} aptitudes. (De plus, ils deviennent sensibles à certains types de monstres et aux attaques de monstres que les personnages sans capacités psychiques ne subissent pas, comme cela sera détaillé plus tard).
 
+\bigskip
 
+Les \textbf{magiciens} qui ont des aptitudes psioniques verront que cela élimine la nécessité d'apprendre certains sorts qui leur donnent fondamentalement les mêmes pouvoirs pour une durée limitée. C'est une chance, car pour chaque aptitude psionique gagnée, le magicien perdra la capacité de se souvenir d'un sort. Cela implique qu'avec le gain de la première aptitude, le magicien sera capable d'utiliser un sort de premier niveau de moins ; quand la deuxième aptitude sera gagnée, il perdra deux niveaux de sorts \textbf{de plus} (soit deux sorts de premier niveau ou un sort de deuxième niveau), et ainsi de suite. Jamais le magicien ne doit se souvenir de plus de sorts de haut niveau que de sorts de bas niveau, et s'il est capable d'utiliser des sorts du sixième niveau, il doit être capable de se souvenir d'au moins un sort de tous les autres cinq niveaux. Les attaques des créatures psioniques seront aussi subies par les magiciens qui développent ce talent.
 
+\bigskip
 
+Les \textbf{clercs} ayant des aptitudes psioniques gagnent aussi l'avantage de pouvoir employer plusieurs pouvoirs \og magiques \fg{}, mais pour chaque aptitude psionique gagnée, le clerc perdra deux de ses autres avantages : primo, il perdra un sort, de la même façon que le magicien ; secundo, le clerc perd la capacité de retourner les morts-vivants à mesure qu'il gagne des pouvoirs  psioniques, de sorte que pour chaque aptitude psionique gagnée, le clerc se place un niveau plus bas dans la capacité de retourner les morts-vivants. Ainsi, un clerc de niveau 10 avec quatre aptitudes psioniques aura perdu 10 niveaux de sorts\footnote{Les pertes de niveaux de sorts sont cumulatives. Pour le gain de 4 aptitudes psioniques : 1 (niveau 1) + 2 (niveau 2) + 3 (niveau 3) + 4 (niveau 4) = 10 niveaux de sorts seront perdus (NdT).} et retournera les morts-vivants comme un clerc de niveau 6. Gagner des aptitudes psioniques rend aussi la personne disposant de ces capacités sensible aux attaques des créatures psioniques.
 
+\bigskip
 
+\textbf{Les moines \& les druides n'ont pas de potentiel psychique : il leur est donc interdit de devenir des personnes aux pouvoirs psychiques.}
 
+\bigskip
 
+Les \textbf{voleurs} qui ont un potentiel psychique avéré sont sujets aux mêmes avantages que ceux gagnés par les combattants. Néanmoins, en plus des pénalités notées pour les combattants, les voleurs perdent aussi 1 point de dextérité toutes les quatre aptitudes gagnées.
 
+\subsection*{{\normalsize DETERMINATION DES APTITUDES :}}
 
+\medskip
 
+Après que les six caractéristiques normales ont été tirées, et que le joueur a choisi un type de personnage, les personnages-joueurs qui disposent d'un score non modifié de 15 ou plus en Intelligence, Sagesse ou Charisme peuvent choisir, en plus, de tester leur capacité psionique, s'ils ont fait le choix d'être humain. La capacité psionique est déterminée en faisant un jet de pourcentage. Un score de 91 ou plus indique que le personnage a cette capacité.
 
+\bigskip
 
+\textbf{Bonus et pénalité à l'avancement dus aux aptitudes :}
+
+\bigskip
+
+Les personnages-joueurs avancent en niveaux comme indiqué par leur classe et leur caractéristique principale. La capacité psionique, néanmoins, est affecté par le potentiel psychique. Un second jet de dés doit être fait pour déterminer ce niveau, ainsi que les bonus et pénalités afférents :
+
+\bigskip
+
+{\parindent3cm POTENTIEL PSYCHIQUE
+
+\bigskip
+
+\begin{tabular}{p{3cm}l}
+\textbf{Score} & \textbf{Bonus ou pénalité} \\
+\textbf{des dés} & \textbf{Chance de gagner une aptitude} \\
+01--10 & --6\%/niveau cumulatif \\
+11--25 & --5\%/niveau cumulatif \\
+26--50 & --4\%/niveau cumulatif \\
+51--75 & Aucun \\
+76--90 & +1\%/niveau cumulatif \\
+91--99 & +2\%/niveau cumulatif \\
+\hspace{0.4cm}00 & +3\%/niveau cumulatif \\
+\end{tabular}}
+
+\bigskip
+
+Si un personnage a une pénalité de --4\%, sa chance de base de gagner une aptitude sera de 6\% au lieu de 10\%\footnote{La chance de base est de 10\% par niveau, de manière cumulative (NdT).}. De même, si son bonus est de 3\%, sa chance de base par niveau sera de 13\%, si bien qu'au niveau 3, la chance de gagner une aptitude psionique sera de 39\%.
+
+\bigskip
+
+\textbf{Bonus} : si une aptitude psionique est gagnée, la chance de gagner immédiatement une seconde aptitude est égale au potentiel psychique du personnage.
+
+\begin{center}
+\includegraphics[scale=0.17]{./images/demon-typeVI.jpg}
+\end{center}
+
+%reprendre ici
+
+LEVELS AND NUMBER OF EXPERIENCE POINTS NECESSARY TO ATTAIN THEM:
+(Addition)
+Player-characters with psionic ability progress in the normal character type as they originally
+selected at the usual rate. However, beginning at 1st level, they have a possibility of acquiring
+a psionic-type ability. Psionic abilities are given under SPELLS. The possibility of gaining any
+given ability is 10% per experience level, so that a 1st-level character has a 10% chance of
+having a psionic ability, a 2nd-level character has a 20% chance, and so on with a 10th-level
+character having a 100% chance.
+Selection of psionic-type ability is done by random number generation, but if random deter-
+mination indicates an ability already possessed the random number generation should be
+continued until an ability which is not already possessed is indicated. At such time as there is
+a 100% probability of an ability being gained (10th level) the character may select whichever
+ability is desired whenever an experience level is gained.
 
 
 
@@ -430,7 +479,7 @@ A chaque moment où une situation se présente durant laquelle une des possibili
 
 \bigskip
 
-\textbf{L'Egoïsme dans les relations au long cours avec l'utilisateur} : cette détermination est assez simple, car elle est basée sur la comparaison du score d'Egoïsme de l'épée (1--12) avec le niveau du Combattant l'utilisant. Consultez la table des \myunderline{Situations Clef} ci-dessus. Si l'une des parties a une différence positive de 6 ou plus, celle-ci l'emportera toujours et plus aucun test (incluant les Situations Clef) ne sera nécessaire. Une différence positive de 2--5 indiquera que celle ayant le plus haut score l'emporte généralement, et les tests ne devront être effectués que dans les Situations Clef. Une différence de 0--1 indique un combat continu entre l'épée et son utilisateur, et durant les situations stressantes, les deux devraient être testés afin de déterminer qui l'emporte.
+\textbf{L'Egoïsme dans les relations au long cours avec l'utilisateur} : cette détermination est assez simple, car elle est basée sur la comparaison du score d'Egoïsme de l'épée (1--12) avec le niveau du combattant l'utilisant. Consultez la table des \myunderline{Situations Clef} ci-dessus. Si l'une des parties a une différence positive de 6 ou plus, celle-ci l'emportera toujours et plus aucun test (incluant les Situations Clef) ne sera nécessaire. Une différence positive de 2--5 indiquera que celle ayant le plus haut score l'emporte généralement, et les tests ne devront être effectués que dans les Situations Clef. Une différence de 0--1 indique un combat continu entre l'épée et son utilisateur, et durant les situations stressantes, les deux devraient être testés afin de déterminer qui l'emporte.
 
 \end{minipage}
 \end{center}
