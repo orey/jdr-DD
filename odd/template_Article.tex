@@ -62,6 +62,9 @@
 \usepackage{graphicx}
 \graphicspath{{./yed/}{./images/}{./maps/}}
 
+% Array stretch pour avoir un peu plus de vertical spacing dans les tabular
+\renewcommand{\arraystretch}{1.2}
+
 %Macro pour réduire l'espace sous le titre
 \newcommand{\myunderline}[1]{\underline{\smash{#1}}}
 
@@ -281,20 +284,40 @@ Si un personnage a une pénalité de --4\%, sa chance de base de gagner une apti
 \includegraphics[scale=0.17]{./images/demon-typeVI.jpg}
 \end{center}
 
-%reprendre ici
-
 \subsection*{\normalsize NIVEAUX ET POINTS D'EXPERIENCE POUR LES ATTEINDRE}
 
-Les personnages-joueurs possédant des aptitudes psioniques progressent de la façon standard dans le type de personnage qu'ils ont choisi au départ. Néanmoins, à partir du niveau~1, ils ont la possibilité d'acquérir une aptitude de type psionique. Les aptitudes psioniques sont listées dans la section \textbf{SORTS}. La probabilité de gagner une aptitude est de 10\% par niveau d'expérience, de sorte qu'un personnage de niveau 1 dispose d'une chance de 10\% d'avoir une aptitude psionique, un personnage de niveau 2 aura 20\% de chances, et ainsi de suite juqu'au personnage de niveau 10ayant 100\% de chances.
+Les personnages-joueurs possédant des aptitudes psioniques progressent de la façon standard dans le type de personnage qu'ils ont choisi au départ. Néanmoins, à partir du niveau~1, ils ont la possibilité d'acquérir une aptitude de type psionique. Les aptitudes psioniques sont listées dans la section \textbf{SORTS}. La probabilité de gagner une aptitude est de 10\% par niveau d'expérience, de sorte qu'un personnage de niveau 1 dispose d'une chance de 10\% d'avoir une aptitude psionique, un personnage de niveau 2 aura 20\% de chances, et ainsi de suite jusqu'au personnage de niveau 10ayant 100\% de chances.
 
 \bigskip
 
 La sélection de l'aptitude de type psionique est faite aléatoirement, mais si le sort indique une aptitude déjà possédée, il est nécessaire de rejouer  jusqu'à ce qu'une aptitude non possédée par le personnage soit tirée. Quand le personnage dispose de 100\% de chances de gagner une aptitude (10\textsuperscript{ème} niveau), le personnage peut choisir n'importe quelle aptitude quand il gagne un niveau d'expérience.
 
+\subsection*{\normalsize COMBAT PSIONIQUE}
 
+Il y a basiquement deux formes d'attaque psionique: 1) la forme dans laquelle il n'y a pas d'attaque en retour et 2) la forme qui est un échange d'attaques et de défenses où deux créatures avec des aptitudes psioniques sont impliquées. Certains dispositifs magiques ou aptitudes psioniques limitées modifieront le cas 1) ci-dessus. Il est aussi possible que certaines créatures dotées d'aptitude psioniques aient une forme d'attaque qui affectera uniquement les autres formes de vie dotées de capacités psioniques. Quand le combat psionique se produit, aucune autre action ne peut être effectuée.
 
+\medskip
 
+Les attaques psioniques sur les créatures non-psioniques ne peuvent être faites que si l'attaquant a une force d'attaque psionique de plus de 120. La force d'attaque psionique est déterminée en additionnant le \textbf{potentiel psychique} au nombre d'aptitudes psioniques multiplié par deux et le nombres de modes d'\textbf{attaques psioniques} et de \textbf{défenses psioniques} multiplié par cinq. Par exemple, un personnage avec un potentiel psychique de 37, 6 aptitudes psioniques et 5 modes d'attaques et de défenses aurait une force d'attaque psionique de 73 (37 + 12 (6x2) + 25 (5x5)). Les dépenses précédentes en points de force psionique sont considérées avec un ratio de 50\%, ce qui fait qu'un usage de 12 points réduit la force d'attaque de 6 points. Les forces d'attaque psionique des monstres sont exposées dans les paragraphes traitant des monstres dotés de pouvoirs psioniques.
 
+\medskip
+
+Après avoir fait la première attaque, ou dans le cas où les opposants annoncent simultanément qu'ils attaquent de manière psionique (ou dans le cas où le monstre le fait automatiquement et le personnage annonce qu'il le fait), la séquence d'attaque est déterminée comme suit : chaque opposant fait un jet de pourcentage et ajoute le résultat à sa force d'attaque psionique. Le plus haut score attaque en premier.
+
+\bigskip
+
+{\parindent0.5cm
+\begin{tabular}{llcll}
+\multicolumn{2}{l}{\textbf{Modes d'attaque, toutes classes}} && \multicolumn{2}{l}{\textbf{Modes de défense, toutes classes}} \\
+A. & Souffle psionique (20)       && F. & Esprit vide (1) \\
+B. & Poussée de l'esprit (10) 	  && G. & Bouclier de pensée (2) \\
+C. & Coup de fouet sur l'ego (15) && H. & Barrières mentales (4) \\
+D. & Imposition d'identité (10)   && I. & Forteresse intellectuelle (7) \\
+E. & Écrasement psychique (25*)   && J. & Tour de volonté de fer (10) \\
+&&&& \\
+\multicolumn{5}{p{15cm}}{(Le coût d'utilisation en points de force psionique est montré entre parenthèses)} \\
+\multicolumn{5}{p{15cm}}{*Si le joueur possède moins de points, altérer la probabilité de succès en \% en conséquence} \\
+\end{tabular}}
 
 
 
