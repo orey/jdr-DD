@@ -1,5 +1,5 @@
 % A compiler avec xelatex
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
@@ -8,7 +8,7 @@
 \usepackage{pdfpages}
 
 %geometry of the page
-\usepackage[vmargin=0.6in,hmargin=1in]{geometry}
+\usepackage[vmargin=0.6in,hmargin=1in,showframe]{geometry}
 
 \setlength{\parindent}{1cm}
 
@@ -24,9 +24,9 @@
 \newcommand{\ODDsectionfont}{\fontsize{42}{50}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 
 % Pour le PC 64 bits
-%\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
+\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
 % Pour le PC 32 bits
-\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
+%\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
 
 %- \usepackage{xcolor}
 \usepackage{titlesec}
@@ -63,7 +63,12 @@
 \graphicspath{{./yed/}{./images/}{./maps/}}
 
 % Array stretch pour avoir un peu plus de vertical spacing dans les tabular
+\usepackage{tabularx}
 \renewcommand{\arraystretch}{1.2}
+\usepackage{multirow}
+
+% Place les footnotes en bas et supprimer l'indentation dans la footnote
+\usepackage[bottom]{footmisc}
 
 %Macro pour réduire l'espace sous le titre
 \newcommand{\myunderline}[1]{\underline{\smash{#1}}}
@@ -73,7 +78,7 @@
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{document}
 
-\includepdf{pagedegarde.pdf}
+\includepdf[scale=0.9]{pagedegarde.pdf}
 \newpage
 
 {\color{white}a}
@@ -100,13 +105,13 @@
 
 {\Large \textbf{MAGIE ANCIENNE ET PUISSANTE}}
 
-\vspace{0.8cm}
+\vspace{1cm}
 
-{\large PAR}
+{\large PAR
 
 \vspace{0.1cm}
 
-{\large GARY GYGAX \& BRIAN BLUME}
+GARY GYGAX \& BRIAN BLUME
 
 \vspace{3cm}
 
@@ -118,24 +123,24 @@ Jim Ward \& Tim Kask pour leurs suggestions et contributions !
 
 Illustrations de Dave Sutherland, Tracy Lesch \& Gary Kwapisz
 
-Couverture par Deborah Larson
+Couverture par Deborah Larson}
 
-\vspace{1cm}
+\vspace{1.3cm}
 
-{\small \textbf{\ODDtimes{2023}}}
+\textbf{\ODDtimes{2023}}
 
 \vspace{0.5cm}
 
-{\small \ODDtimes{\textbf{\textcopyright\ 1976 - TSR GAMES}
+\ODDtimes{\textbf{\textcopyright\ 1976 - TSR GAMES}
 
 \textbf{9\textsuperscript{ème} impression, novembre 1979}
 
-\textbf{Imprimé aux U.S.A}}}
+\textbf{Imprimé aux U.S.A}}
 \end{center}
 
 \vfill
 
-{\small \noindent LES QUESTIONS SUR LES REGLES DOIVENT ETRE ACCOMPAGNEES D'UNE ENVELOPPE TIMBREE A L'ADRESSE DE L'EXPEDITEUR ET ENVOYEES A TACTICAL STUDIES RULES, POB 756, LAKE GENEVA, WISCONSIN 53247}
+{\small \noindent LES QUESTIONS SUR LES REGLES DOIVENT ETRE ACCOMPAGNEES D'UNE ENVELOPPE RETOUR TIMBREE ET ENVOYEES A TACTICAL STUDIES RULES, POB 756, LAKE GENEVA, WISCONSIN 53147}
 
 
 \newpage
@@ -178,13 +183,15 @@ Comme vous pourrez le noter sur la page de titre, ce supplément est le fruit de
 
 Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dans une nouvelle de science-fiction écrite par Jack Williamson, \texttt{The Greatest Invention}, publié dans le magazine \texttt{Astounding Science Fiction}. Il est la compression de deux deux termes, \texttt{psi} dans le sens de phénomène psychique et \texttt{electronics}. \texttt{Psionics} devient un terme décrivant la discipline qui étudie les phénomènes psychiques avec les moyens de l'ingénierie moderne de l'époque, soit l'électronique. Malgré la promotion de personnes comme John W. Campbell, le terme restera utilisé uniquement dans le monde de la science-fiction, avant d'être intégré dans le monde des jeux de rôles.
 
-La version originale de Donjons \& Dragons, dite OD\&D, est publié en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le second livret, \texttt{Monstres et Trésors}, traduit en français par Porphyre et disponible sur le site de \texttt{La Forge de Papier}(la-forge-de-papier.over-blog.com), on trouve les premières références à des pouvoirs psychiques, dans le chapitre sur les épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
+La version originale de Donjons \& Dragons, dite OD\&D, est publiée en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le second livret, \texttt{Monsters and Treasures}, les premières références à des pouvoirs psychiques, dans la section traitant des épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
 
-Ensuite, en 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentée de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer en extension à un jeu médiéval-fantastique des règles plus proches de la science-fiction.
+En 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentées de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer, en extension à un jeu médiéval-fantastique, une gestion des pouvoirs mentaux, habituellement présents dans les univers de science-fiction.
 
-Nous proposons ici une nouvelle présentation des règles psioniques du supplément \texttt{Eldritch Wizardry}. Les règles présentées sont exhaustives, précisées et réorganisées. La consultation de certains sites en américain a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
+Nous proposons ici une double présentation des règles psioniques du supplément \texttt{Eldritch Wizardry} : le premier chapitre propose les règles originales traduites le plus fidèlement possible ; le chapitre suivant propose une réorganisation de ces règles visant à les présenter de manière plus claire et plus logique. La consultation de certains sites américains a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
 
 Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très "gygaxien" (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de psioniques proposant une façon nouvelle de voir les pouvoirs, très différente de la magie de OD\&D, façon qui inspirera beaucoup d'autres systèmes de pouvoirs dont l'utilisation est basée sur la consommation de points.
+
+Dans la partie \texttt{Monstres et Trésors}, nous proposons une traduction des règles concernant les épées magiques (psioniques), règles extraites du second livret, \texttt{Monsters and Treasures}, de OD\&D.
 
 \vspace{1cm}
 
@@ -200,6 +207,7 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 
 \newpage
 
+%==========================================================================SECTION
 \section*{Hommes \& Magie}
 
 \subsection*{{\normalsize PERSONNAGES :}}
@@ -309,8 +317,8 @@ Après avoir fait la première attaque, ou dans le cas où les opposants annonce
 {\parindent0.5cm
 \begin{tabular}{llcll}
 \multicolumn{2}{l}{\textbf{Modes d'attaque, toutes classes}} && \multicolumn{2}{l}{\textbf{Modes de défense, toutes classes}} \\
-A. & Souffle psionique (20)       && F. & Esprit vide (1) \\
-B. & Poussée de l'esprit (10) 	  && G. & Bouclier de pensée (2) \\
+A. & Onde de choc psionique (20)  && F. & Esprit vide (1) \\
+B. & Poussée de l'esprit (10) 	  && G. & Bouclier de pensées (2) \\
 C. & Coup de fouet sur l'ego (15) && H. & Barrières mentales (4) \\
 D. & Imposition d'identité (10)   && I. & Forteresse intellectuelle (7) \\
 E. & Écrasement psychique (25*)   && J. & Tour de volonté de fer (10) \\
@@ -319,17 +327,324 @@ E. & Écrasement psychique (25*)   && J. & Tour de volonté de fer (10) \\
 \multicolumn{5}{p{15cm}}{*Si le joueur possède moins de points, altérer la probabilité de succès en \% en conséquence} \\
 \end{tabular}}
 
+Tout personnage doué de pouvoirs psychiques gagne immédiatement son premier mode d'attaque (onde de choc psionique) dès qu'il gagne sa première aptitude. Les aptitudes devraient être sélectionnées aléatoirement, mais un personnage ne devrait \textbf{jamais} avoir plus d'aptitudes supérieures que d'aptitudes basiques. Dans la sélection aléatoire, il est suggéré de mettre un poids supérieur aux probabilités de gain d'aptitudes liées à des aptitudes déjà possédées, par exemple empathie augmenterait les chances de gagner ESP, télépathie animale et projection télépathique. Les modes d'attaques additionnels sont gagnés à hauteur de un à chaque quatre aptitudes (cinq pour les combattants). La force psionique totale est deux fois la force d'attaque psionique (ou la force psionique d'attaque et de défense additionnées).Pour les détails sur la restauration des points de force psionique, se référer à la section FORCE PSIONIQUE. %TODO vérifier que cette section existe
 
+\subsection*{\normalsize MODES DE D'ATTAQUE ET DE DEFENSE PSIONIQUES}
 
+\begin{tabular}{p{5cm} >{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{2.5cm}}
+&\multicolumn{3}{c}{\textbf{Portée}} \\
+\textbf{Mode d'attaque} & \textbf{Courte} & \textbf{Moyenne} & \textbf{Longue} \\
+Écrasement psychique & 2m & -- & -- \\
+Onde de choc psionique & 1m & 2.5m & 4m \\
+Poussée de l'esprit & 3m & 6m & 9m \\
+Coup de fouet sur l'ego & 2m & 4m & 6m \\
+Imposition d'identité & 4m & 8m & 12m \\
+\end{tabular}
 
+\medskip
 
+La portée courte augmente de 0.3m (et les autres portées augmentent de la même façon proportionnellement) avec chaque niveau de maîtrise d'une capacité d'attaque.
 
+\medskip
 
+Les attaques à portée moyenne font seulement 80\% des dommages précisés. Les attaques à longue portée font seulement 50\% des dommages précisés.
 
+\bigskip
 
+\begin{tabular}{p{7.5cm}p{6cm}}
+\textbf{Mode de défense} & \textbf{Protection maximale pour} \\
+Esprit vide & Individu seul \\
+Bouclier de pensées & Individu seul \\
+Barrière mentale & Individu seul \\
+Forteresse intellectuelle & Cercle de 3m autour de l'individu \\
+Tour de volonté de fer & Cercle de 1m autour de l'individu \\
+\end{tabular}
+
+\bigskip
+
+Les attaques sur un individu surpris sont gérées dans la MATRICE DES ATTAQUES PSIONIQUES SPECIALES.
+
+\medskip
+
+\begin{tabular}{c>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}}
+\textbf{Force} &&&&&& \\
+\textbf{d'attaque} & \multicolumn{7}{c}{\textbf{Potentiel psionique du défenseur}} \\
+\textbf{psionique} & \textbf{01--10} & \textbf{11--25} & \textbf{26--50} & \textbf{51--75} & \textbf{76--90} & \textbf{91--99} & \textbf{00} \\
+01--20      & S & S & 40 & 30 & 20 & 10 & 5 \\
+21--40      & S & S & S  & 40 & 30 & 20 & 10 \\
+41--60      & W & S & S  & S  & 40 & 30 & 20 \\
+61--80      & W & S & S  & S  & S  & 40 & 30 \\
+81--90      & C & W & S  & S  & S  & S  & 40 \\
+91--00      & C & C & W  & S  & S  & S  & S \\
+101--110    & D & C & C  & W  & S  & S  & S \\
+111--120    & D & D & C  & C  & W  & W  & S \\
+121 et plus & D & D & D  & C  & C  & C  & W \\
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{lp{14.5cm}}
+S = & Etourdi pour 5--20 tours, pas d'attaque psionique \\
+W = & Blessure psychique, récupération en 1--6 mois, pas d'attaque psionique \\
+C = & Handicapé psionique de manière permanente, perd toutes ses aptitudes \\
+D = & Mort \\
+5--40 = & Nombre de points d'attaque psionique perdu -- récupérés en 1--6 jours \\
+Note : & L'attaque Coup de fouet sur l'ego qui donne un résultat "D" veut dire stupidité et le résultat "C" doit être considéré comme "W". L'attaque Imposition psychique avec un résultat de "W", "C", ou "D" signifie que le défenseur est sous le contrôle de l'attaquant jusqu'à ce qu'il soit libéré. \\
+\end{tabular}
+
+\subsection*{\normalsize MATRICE A : ATTAQUE PSIONIQUE SUR NON-PSIONIQUE}
+
+\begin{tabular}{c>{\centering\arraybackslash}p{2.6cm}>{\centering\arraybackslash}p{2.6cm}>{\centering\arraybackslash}p{2.6cm}l}
+\textbf{Intelligence} & \multicolumn{3}{c}{\textbf{Jet de sauvegarde par portée d'attaque}} & \textbf{EFFET SI SAUVE-} \\
+\textbf{du défenseur} & \textbf{Courte} & \textbf{Moyenne} & \textbf{Longue} & \textbf{GARDE ECHOUEE} \\
+3--4    & 19 & 18 & 17 & Mort \\
+5--7    & 17 & 16 & 15 & Coma 1--4 jours \\
+8--10   & 15 & 14 & 13 & Sommeil 20--120 min. \\
+11-12   & 13 & 12 & 11 & Etourdi 1--4 tours \\
+13-14   & 11 & 10 &  9 & Confus 1--6 tours \\
+15-16   &  9 &  8 &  7 & Furieux 1--8 tours \\
+17      &  7 &  6 &  5 & Esprit affaibli \\
+18      &  5 &  4 &  3 & Folie permanente \\
+19      &  3 &  2 &  1 & Folie 1--4 semaines \\
+20 \& + &  1 &  0 & -1 & Folie 2--12 jours \\
+\end{tabular}
+
+\bigskip
+
+AJUSTEMENTS AU JET DE SAUVEGARDE :
+
+\medskip
+
+\begin{tabular}{p{4cm}c p{2.8cm} p{6.5cm} l}
+\multicolumn{2}{c}{\textbf{Ajouts au dé}} && \multicolumn{2}{c}{\textbf{Soustractions au dé}} \\
+Magicien & +1 && Médaillon ESP & -5 \\
+Clerc    & +2 && Sort relié aux pouvoirs psioniques* & -4 \\
+Elfe     & +2 && Etourdi & -3 \\
+Nain     & +4 && Confus & -2 \\
+Halfling & +4 && Enragé & -1 \\
+Heaume télépathique & +4 && Esprit affaibli & ** \\
+&&& Fou & *** \\
+\end{tabular}
+
+\begin{tabular}{rp{15.3cm}}
+* & Voir la liste des aptitudes psionique plus loin pour comparaison \\
+** & Traiter un esprit affaibli comme une personne à l'intelligence de 3--4 \\
+*** & Les individus fous ne peuvent être attaqués psioniquement que par l'"Imposition" (voir la section APTITUDES PSIONIQUES).
+\end{tabular}
+
+\medskip
+
+Un heaume de télépathie porté par le défenseur \textbf{étourdira} l'attaquant pour trois tours si le défenseur réussit son jet de sauvegarde.
+
+\subsection*{\normalsize MATRICE B : COMBAT PSIONIQUE COMPLET, AVEC DOMMAGES}
+
+\begin{tabular}{clccccc}
+\small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
+\small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
+\small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
+21 & Onde       &    3 & 7    & 4 & 2 & 0 \\
+   & Poussée    &   12 & 5    & 1 & 0 & 3 \\
+à  & Fouet      &    8 & 4    & 0 & 0 & 0 \\
+   & Imposition &    2 & 5    & 8 & 1 & 2 \\
+40 & Écrasement & 02\% & 01\% & - & - & - \\
+
+41 & Onde       &    4 & 9    & 5    & 3 & 0 \\
+   & Poussée    &   14 & 7    & 02   & 1 & 4 \\
+à  & Fouet      &   10 & 6    & 0    & 0 & 0 \\
+   & Imposition &    3 & 7    & 10   & 3 & 4 \\
+60 & Écrasement & 04\% & 02\% & 01\% & - & - \\
+
+61 & Onde       &    6 & 11   & 7    & 4    & 0 \\
+   & Poussée    &   16 & 9    & 4    & 2    & 5 \\
+à  & Fouet      &   13 & 9    & 1    & 0    & 1 \\
+   & Imposition &    4 & 9    & 13   & 5    & 7 \\
+80 & Écrasement & 08\% & 04\% & 02\% & 01\% & - \\
+
+81 & Onde       &    9 & 14   & 9    & 5    & 0  \\
+   & Poussée    &   18 & 11   & 6    & 3    & 6  \\
+à  & Fouet      &   17 & 13   & 2    & 0    & 2  \\
+   & Imposition &    6 & 11   & 16   & 8    & 10 \\
+90 & Écrasement & 10\% & 06\% & 04\% & 01\% & -  \\
+\end{tabular}
+
+\begin{tabular}{clccccc}
+\small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
+\small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
+\small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
+
+91  & Onde       &   13 & 17   & 11   & 7    & 1    \\
+    & Poussée    &   20 & 13   & 8    & 4    & 7    \\
+à   & Fouet      &   22 & 17   & 4    & 1    & 3    \\
+    & Imposition &    8 & 14   & 19   & 11   & 13   \\
+100 & Écrasement & 12\% & 08\% & 06\% & 02\% & 01\% \\
+
+101 & Onde       &   18 & 20   & 13   & 9    & 2    \\
+    & Poussée    &   23 & 15   & 10   & 5    & 8    \\
+à   & Fouet      &   28 & 21   & 6    & 2    & 9\footnotemark \\
+    & Imposition &   10 & 17   & 23   & 15   & 18   \\
+110 & Écrasement & 15\% & 10\% & 08\% & 03\% & 02\% \\
+
+111 & Onde       &   24 & 23   & 15   & 11   & 3    \\
+    & Poussée    &   26 & 18   & 13   & 7    & 10   \\
+à   & Fouet      &   35 & 27   & 8    & 3    & 6    \\
+    & Imposition &   13 & 21   & 27   & 19   & 24   \\
+120 & Écrasement & 20\% & 14\% & 10\% & 05\% & 03\% \\
+
+121  & Onde       &   30 & 27   & 18   & 14   & 5    \\
+     & Poussée    &   29 & 22   & 17   & 10   & 12   \\
+à    & Fouet      &   43 & 33   & 11   & 5    & 8    \\
+     & Imposition &   17 & 25   & 31   & 23   & 30   \\
+plus & Écrasement & 25\% & 18\% & 13\% & 07\% & 04\% \\
+\end{tabular}\footnotetext{Ce chiffre est une faute de frappe. Il ne suit pas la logique de progression des dommages sur cette colonne. Il faut lire 4 ou 5 (NdT).}
+
+\bigskip
+
+Un heaume de télépathie porté par le défenseur \textbf{étourdira} l'attaquant pour trois tours si le défenseur réussit son jet de sauvegarde.
+
+\bigskip
+
+Un heaume de télépathie augmente la force psionique de 40.
+
+\bigskip
+
+La table indique le nombre de points de dommages encaissés par les aptitudes psioniques de l'opposant, excepté la ligne concernant l'ECRASEMENT PSYCHIQUE. Quand cette attaque est tentée, les seules défenses pouvant être utilisées sont BOUCLIER DE PENSEES ou l'ABSENCE de défense, mais si le jet de pourcentage est réussi, l'attaque tue instantanément le défenseur.
+
+\bigskip
+
+Quand un combattant en est réduit à ne plus avoir de capacités défensives, alors toutes les attaques sur lui sont considérées comme devant utiliser la \textbf{Matrice des attaques psioniques spéciales} ci-dessous\footnote{Cette matrice est, de fait, au dessus (NdT).}.
+
+\bigskip
+
+Les capacités psioniques de défense sont les mêmes que la force d'attaque psionique.
+
+\bigskip
+
+La portée courte augmente de 0.3m (et les autres portées augmentent de la même façon proportionnellement) avec chaque niveau de maîtrise d'une capacité d'attaque.
+
+\bigskip
+
+Les attaques à portée moyenne font seulement 80\% des dommages précisés. Les attaques à longue portée font seulement 50\% des dommages précisés.
+
+\bigskip
+
+Les attaques sur un individu surpris sont gérées dans la MATRICE DES ATTAQUES PSIONIQUES SPECIALES.
+
+\bigskip
+
+L'utilisation des pouvoirs psioniques alertera toute créature douée de pouvoirs psioniques dans la portée du pouvoir utilisé, que quelque chose impliquant des pouvoirs psioniques est en train d'arriver. Si le pouvoir est utilisé de manière continue, la probabilité croît que la direction et le pouvoir lui-même soient identifiés.La chance de base est de 10\% pour chaque pouvoir, et la chance augmente de 10\% pour chaque tour d'utilisation de la même aptitude. L'usage d'une aptitude différente rendra l'identification impossible mais pas la direction. Quand la direction est trouvée, la force relative du pouvoir peut être déterminée au tour suivant.
+
+\bigskip
+
+Les aptitudes supérieures alertent les autres créatures psioniques sur une portée double de celle de l'aptitude. Le combat psionique (modes d'attaques) alertent les créatures psioniques sur une portée triple de la capacité psionique (exception faite de Poussée de l'esprit et Imposition d'identité où la détection ne se fait au maximum qu'à la portée de la capacité).
+
+\bigskip
+
+Noter que les sorts qui dupliquent les pouvoirs psioniques ou y sont similaires attireront de même l'attention des créatures psioniques. Cela inclut aussi les objets magiques qui tombent dans cette catégorie.
+
+\subsection*{\normalsize RESTAURATION DE L'ENERGIE PSIONIQUE}
+
+Les points de force psionique dépensés peuvent être restaurés par l'arrêt total de toute activité psionique. La vitesse de restauration dépend du type d'activité non-psionique que le personnage psionique pratiquera :
+
+\begin{center}
+\begin{tabular}{cp{0.3cm}c}
+\textbf{Activité} && \textbf{Gain de points de force psionique} \\
+Marcher, parler \& activités identiques && 6 points/heure \\
+Se reposer tranquillement && 12 points/heure \\
+Dormir && 24 points/heure \\
+\end{tabular}
+\end{center}
 
 \newpage
+\subsection*{\normalsize APTITUDES PSIONIQUES}
+\textbf{Combattants (incluant les Paladins et les Rangers) \& Voleurs (incluant les Assassins)}
 
+\bigskip
+
+\begin{tabular}{p{7.5cm}p{0.3cm}p{7.5cm}}
+APTITUDES BASIQUES (coût à l'usage) && APTITUDES SUPERIEURES (coût à l'usage) \\
+Réduction (aucun) && Contrôle de l'énergie (spécial) \\
+Expansion (spécial) && Télékinésie (3/tour) \\
+Lévitation (1/tour) && Marche dimensionnelle (spécial) \\
+Domination (spécial) && Projection astrale (spécial) \\
+Contrôle de l'esprit sur le corps (aucun) && Réarrangement moléculaire (spécial) \\
+Invisibilité (2/tour) && Manipulation moléculaire (50) \\
+Prémonition (spécial) && Contrôle de l'esprit sur le corps (5/tour) \\
+Hibernation (aucun) && Barrière mentale (aucun) \\
+Changer le poids du corps (1/tour) && \\
+Clairaudience (2/tour) && \\
+Clairvoyance (2/tour) && \\
+Corps comme arme (aucun) && \\
+\end{tabular}
+
+\bigskip
+
+\textbf{Magiciens (incluant les Illusionnistes)}
+
+\bigskip
+
+\begin{tabular}{p{7.5cm}p{0.3cm}p{7.5cm}}
+Détection du Mal/Bien (aucun) && Projection télépathique (3/tour) \\
+Détection de la magie (1/tour) && Prémonition (spécial) \\
+Perception extrasensorielle (1/tour) && Porte dimensionnelle (10) \\
+Hypnose (spécial) && Télékinésie (3/tour) \\
+Lévitation (1/tour) && Téléportation (20) \\
+Clairaudience (1/tour) && Projection astrale (spécial) \\
+Clairvoyance (1/tour) && Transformation éthérée (5/tour) \\
+Réduction (aucun) && Altération de la forme (spécial) \\
+Expansion (spécial) && \\
+Agitation moléculaire (2/tour) && \\
+\end{tabular}
+
+\bigskip
+
+\textbf{Clercs (incluant les Moines et les Druides)}
+
+\bigskip
+
+\begin{tabular}{p{7.5cm}p{0.3cm}p{7.5cm}}
+Détection du Mal/Bien (aucun) && Réarrangement moléculaire (5/tour) \\
+Empathie (aucun) && Altération de l'aura (spécial) \\
+Lévitation (1/tour) && Prémonition (spécial) \\
+Hypnose (1/tour) && Projection télépathique (3/tour) \\
+Domination (spécial) && Marche dimensionnelle (spécial) \\
+Perception extrasensorielle (1/tour) && Projection astrale (spécial) \\
+Contrôle cellulaire (spécial) && Domination des masses (spécial) \\
+Contrôle de l'esprit sur le corps (aucun) &&  Voyage probabiliste \\
+Changer le poids du corps (1/tour) && \\
+Télépathie animale (2/tour) && \\
+\end{tabular}
+
+\newpage
+\subsection*{\normalsize EXPLICATIONS DES APTITUDES PSIONIQUES}
+
+{\large \textbf{Combattants}}
+
+\textbf{Réduction} : la capacité de rendre le corps plus petit en taille. La réduction est approximativement de 1/3 de mètre par niveau à partir duquel l'individu a possédé l'aptitude, de sorte qu'après six niveaux de possession, l'individu peut devenir aussi petit qu'un minuscule insecte.
+
+\bigskip
+
+\textbf{Expansion} : la capacité pour le corps de devenir plus grand en taille. L'expansion est approximativement de 2/3 de mètre par niveau à partir duquel l'individu a possédé l'aptitude, jusqu'à un maximum de 12 niveaux (12 * 2/3 = 8m). La croissance en masse et en force est proportionnée, de sorte qu'au maximum, la croissance de la force atteint celle d'un géant des tempêtes. Il est possible de rester à sa taille maximale pendant deux tours, mais chaque niveau en dessous du maximum accroît l'endurance pour un tour, de sorte que si l'expansion potentielle était de 4m, une expansion de seulement 2m (3 x 2/3) permettrait à l'individu de rester à cette taille pour cinq (2 + 3) tours de jeu.
+
+\bigskip
+
+\textbf{Lévitation} : De manière similaire à la lévitation magique, cette aptitude permet à l'individu de léviter un tour par niveau de possession de l'aptitude. Ainsi, si l'aptitude a été possédée depuis un niveau, la personne peut léviter un tour : si elle a possédé l'aptitude pendant deux niveaux, deux tours de plus sont ajoutés, ce qui fait un total de trois ; au troisième niveau de possession, trois tours sont ajoutés, et ainsi de suite.
+
+\bigskip
+
+\textbf{Domination} : La capacité de forcer quelqu'un à agir selon votre volonté. L'utilisation de cette aptitude requiert une grande concentration, et elle utilise des points de force psionique à hauteur de un point pa niveau de créature dominée par minute de domination. Si la domination requiert le dominé de faire des choses qui sont grandement contre sa volonté, la dépense de points de force psionique est doublée.
+
+\bigskip
+
+\textbf{Contrôle de l'esprit sur le corps} : la capacité de supprimer certains besoins corporels (ou de les satisfaire avec des moyens psioniques) ; nourriture, eau, et sommeil peuvent être complètement ignorés pour deux jours par niveau de possession du pouvoir. Ainsi, une personne ayant possédé l'aptitude depuis deux niveaux peut se passer de dormir, manger ou boire pour une période allant jusqu'à quatre jours. Plus tard, néanmoins, la personne \textbf{doit} passer un nombre de jours équivalent à se reposer pour restaurer son aptitude : un échec à faire cela ne mettra pas à mal le corps, mais l'aptitude ne sera plus utilisables tant qu'un tel repos n'est pas pris.
+
+\bigskip
+
+\textbf{Prémonition} : la capacité d'estimer le meilleur
+
+%reprendre ici
+
+%==========================================================================SECTION
+\newpage
 \section*{Monstres \& Trésors}
 
 \subsection*{\underline{EPEES}}
@@ -532,6 +847,66 @@ Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (cha
 
 \myunderline{\textbf{EPEES, BONUS AUX DOMMAGES}} : Les épées reçoivent toutes des bonus pour ce qui est de la probabilité de toucher un opposant, mais certaine sd'entre elles reçoivent aussi un bonus aux dommages quand elles touchent. Ces épées sont celles qui ont un +2 ou +3 contre certaines créatures, mais pas celles qui ont un bonus général de +2 ou +3.
 }% parindent
+
+
+%==========================================================================SECTION
+\newpage
+\section*{Annexes}
+
+\subsection*{Traduction des pouvoirs psioniques}
+
+\begin{tabular}{lp{0.5cm}l}
+Animal Telepathy && Télépathie animale \\
+Astral projection && Projection astrale \\
+Aura Alteration && Altération de l'aura \\
+Body control && Contrôle du corps \\
+Body Equilibrium && Changer le poids du corps \\
+Body Weaponry && Corps comme arme \\
+Cell adjustment && Contrôle cellulaire \\
+Clairaudience && Clairaudience \\
+Clairvoyance && Clairvoyance \\
+Detection of Evil/Good && Détection du Mal/du Bien \\
+Detection of Magic && Détection de la magie \\
+Dimension Door && Porte dimensionnelle \\
+Dimension Walking && Marche dimensionnelle \\
+Domination && Domination \\
+Empathy && Empathie \\
+Energy control && Contrôle de l'énergie \\
+ESP && Perception extrasensorielle \\
+Etherealness && Transformation éthérée \\
+Expansion && Expansion \\
+Hypnosis && Hypnose \\
+Invisibility && Invisibilité \\
+Levitation && Lévitation \\
+Mass Domination && Domination des masses \\
+Mind bar && Barrière mentale \\
+Mind over body && Contrôle de l'esprit sur le corps \\
+Molecular Agitation && Agitation moléculaire \\
+Molecular Manipulation && Manipulation moléculaire \\
+Molecular Rearrangement && Réarrangement moléculaire \\
+Precognition && Prémonition \\
+Probability Travel && Voyage probabiliste \\
+Reduction && Réduction \\
+Shape Alteration && Altération de la forme \\
+Suspend Animation && Hibernation \\
+Telekinesis && Télékinésie \\
+Telepathic projection && Projection télépathique \\
+Teleportation && Téléportation \\
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{verbatim}
 ---
