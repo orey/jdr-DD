@@ -4,10 +4,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 
+\usepackage{comment}
+
 % Pour inclure la page de garde
 \usepackage{pdfpages}
 
 %geometry of the page
+%TODO Enlever le cadre une fois le document terminé
+%\usepackage[vmargin=0.6in,hmargin=1in]{geometry}
 \usepackage[vmargin=0.6in,hmargin=1in,showframe]{geometry}
 
 \setlength{\parindent}{1cm}
@@ -16,10 +20,9 @@
 \usepackage{fontspec}
 
 
-
-\newcommand{\MEGA}{\fontsize{110}{-30}\fontspec{Mega:style=JDR-ORey}\selectfont}
-
-
+%TODO désactiver la police Méga
+% Test de police Méga
+%\newcommand{\MEGA}{\fontsize{110}{-30}\fontspec{Mega:style=JDR-ORey}\selectfont}
 
 
 % Police de caractères OD&D Saloon Girl Inline
@@ -30,10 +33,11 @@
 \newcommand{\ODDtitlebisfont}{\fontsize{52}{70}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 \newcommand{\ODDsectionfont}{\fontsize{42}{50}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
 
+%TODO Choisir pour le PC 32 ou 64 bits
 % Pour le PC 64 bits
-\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
+%\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
 % Pour le PC 32 bits
-%\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
+\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
 
 %- \usepackage{xcolor}
 \usepackage{titlesec}
@@ -57,6 +61,7 @@
 
 \titleformat{\section}{\centering\ODDsectionfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection}{1em}{}
 
 
 %- \titleformat*{\subsection}{\large\bfseries\sffamily\color{MSLightBlue}}
@@ -221,7 +226,7 @@ Dans la partie \texttt{Monstres et Trésors}, nous proposons une traduction des 
 
 {\parindent0pt
 
-Il existe une catégorie spéciale de personnages qui traverse les quatre classes majeures de personnages-joueurs. Ceux qui possèdent des \textbf{capacités psioniques} peuvent être trouvés parmi les combattants, les magiciens, les clercs et même les voleurs.
+Il existe une catégorie spéciale de personnages qui traverse les quatre classes majeures de personnages-joueurs. Ceux qui possèdent des \textbf{capacités psioniques} peuvent être trouvés parmi les guerriers, les magiciens, les clercs et même les voleurs.
 
 \bigskip
 
@@ -237,7 +242,7 @@ Tous les joueurs avec des aptitude psioniques doivent être humains.
 
 \bigskip
 
-Les \textbf{combattants} sont essentiellement sensibles aux pouvoirs communément connus sous le nom de Yoga. Il y a 20 \og dévotions \fg{} possibles qu'ils peuvent accomplir (les 18 Siddhis et les 2 Sciences) s'ils suivent le développement de leurs talents mentaux. Cependant, pour \textbf{chaque} aptitude qu'ils gagnent, ils doivent perdre un de leurs suivants et un point de Force est perdu de manière permanente pour chaque ensemble de \textbf{quatre} aptitudes. (De plus, ils deviennent sensibles à certains types de monstres et aux attaques de monstres que les personnages sans capacités psychiques ne subissent pas, comme cela sera détaillé plus tard).
+Les \textbf{guerriers} sont essentiellement sensibles aux pouvoirs communément connus sous le nom de Yoga. Il y a 20 \og dévotions \fg{} possibles qu'ils peuvent accomplir (les 18 Siddhis et les 2 Sciences) s'ils suivent le développement de leurs talents mentaux. Cependant, pour \textbf{chaque} aptitude qu'ils gagnent, ils doivent perdre un de leurs suivants et un point de Force est perdu de manière permanente pour chaque ensemble de \textbf{quatre} aptitudes. (De plus, ils deviennent sensibles à certains types de monstres et aux attaques de monstres que les personnages sans capacités psychiques ne subissent pas, comme cela sera détaillé plus tard).
 
 \bigskip
 
@@ -253,7 +258,7 @@ Les \textbf{clercs} ayant des aptitudes psioniques gagnent aussi l'avantage de p
 
 \bigskip
 
-Les \textbf{voleurs} qui ont un potentiel psychique avéré sont sujets aux mêmes avantages que ceux gagnés par les combattants. Néanmoins, en plus des pénalités notées pour les combattants, les voleurs perdent aussi 1 point de dextérité toutes les quatre aptitudes gagnées.
+Les \textbf{voleurs} qui ont un potentiel psychique avéré sont sujets aux mêmes avantages que ceux gagnés par les guerriers. Néanmoins, en plus des pénalités notées pour les guerriers, les voleurs perdent aussi 1 point de dextérité toutes les quatre aptitudes gagnées.
 
 \subsection*{{\normalsize DETERMINATION DES APTITUDES :}}
 
@@ -334,7 +339,7 @@ E. & Écrasement psychique (25*)   && J. & Tour de volonté de fer (10) \\
 \multicolumn{5}{p{15cm}}{*Si le joueur possède moins de points, altérer la probabilité de succès en \% en conséquence} \\
 \end{tabular}}
 
-Tout personnage doué de pouvoirs psychiques gagne immédiatement son premier mode d'attaque (onde de choc psionique) dès qu'il gagne sa première aptitude. Les aptitudes devraient être sélectionnées aléatoirement, mais un personnage ne devrait \textbf{jamais} avoir plus d'aptitudes supérieures que d'aptitudes basiques. Dans la sélection aléatoire, il est suggéré de mettre un poids supérieur aux probabilités de gain d'aptitudes liées à des aptitudes déjà possédées, par exemple empathie augmenterait les chances de gagner ESP, télépathie animale et projection télépathique. Les modes d'attaques additionnels sont gagnés à hauteur de un à chaque quatre aptitudes (cinq pour les combattants). La force psionique totale est deux fois la force d'attaque psionique (ou la force psionique d'attaque et de défense additionnées).Pour les détails sur la restauration des points de force psionique, se référer à la section FORCE PSIONIQUE. %TODO vérifier que cette section existe
+Tout personnage doué de pouvoirs psychiques gagne immédiatement son premier mode d'attaque (onde de choc psionique) dès qu'il gagne sa première aptitude. Les aptitudes devraient être sélectionnées aléatoirement, mais un personnage ne devrait \textbf{jamais} avoir plus d'aptitudes supérieures que d'aptitudes basiques. Dans la sélection aléatoire, il est suggéré de mettre un poids supérieur aux probabilités de gain d'aptitudes liées à des aptitudes déjà possédées, par exemple empathie augmenterait les chances de gagner ESP, télépathie animale et projection télépathique. Les modes d'attaques additionnels sont gagnés à hauteur de un à chaque quatre aptitudes (cinq pour les guerriers). La force psionique totale est deux fois la force d'attaque psionique (ou la force psionique d'attaque et de défense additionnées).Pour les détails sur la restauration des points de force psionique, se référer à la section FORCE PSIONIQUE. %TODO vérifier que cette section existe
 
 \subsection*{\normalsize MODES DE D'ATTAQUE ET DE DEFENSE PSIONIQUES}
 
@@ -518,7 +523,7 @@ La table indique le nombre de points de dommages encaissés par les aptitudes ps
 
 \bigskip
 
-Quand un combattant en est réduit à ne plus avoir de capacités défensives, alors toutes les attaques sur lui sont considérées comme devant utiliser la \textbf{Matrice des attaques psioniques spéciales} ci-dessous\footnote{Cette matrice est, de fait, au dessus (NdT).}.
+Quand un guerrier en est réduit à ne plus avoir de capacités défensives, alors toutes les attaques sur lui sont considérées comme devant utiliser la \textbf{Matrice des attaques psioniques spéciales} ci-dessous\footnote{Cette matrice est, de fait, au dessus (NdT).}.
 
 \bigskip
 
@@ -563,7 +568,7 @@ Dormir && 24 points/heure \\
 
 \newpage
 \subsection*{\normalsize APTITUDES PSIONIQUES}
-\textbf{Combattants (incluant les Paladins et les Rangers) \& Voleurs (incluant les Assassins)}
+\textbf{Guerriers (incluant les Paladins et les Rangers) \& Voleurs (incluant les Assassins)}
 
 \bigskip
 
@@ -624,7 +629,7 @@ Télépathie animale (2/tour) && \\
 \newpage
 \subsection*{\normalsize EXPLICATIONS DES APTITUDES PSIONIQUES}
 
-{\large \textbf{Combattants}}
+\subsubsection*{Guerriers}
 
 \textbf{Réduction} : la capacité de rendre le corps plus petit en taille. La réduction est approximativement de 1/3 de mètre par niveau à partir duquel l'individu a possédé l'aptitude, de sorte qu'après six niveaux de possession, l'individu peut devenir aussi petit qu'un minuscule insecte.
 
@@ -767,7 +772,7 @@ Etre emporté casse le lien d'argent. Perdre entre 1--10 jours se produit lorsqu
 
 \bigskip
 
-\begin{tabular}{cc}
+\begin{tabular}{>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{11.7cm}}
 \textbf{Niveau de maîtrise} & \textbf{Capable de manipuler l'équivalent de} \\
 premier    & cordelettes fines \\
 deuxième   & cordes fines \\
@@ -775,17 +780,152 @@ troisième  & cordes épaisses ou lanières de cuir\\
 quatrième  & câbles \\
 cinquième  & chaînes légères \\
 sixième    & chaînes lourdes \\
+\end{tabular}
+
+\begin{tabular}{>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{11.7cm}}
+%\textbf{Niveau de maîtrise} & \textbf{Capable de manipuler l'équivalent de} \\
 septième   & fers et menottes\\
 huitième   & barres de fer, 2.5cm de diamètre\\
 neuvième   & barres d'acier, 2.5cm de diamètre \\
 dixième    & murs épais de pierre, 60 cm d'épaisseur, trou de la taille d'un homme \\
-
 \end{tabular}
 
+\bigskip
+
+\textbf{Contrôle du corps} : la capacité d'adapter le corps à des températures extrêmes ou des éléments destructifs hostiles (fumées empoisonnées, eau, acide). cela permet au possesseur de traverser le feu, de respirer sous l'eau, etc., cela pour une durée limitée dépendant du niveau de maîtrise qu'il possède. Comme règle générale, assumer que l'individu est capable de résister à l'équivalent d'un dé de dommages causé par la substance ou l'environnement pendant un tour (dix minutes). Cela implique qu'il pourrait traverser un feu normal ou rester sous l'eau pendant un tour, mais dans un environnement plus hostile, la limite du temps d'exposition serait réduite en conséquence. Pour chaque niveau de maîtrise, le possesseur gagne de manière cumulative une période identique, soit deux périodes au niveau deux, trois périodes au niveau trois, et ainsi de suite. Au dixième niveau de maîtrise, le possesseur aurait 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55 périodes basiques de temps.
+
+\bigskip
+
+\textbf{Barrière mentale} : cette aptitude protège le corps physique et l'esprit d'une possession. Elle peut être utilisée quand le corps est abandonné (comme en cas de projection astrale) ou à d'autres moments pour le protéger de possession par urnes magiques, démons ou diables. Pour autant, cette aptitude ne fonctionne pas contre des attaques psioniques. La chance pour que le possesseur puisse établir la barrière de son esprit avec succès est de 10\% par niveau de maîtrise. Après le dixième niveau de maîtrise, le pourcentage de chances qu'il soit capable de localiser l'urne ou amulette de l'être qui tente de le posséder croît de la même façon.
+
+\subsubsection*{Magiciens}
+
+\textbf{Détection du Mal/du Bien} : cette aptitude est simplement le pouvoir de détecter l'aura qui émane de l'esprit des créatures -- ou qui reste sur les objets ou dans les lieux si l'aura est exceptionnellement forte, sinon elle ne fonctionne pas pour les non-sensibles.% que faut-il comprendre?
+Il n'y a pas d'utilisation de points de force psionique pour détercter le mal ou le bien.
+
+\bigskip
+
+\textbf{Détection de la magie} : bien que cette aptitude soit similaire en nature aux autres types de détection, la magie opère sur un plan différent, ce qui implique que le possesseur de ce pouvoir soit dépenser 1 point de force psionique pour chaque tour dans lequel il tente de détecter la magie. Après trois niveaux de maîtrise de l'aptitude, le possesseur possède une chance cumulative de 10\% de déterminer quelle sorte de magie est impliquée (et non seulement que certaines forces magiques sont là), soit au quatrième niveau de progression, il possède une chance de 20\% de déterminer la nature basique du sort qui est en cours ou a été lancé.
+
+\bigskip
+
+\textbf{Perception extrasensorielle} (ESP) : un pouvoir similaire au sort du même nom\footnote{
+\og ESP : un sort qui permet à l'utilisateur de détecter les pensées (s'il y en a) de tout ce qui rode derrière les portes ou dans les ténèbres. Le sort peut pénétrer de la roche jusqu'à environ 60cm d'épaisseur mais une fine couche de plomb empêchera sa pénétration. Durée : 12 tours. Portée : 2m. \fg{} Sort de niveau 2 pour magicien, extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).
+}, excepté que la portée est le double de celle du sort, soit 4m. Noter que cette aptitude permet au possesseur d'être \og à l'écoute \fg{} des pensées, et qu'il y a une différence avec le fait de recevoir et de transmettre des pensées de manière télépathique.
+
+\bigskip
+
+\textbf{Hypnose} : l'aptitude ressemble au sort de suggestion des magiciens\footnote{
+\og Suggestion : un sort qui fonctionne que le principe de l'hypnose. Si une créature sur laquelle le sort est lancé, rate son jet de sauvegarde contre la magie, il sera la victime de la suggestion, immédiatement ou de manière différée au bon vouloir du magicien. Le fait que la créature s'autodétruise est improbable à 99\%, mais des suggestions formulées avec attention peuvent, selon l'estimation de l'arbitre, altérer cette probabilité. Les suggestions doivent être simples et relativement courtes, soit une phrase ou deux. Durée : une semaine de temps de jeu.\fg{} Sort de niveau 3 pour magicien, issu du supplément \texttt{Greyhawk} (NdT).
+}, mais il n'affectera pas les personnes très stupides ou hautement intelligentes. Pour chaque niveau de maîtrise, le possesseur est capable de toucher le même nombre de niveaux de créatures. Ainsi, au premier niveau de possession, l'individu n'est capable de toucher qu'une créature de niveau 1 ; au deuxième niveau de maîtrise, le possesseur est capable d'affecter 3 niveaux (1 + 2) ; au troisième niveau de maîtrise, le nombre de niveaux saute à 6 (1 + 2 + 3), et ainsi de suite. Le coût d'utilisation de cette aptitude est de 1 point de force psionique pour chaque niveau de créature affecté. Si l'intelligence de la créature sur laquelle l'aptitude est utilisée est entre 13 et 16, un jet de sauvegarde contre la magie est autorisé, et s'il est réussi, le pouvoir ne le touche pas. La suggestion post-hypnose aura  une chance cumulative de 5\% par jour de disparaître.
+
+\bigskip
+
+\textbf{Lévitation} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Clairaudience} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Clairvoyance} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Réduction} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Expansion} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Agitation moléculaire} : cette aptitude permet au possesseur de faire bouger les molécules d'une chose plus rapidement que la normale. Bien que seulement un petit nombre d'entre elles puisse être affecté, si l'agitation dure pendant dix tours, les effets suivants seront constatés :
+
+\medskip
+
+\begin{tabular}{p{8cm}p{8cm}}
+\textbf{Type de matériau} & \textbf{Effet} \\
+Papier, paille & feu avec flammes brillantes \\
+bois sec & le bois se consume \\
+chair & boursouflures* \\
+métal & chaud au toucher** \\
+\end{tabular}
+
+\bigskip
+
+* A chaque tour, la créature prendra 1 point de dommages, cumulatif (1, 2, 3, 4, etc.) si l'aptitude continue à être utilisée contre lui.
+
+\bigskip
+
+** Devient brûlant comme via le sort Chauffer le métal des druides, et refroidira à la même vitesse si l'attention de la personne munie de pouvoirs psioniques quitte l'objet.
+
+\bigskip
+
+Même si la quantité de matériau sur laquelle le possesseur de l'aptitude exerce son influence ne change pas avec des niveaux additionnels de maîtrise, le temps requis pour atteindre les effets décrits ci-dessus diminue de un tour tous les niveaux de maîtrise au dessus du premier. Noter que l'objet affecté doit être visible (cela inclut la clairvoyance) de l'individu psionique.
+
+\bigskip
+
+\textbf{Projection télépathique} : cette aptitude est assez similaire au pouvoir conféré par le heaume de télépathie. L'individu avec cette aptitude est capable d'envoyer des messages télépathiques à n'importe quelle personne  disposant de l'aptitude Perception extrasensorielle (qu'elle soit psionique ou magique). De plus, le possesseur de l'aptitude est capable d'influence un niveau de créature par niveau de maîtrise de l'aptitude. (Ainsi un troisième niveau de télépathie permet à l'utilisateur d'influence six niveaux de créatures, soit six créatures de niveau 1, ou une créature de niveau 6, ou n'importe quelle combinaison des six niveaux.)
+
+\bigskip
+
+Même les créatures basiquement stupides ou hautement intelligentes peuvent être influencées de manière télépathique. La portée du pouvoir est de 2m plus le niveau de maîtrise de l'individu, de manière cumulative (premier niveau = +30cm, deuxième niveau =+1m, troisième niveau = +2m, quatrième niveau = 3m, etc.); Au dixième niveau, la portée double. Note : un heaume de télépathie double le pouvoir et la portée de l'aptitude et octroie, en plus, au possesseur les effets d'un bonus de +4 sur son intelligence .
+
+\bigskip
+
+\textbf{Pémonition} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Porte dimensionnelle} : cette aptitude est exactement la même que le sort du même nom\footnote{
+\og Porte dimensionnelle : un sort de téléportation limitée qui permet à un objet d'être instantanément transporté jusqu'à 11m dans toutes les directions (incluant en haut et en bas). Il n'y a pas de risque de mauvaise évaluation quand on utilise une Porte Dimensionnelle, ainsi l'utilisateur arrive toujours où il souhaite, par exemple 4m au dessus, 11m à l'est, etc. Portée : 30cm. \fg{} Sort de niveau 4 pour magicien, extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).
+}, excepté que l'individu ayant des pouvoirs psioniques dépense des points de force psionique pour accomplir la téléportation limitée.
+
+\bigskip
+
+\textbf{Télékinésie} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Téléportation} : l'aptitude est exactement la même que le sort du même nom\footnote{
+\og Téléporter : transport instantané d'un endroit à un autre, quelque soit la distance impliquée, pourvu que l'utilisateur connaisse l'endroit où il veut aller (la topographie de la zone d'arrivée). Sans un savoir certain de la destination, la téléportation est incertaine à 75\%, ce qui implique qu'un score inférieur à 75\% sur un jet de pourcentage implique la mort. Si l'utilisateur connaît la topographie générale de sa destination, mais ne l'a pas étudiée avec attention, le facteur d'incertitude est de 10\% que la téléportation soit trop basse et de 10\% qu'elle soit trop haute. Un score bas (1--10\%) veut dire la mort si un matériau solide est impliqué. Un score élevé (91--100\%) indique une chute de 3 à 30 mètres, ce qui peut aussi causer la mort. Si une étude attentive de la destination a été faite auparavant, alors le magicien possède un risque de 1\% de se téléporter trop bas, et un risque de 4\% de se téléporter trop haut (3--12 mètres). \fg{} Sort de niveau 5 pour magicien, extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).
+}, excepté qu'elle coûte de l'énergie psionique à exécuter. Si de l'énergie psionique additionnelle est dépensée, la chance d'arriver trop bas ou trop haut est altérée proportionnellement ; ainsi, si 10 points additionnels sont dépensés dans la téléportation, les risques d'arriver top bas ou trop haut sont réduits de 5\% chacun.
+
+\bigskip
+
+\textbf{Projection astrale} : identique au pouvoir disponible pour les guerriers, excepté que des sorts peuvent être utilisés comme détaillé dans la description du \og sort astral \fg{}\footnote{
+\og Sort astral : un sort qui permet à l'utilisateur d'envoyer sa forme astrale, indétectable pour tous sauf pour ceux du plan astral, depuis son corps vers d'autres endroits. Noter qu'un sort ``Mot de pouvoir aveuglant'' ne pourrait pas empêcher ce sort et ne pourrait pas aveugler la forme astrale. Le magicien peut utiliser des sorts quand il est dans sa forme astrale, mais il y a 5\% de risques par niveau de sort que le sort échoue. Si le sort échoue, il y a un risque de 2\% par niveau de sort que le magicien soit forcé de retourner dans son corps. Exemple : un magicien du dix-huitième niveau dans sa forme astrale tente de jeter un sort du sixième niveau. Il y  30\% de chances que le sort échoue, et s'il échoue, il y a 12\% de chances qu'il soit obligé de réintégrer son corps. Si, pendant que le magicien a quitté son corps et se trouve dans le plan astral, son corps est bougé en dehors de la porté du sort ou détruit, la forme astrale du magicien est immédiatement envoyée pour bafouiller et hurler au plus bas niveau de l'enfer. Durée : dans les souterrains -- 12 tours ; à l'extérieur -- 8 heures de jeu. Portée : dans les souterrains -- 7m ; à l'extérieur -- 160km/niveau à partir du 18\textsuperscript{ème}. Mouvement du corps astral : dans les souterrains -- 4m/tour ; à l'extérieur 160km par heure de jeu depuis le 18\textsuperscript{ème} niveau.\fg{} Sort de niveau 9 pour magicien, issu du supplément \texttt{Greyhawk} (NdT)
+}.
+
+
+%reprendre ici
+
+Etherealness: This power confers the same ability as the magical potion of etherealness.
+The psionic actually alters his bodily vibrations to those of a different plane. Note that until this
+ability has been mastered for many levels it is not possible to carry many items, for the ethereal
+state extends only to equipment weight/encumbrance of 50 gold pieces per level of mastery.
+Ethereal individuals are affected by the psychic wind (detailed under astral projection) as fol-
+lows: There is a 1% chance that this wind will blow, and this must be checked each turn the
+individual is in ethereal form. If it does blow, the ethereal individual will not be killed, but the
+chance for him becoming lost is double, but at that point there is no longer any expenditure of
+psionic strength points to remain ethereal, for the individual is lost on the plane and will remain
+so for the amount of time decided by the dice roll.
+
+
+
+
+
+
+%================================================Test
+%TODO Désactiver la police Méga
+\begin{comment}
 \newpage
 \begin{center}
 {\color{orange}\MEGA{NEOMEGA}}
 \end{center}
+\end{comment}
 
 
 
@@ -959,7 +1099,7 @@ A chaque moment où une situation se présente durant laquelle une des possibili
 
 \bigskip
 
-\textbf{L'Egoïsme dans les relations au long cours avec l'utilisateur} : cette détermination est assez simple, car elle est basée sur la comparaison du score d'Egoïsme de l'épée (1--12) avec le niveau du combattant l'utilisant. Consultez la table des \myunderline{Situations Clef} ci-dessus. Si l'une des parties a une différence positive de 6 ou plus, celle-ci l'emportera toujours et plus aucun test (incluant les Situations Clef) ne sera nécessaire. Une différence positive de 2--5 indiquera que celle ayant le plus haut score l'emporte généralement, et les tests ne devront être effectués que dans les Situations Clef. Une différence de 0--1 indique un combat continu entre l'épée et son utilisateur, et durant les situations stressantes, les deux devraient être testés afin de déterminer qui l'emporte.
+\textbf{L'Egoïsme dans les relations au long cours avec l'utilisateur} : cette détermination est assez simple, car elle est basée sur la comparaison du score d'Egoïsme de l'épée (1--12) avec le niveau du guerrier l'utilisant. Consultez la table des \myunderline{Situations Clef} ci-dessus. Si l'une des parties a une différence positive de 6 ou plus, celle-ci l'emportera toujours et plus aucun test (incluant les Situations Clef) ne sera nécessaire. Une différence positive de 2--5 indiquera que celle ayant le plus haut score l'emporte généralement, et les tests ne devront être effectués que dans les Situations Clef. Une différence de 0--1 indique un combat continu entre l'épée et son utilisateur, et durant les situations stressantes, les deux devraient être testés afin de déterminer qui l'emporte.
 
 \end{minipage}
 \end{center}
@@ -983,7 +1123,7 @@ La capacité spéciale ne sera applicable que pour ceux que l'épée a été cha
 \medskip
 
 {\parindent1.5cm\begin{tabular}{p{4.6cm}p{4.6cm}p{4.6cm}}
-Tuer les magiciens & Tuer les combattants & Vaincre la Loi \\
+Tuer les magiciens & Tuer les guerriers & Vaincre la Loi \\
 Tuer les clercs & Tuer les monstres & Vaincre le Chaos \\
 \end{tabular}}
 
@@ -1041,11 +1181,15 @@ Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (cha
 
 \textbf{Expansion} : Expansion. Pouvoir psionique.
 
+\textbf{Fighting-man, fighting-men} : guerrier, guerriers. Certaines traductions proposent \og combattant \fg{} à la place, mais la traduction de guerrier nous a semblé plus proche des traductions habituelles de D\&D.
+
 \textbf{Hypnosis} : Hypnose. Pouvoir psionique.
 
 \textbf{Invisibility} : Invisibilité. Pouvoir psionique.
 
 \textbf{Levitation} : Lévitation. Pouvoir psionique.
+
+\textbf{Magic jar} : urne magique, utilisée dans les possessions.
 
 \textbf{Mass Domination} : Domination des masses. Pouvoir psionique.
 
