@@ -48,6 +48,19 @@
 % Set main font
 \setmainfont{Futura Std}
 
+\usepackage{hyperref}
+\hypersetup{
+pdfauthor={Olivier Rey},
+pdftitle={D\&D 0e - Pouvoirs psioniques},
+pdfkeywords={jdr,d\&d,0e},
+pdfsubject={jeu de rôles},
+pdfcreator={TexStudio for xetex},
+pdflang={French},
+colorlinks=true,
+linkcolor={blue},
+urlcolor={blue},
+}
+
 % Define light and dark Microsoft blue colours
 %- \definecolor{MSBlue}{rgb}{.204,.353,.541}
 %- \definecolor{MSLightBlue}{rgb}{.31,.506,.741}
@@ -84,6 +97,7 @@
 
 %Macro pour réduire l'espace sous le titre
 \newcommand{\myunderline}[1]{\underline{\smash{#1}}}
+
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %                               DOCUMENT
@@ -161,7 +175,7 @@ Couverture par Deborah Larson}
 
 \vfill
 
-\noindent {\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (https://rouboudou.itch.io) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan, gratuite et ne pouvant être vendue.}}
+\noindent{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (https://rouboudou.itch.io) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan, gratuite et ne pouvant être vendue.}}
 
 \newpage
 
@@ -896,34 +910,123 @@ Même les créatures basiquement stupides ou hautement intelligentes peuvent êt
 \bigskip
 
 \textbf{Projection astrale} : identique au pouvoir disponible pour les guerriers, excepté que des sorts peuvent être utilisés comme détaillé dans la description du \og sort astral \fg{}\footnote{
-\og Sort astral : un sort qui permet à l'utilisateur d'envoyer sa forme astrale, indétectable pour tous sauf pour ceux du plan astral, depuis son corps vers d'autres endroits. Noter qu'un sort ``Mot de pouvoir aveuglant'' ne pourrait pas empêcher ce sort et ne pourrait pas aveugler la forme astrale. Le magicien peut utiliser des sorts quand il est dans sa forme astrale, mais il y a 5\% de risques par niveau de sort que le sort échoue. Si le sort échoue, il y a un risque de 2\% par niveau de sort que le magicien soit forcé de retourner dans son corps. Exemple : un magicien du dix-huitième niveau dans sa forme astrale tente de jeter un sort du sixième niveau. Il y  30\% de chances que le sort échoue, et s'il échoue, il y a 12\% de chances qu'il soit obligé de réintégrer son corps. Si, pendant que le magicien a quitté son corps et se trouve dans le plan astral, son corps est bougé en dehors de la porté du sort ou détruit, la forme astrale du magicien est immédiatement envoyée pour bafouiller et hurler au plus bas niveau de l'enfer. Durée : dans les souterrains -- 12 tours ; à l'extérieur -- 8 heures de jeu. Portée : dans les souterrains -- 7m ; à l'extérieur -- 160km/niveau à partir du 18\textsuperscript{ème}. Mouvement du corps astral : dans les souterrains -- 4m/tour ; à l'extérieur 160km par heure de jeu depuis le 18\textsuperscript{ème} niveau.\fg{} Sort de niveau 9 pour magicien, issu du supplément \texttt{Greyhawk} (NdT)
+\og Sort astral : un sort qui permet à l'utilisateur d'envoyer sa forme astrale, indétectable pour tous sauf pour ceux du plan astral, depuis son corps vers d'autres endroits. Noter qu'un sort ``Mot de pouvoir aveuglant'' ne pourrait pas empêcher ce sort et ne pourrait pas aveugler la forme astrale. Le magicien peut utiliser des sorts quand il est dans sa forme astrale, mais il y a 5\% de risques par niveau de sort que le sort échoue. Si le sort échoue, il y a un risque de 2\% par niveau de sort que le magicien soit forcé de retourner dans son corps. Exemple : un magicien du dix-huitième niveau dans sa forme astrale tente de jeter un sort du sixième niveau. Il y  30\% de chances que le sort échoue, et s'il échoue, il y a 12\% de chances qu'il soit obligé de réintégrer son corps. Si, pendant que le magicien a quitté son corps et se trouve dans le plan astral, son corps est bougé en dehors de la porté du sort ou détruit, la forme astrale du magicien est immédiatement envoyée pour bafouiller et hurler au plus bas niveau de l'enfer. Durée : dans les souterrains -- 12 tours ; à l'extérieur -- 8 heures de jeu. Portée : dans les souterrains -- 7m ; à l'extérieur -- 160km/niveau à partir du 18\textsuperscript{ème}. Mouvement du corps astral : dans les souterrains -- 4m/tour ; à l'extérieur 160km par heure de jeu depuis le 18\textsuperscript{ème} niveau.\fg{} Sort de niveau 9 pour magicien, issu du supplément \texttt{Greyhawk} (NdT).
 }.
 
 \bigskip
 
 \textbf{Forme éthérée} : ce pouvoir confère la même aptitude que la potion magique de forme éthérée\footnote{
-\og Huile éthérée : quand l'utilisateur est oint de cette substance, il est est capable de traverser des substance solides comme il le souhaite, comme s'il revêtait l'Armure Ethérée. Noter que quand l'utilisateur est ainsi oint, il n'est pas capable de manipuler des objets normaux car ses mains leur passent au travers.
+\og Huile éthérée : quand l'utilisateur est oint de cette substance, il est est capable de traverser des substance solides comme il le souhaite, comme s'il revêtait l'Armure Ethérée. Noter que quand l'utilisateur est ainsi oint, il n'est pas capable de manipuler des objets normaux car ses mains leur passent au travers. \fg{} Potion issue du supplément \texttt{Greyhawk} (NdT).
 }. En fait, la personne psionique altère les vibrations de son corps pour les aligner avec celles d'un autre plan. Noter que tant que cette aptitude n'est pas maîtrisé depuis plusieurs niveaux, il n'est pas possible de porter beaucoup de choses, car l'état éthéré d'étend uniquement à un poids d'équipement/encombrement de 50 pièces d'or par niveau de maîtrise. Les individus éthérés sont affectés par le vent psychique (détaillé dans le paragraphe Projection astrale) comme suit : la chance que le vent souffle est de 1\%, et cela doit être testé à tous tours durant lesquels l'individu est dans sa forme éthérée. S'il souffle, l'individu éthéré ne sera pas tué, mais la chance qu'il a d'être perdu est \textbf{doublée}. A ce moment, il n'y a plus de dépense de points de force psionique pour rester éthéré, car l'individu est perdu dans le plan et le restera pour un temps décidé par le jet de dés.
 
 \bigskip
 
-\textbf{Altération de la forme} : 
+\textbf{Altération de la forme} : ce pouvoir est assez similaire avec le sort de métamorphisme\footnote{
+\og Métamorphose : Un sort permettant à l'utilisateur de prendre la forme de ce qu'il souhaites, mais il ne pourra pas acquérir les compétences de combat de la chose dans laquelle il s'est métamorphosé. C'est-à-dire, si l'utilisateur se transformait dans un dragon d'un type particulier, il ne gagnerait pas les aptitudes de combat ou de souffle, mais il pourrait voler. Durée : 6 tours + le niveau du magicien qui emploie le sort. \fg{} Sort de niveau 4 pour magicien, extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).
+}. Le possesseur est capable d'altérer sa forme en presque n'importe quoi, mais il n'y a pas de gain correspondant aux caractéristiques de la forme assumée -- ni de perte de compétences de la personne qui a altéré sa forme. Le coût basique est de 5 points d'énergie psionique pour changer sa forme, avec des changements extrêmes en taille, masse ou composition moléculaire, coûtant de manière additionnelle :
 
+\bigskip
 
-Shape Alteration: This power is quite similar to the spell for polymorphing self. The pos-
-sessor is able to alter his shape to nearly anything desired, but there is no corresponding gain
-of the characteristics of the shape assumed — nor is there a loss of the abilities of the person
-who has altered his shape. There is a basic cost of 5 psionic energy points to alter shape, with
-extreme alterations in size, mass, or molecular composition costing additionally:
-Example of Extreme Alteration
-Weight change of +/– 1,000 gold pieces weight
-Change to vegetable material*
-Change to mineral material*
-Psionic Cost
-2 points/1,000
-10 points
-50 points
-*the change back to animal material is correspondingly charged in psionic strength points
+\begin{tabular}{p{10cm}l}
+\textbf{Exemple d'altération extrême} & \textbf{Coût psionique} \\
+Changement de poids de +/- 1000 pièces d'or (poids) & 2 points/1000 \\
+Changement en végétal* & 10 points \\
+Changement en minéral & 50 points \\
+\end{tabular}
+
+\bigskip
+
+* Le changement dans l'autre sens vers le monde animal est chargé de la même façon en points de force psionique.
+
+\subsubsection*{Clercs}
+
+\textbf{Détection du Mal/du Bien} : identique à l'aptitude des magiciens.
+
+\bigskip
+
+\textbf{Empathie} : cette aptitude permet au possesseur de ressentir les émotions basiques ou les besoins de n'importe quelle créature consciente. C'est-à-dire qu'il peut sentir l'amour, la haine, l'hostilité, l'amitié, la rage, la peur, la curiosité, le doute, la faim, la soif, et ainsi de suite. La portée de cette aptitude est seulement de 60cm au premier niveau de maîtrise, mais avec chaque niveau de progression, le possesseur est capable d'étendre son aptitude de 60cm, si bien qu'au troisième niveau de maîtrise, il peut être empathique dans un rayon d'environ 2m.
+
+\bigskip
+
+\textbf{Lévitation} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Hypnose} : identique à l'aptitude des magiciens.
+
+\bigskip
+
+\textbf{Domination} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Perception extrasensorielle} : identique à l'aptitude des magiciens.
+
+\bigskip
+
+\textbf{Ajustement cellulaire} : cette aptitude permet au possesseur de soigner les blessures et les maladies. Le coût en points de force psionique pour soigner les blessures est de 2 points pour un point de dommages. Le coût pour soigner les maladies est une base de 20 points pour les maladies mineures, et doit être ajusté à la hausse par l'arbitre pour les maladies sévères ou les cas avancés. De plus, le nombre de points de dommages qui peuvent être soignés pendant une période de 24 heures par le possesseur de cette aptitude est dicté par le niveau de maîtrise qu'il possède ; pour chaque niveau, il gagne la possibilité de soigner 10 points, ce qui veut dire, par exemple, qu'au second niveau de maîtrise, jusqu'à 20 points de dommages peuvent être soignés (avec un coût en points de force psionique égal à 40, bien entendu).
+
+\bigskip
+
+\textbf{Contrôle de l'esprit sur le corps} :  identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Changer le poids du corps} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Télépathie animale} : cette aptitude donne au possesseur le pouvoir de communiquer avec des créatures conscientes par contact mental direct, mais elle ne permet pas de commander ou d'influencer la créature avec qui est établie la communication. L'aptitude dépend du niveau de maîtrise de la personne dotée du pouvoir :
+
+\bigskip
+
+\begin{tabular}{>{\centering\arraybackslash}p{8cm}>{\centering\arraybackslash}p{7cm}}
+\textbf{Niveau de maîtrise} & \textbf{Peut communiquer avec} \\
+premier & mammifères \\
+deuxième & oiseaux \\
+troisième & reptiles \& amphibiens \\
+quatrième & poissons et créatures similaires \\
+cinquième & insectes \\
+sixième & animaux \og monstrueux \fg \\
+septième & plantes \\
+\end{tabular}
+
+\bigskip
+
+\textbf{Réarrangement moléculaire} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Altération de l'aura} : cette aptitude est étroitement reliée au sort Délivrance des malédictions\footnote{
+\og Délivrance des malédictions : un sort pour supprimer n'importe quelle malédiction ou envoi maléfique. Noter qu'utiliser ce sort sur une \og épée maudite \fg{}, par exemple, transformerait l'arme en une épée ordinaire et non dans une forme de lame enchantée. Portée : adjacent à l'objet. \fg{} Sort de niveau 4 pour magicien, extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).
+}
+en ce qu'une malédiction placée sur quelque chose ou quelqu'un se distingue facilement par son aura. L'individu possédant cette aptitude est capable de reconnaître l'aura défavorable et de l'altérer, mais le coût de la reconnaissance est de 1 point de force psionique par niveau de malédiction, et l'altération ne peut être faite qu'au coût additionnel de 5 points de force par niveau de malédiction.
+
+\bigskip
+
+\textbf{Prémonition} : identique à l'aptitude des magiciens.
+
+\bigskip
+
+\textbf{Projection télépathique} : cette aptitude est étroitement reliée à la projection télépathique des magiciens, excepté que le possesseur est capable d'envoyer des suggestions d'émotions basiques à deux fois le nombre de niveaux de créatures équivalent au nombre de suggestions/messages télépathiques capables d'être envoyés.% Qu'est-ce que ça veut dire ?
+Le heaume de télépathie augmente la capacité télépathique de la même manière qu'il permet de faire de la télépathie.
+
+\bigskip
+
+\textbf{Marche dimensionnelle} : identique à l'aptitude des guerriers.
+
+\bigskip
+
+\textbf{Projection astrale} : identique à l'aptitude des magiciens.
+
+\bigskip
+
+\textbf{Domination des masses} : cette aptitude permet au possesseur d'utiliser sa capacité de domination sur de multiples individus. Le coût en points de force psionique est le même que celui utilisé pour Domination, mais cette aptitude permet au possesseur d'exercer sa dominance de manière continue après la dépense initiale, et une dépense continue n'est pas nécessaire. La domination de masse ne causera jamais d'acte entièrement contre la volonté collective dans tous les cas de figure. Les possibles niveaux influencés et la durée de cette domination dépendent tous deux du niveau de maîtrise de l'individu qui possède cette aptitude. Pour chaque niveau de maîtrise possédé, l'individu est capable de dominer 5 niveaux de créatures pour 2 tours, et au septième niveau de maîtrise, la période de domination devient une semaine entière, et ensuite, la période est étendue d'une semaine par niveau additionnel de maîtrise. Noter que les créatures extrêmement intelligentes ne peuvent être dominées, tout comme celles avec des personnalités très fortes ne peuvent pas être dominées avec succès pour une durée quelconque.
+
+\bigskip
+
+\textbf{Voyage probabiliste} : au moyen de cette aptitude, le possesseur est capable de pénétrer dans des mondes parallèles et entrer dans les plans différents. Cela est extrêmement dangereux néanmoins, car cela correspond à de la projection astrale avec l'enveloppe corporelle. Le vent psychique affecte le voyageur probabiliste, comme s'il se projetait dans l'espace. Pour chaque probabilité ou plan croisé, 10 points d'énergie sont dépensés de manière psionique. Le voyageur est capable d'entrer en communion avec des pouvoirs amicaux, par exemple -- ou risquer d'entrer dans des plans hostiles à son alignement, ou tenter d'explorer les probabilités suivant une ligne de conduite faite sienne.
+
 
 
 %================================================Test
@@ -943,7 +1046,9 @@ Psionic Cost
 \newpage
 \section*{Monstres \& Trésors}
 
-\subsection*{\underline{EPEES}}
+\subsection*{\underline{EXPLICATIONS DES OBJETS MAGIQUES}}
+
+\subsubsection*{\underline{EPEES}}
 {\parindent0pt
 
 Parmi les armes magiques, seules les épées possèdent certains attributs humains (et surhumains) ; les épées ont un \myunderline{Alignement} (Loyal, Neutre ou Chaotique), un facteur d'\myunderline{Intelligence}, et un score d'\myunderline{Egoïsme} (ainsi qu'une détermination optionnelle de leur \myunderline{origine/objectif}). Ces déterminations sont faites de la manière suivante :
@@ -1142,7 +1247,33 @@ Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (cha
 \bigskip
 
 \myunderline{\textbf{EPEES, BONUS AUX DOMMAGES}} : Les épées reçoivent toutes des bonus pour ce qui est de la probabilité de toucher un opposant, mais certaine sd'entre elles reçoivent aussi un bonus aux dommages quand elles touchent. Ces épées sont celles qui ont un +2 ou +3 contre certaines créatures, mais pas celles qui ont un bonus général de +2 ou +3.
+
+\subsubsection*{\underline{DIVERS OBJETS MAGIQUES}}
+
+\textbf{Heaume de télépathie} : permet au porteur de lire les pensées de toute créature dans un rayon de 3m. Si son Intelligence est plus grande que la créature humaine ou humanoïde dans la portée du heaume, le porteur peut tenter de contrôler leur esprit avec des suggestions implantées de manière télépathique. De telles suggestions auront un effet de +2 dans leur probabilité d'être suivies (voir Vol. III pour les actions aléatoires des monstres\footnote{Voir section \og Actions aléatoires par monstre \fg{} de ce document.}). Pour les personnages du jeu, faites un jet de pourcentage en ajoutant 10\% au porteur du heaume, et si le personnage échoue à battre son score,%Quel score?
+il suivra la suggestion. (L'arbitre doit utiliser son jugement dans ce cas, car une suggestion de tuer quelqu'un ne devrait pas avoir de chances d'être suivie par un événement.) Traiter comme un heaume non protégeant si le casque est porté en mêlée.
+
 }% parindent
+
+%==========================================================================SECTION
+\newpage
+\section*{Aventures dans le monde souterrain \& dans les régions sauvages}
+
+\subsection*{LES MONSTRES DU MONDE SOUTERRAIN}
+
+\textbf{Actions aléatoires par monstre} : dans les autres situations qu'en poursuite, les plus intelligents des monstres agiront de manière aléatoire, en accord avec les résultats obtenus en faisant un jet de deux dés (à six faces) :
+
+\bigskip
+
+{\parindent6cm \begin{tabular}{cl}
+2--5 & réaction négative \\
+6--8 & réaction incertaine \\
+9--12 & réaction positive \\
+\end{tabular}}
+
+\medskip
+
+Le score aux dés peut être modifié par des additions ou des soustractions pour des choses telles que des pots-de-vin offerts, la peur, l'alignement des parties concernées, etc.
 
 
 %==========================================================================SECTION
@@ -1163,7 +1294,7 @@ Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (cha
 
 \textbf{Body Weaponry} : Corps comme arme. Pouvoir psionique.
 
-\textbf{Cell adjustment} : Contrôle cellulaire. Pouvoir psionique.
+\textbf{Cell adjustment} : Ajustement cellulaire. Pouvoir psionique.
 
 \textbf{Clairaudience} : Clairaudience. Pouvoir psionique.
 
@@ -1210,6 +1341,8 @@ Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (cha
 \textbf{Molecular Manipulation} : Manipulation moléculaire. Pouvoir psionique.
 
 \textbf{Molecular Rearrangement} : Réarrangement moléculaire. Pouvoir psionique.
+
+\textbf{Polymorphing self} : Métamorphisme. Sort de magicien.
 
 \textbf{Precognition} : Prémonition. Pouvoir psionique.
 
