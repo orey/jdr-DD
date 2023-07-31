@@ -3,6 +3,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
+\hyphenation{person-nage person-nages-joueurs}
 
 \usepackage{comment}
 
@@ -35,9 +36,9 @@
 
 %TODO Choisir pour le PC 32 ou 64 bits
 % Pour le PC 64 bits
-%\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
+\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
 % Pour le PC 32 bits
-\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
+%\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
 
 %- \usepackage{xcolor}
 \usepackage{titlesec}
@@ -207,17 +208,22 @@ Comme vous pourrez le noter sur la page de titre, ce supplément est le fruit de
 
 \section*{Introduction}
 
-Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dans une nouvelle de science-fiction écrite par Jack Williamson, \texttt{The Greatest Invention}, publié dans le magazine \texttt{Astounding Science Fiction}. Il est la compression de deux deux termes, \texttt{psi} dans le sens de phénomène psychique et \texttt{electronics}. \texttt{Psionics} devient un terme décrivant la discipline qui étudie les phénomènes psychiques avec les moyens de l'ingénierie moderne de l'époque, soit l'électronique. Malgré la promotion de personnes comme John W. Campbell, le terme restera utilisé uniquement dans le monde de la science-fiction, avant d'être intégré dans le monde des jeux de rôles.
+Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dans une nouvelle de science-fiction écrite par Jack Williamson, \texttt{The Greatest Invention}, publié dans le magazine \texttt{Astounding Science Fiction}. Il est la compression de deux termes : \texttt{psi} dans le sens de phénomène psychique, et \texttt{electronics}. \texttt{Psionics} devient un terme décrivant la discipline qui étudie les phénomènes psychiques avec les moyens de l'ingénierie moderne de l'époque, soit l'électronique. Malgré la promotion de personnes comme John W. Campbell, le terme restera utilisé uniquement dans le monde de la science-fiction, avant d'être intégré dans le monde des jeux de rôles.
 
-La version originale de Donjons \& Dragons, dite OD\&D, est publiée en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le second livret, \texttt{Monsters and Treasures}, les premières références à des pouvoirs psychiques, dans la section traitant des épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
+La version originale de Donjons \& Dragons, dite OD\&D, est publiée en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le premier livret, \texttt{Men \& Magic}, un certain nombre de sorts ressemblant à des pouvoirs psychiques, et dans le deuxième, \texttt{Monsters \& Treasures}, les premières références à des pouvoirs psychiques, dans la section traitant des épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
 
 En 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentées de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer, en extension à un jeu médiéval-fantastique, une gestion des pouvoirs mentaux, habituellement présents dans les univers de science-fiction.
 
-Nous proposons ici une double présentation des règles psioniques du supplément \texttt{Eldritch Wizardry} : le premier chapitre propose les règles originales traduites le plus fidèlement possible ; le chapitre suivant propose une réorganisation de ces règles visant à les présenter de manière plus claire et plus logique. La consultation de certains sites américains a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
+Nous proposons ici une double présentation des règles psioniques du supplément \texttt{Eldritch Wizardry} :
 
-Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très "gygaxien" (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de psioniques proposant une façon nouvelle de voir les pouvoirs, très différente de la magie de OD\&D, façon qui inspirera beaucoup d'autres systèmes de pouvoirs dont l'utilisation est basée sur la consommation de points.
+\begin{itemize}
+\item La première partie propose les règles originales traduites le plus fidèlement possible ; cette partie inclue toutes les références que l'on trouve dans la partie sur les pouvoirs psioniques sur les règles adjacentes (sorts, objets magiques, potion, système alternatif de combat) ;
+\item la seconde partie propose une réorganisation de ces règles visant à les présenter de manière plus claire et plus logique.
+\end{itemize}
 
-Dans la partie \texttt{Monstres et Trésors}, nous proposons une traduction des règles concernant les épées magiques (psioniques), règles extraites du second livret, \texttt{Monsters and Treasures}, de OD\&D.
+La consultation de certains sites américains a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
+
+Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très "gygaxien" (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de psioniques proposant une façon nouvelle de voir les aptitudes psioniques, très différente de la magie de OD\&D, façon qui inspirera beaucoup d'autres systèmes de pouvoirs dont l'utilisation est basée sur la consommation de points.
 
 \vspace{1cm}
 
@@ -240,11 +246,11 @@ Dans la partie \texttt{Monstres et Trésors}, nous proposons une traduction des 
 
 {\parindent0pt
 
-Il existe une catégorie spéciale de personnages qui traverse les quatre classes majeures de personnages-joueurs. Ceux qui possèdent des \textbf{capacités psioniques} peuvent être trouvés parmi les guerriers, les magiciens, les clercs et même les voleurs.
+Il existe une catégorie spéciale de personnages qui traverse les quatre classes majeures de person-nages-joueurs. Ceux qui possèdent des \textbf{capacités psioniques} peuvent être trouvés parmi les guerriers, les magiciens, les clercs et même les voleurs.
 
 \bigskip
 
-Plus de détails concernant les capacités psioniques et comment déterminer sur ce potentiel existe seront trouvés dans la section \textbf{DETERMINATION DES CAPACITES}.
+Plus de détails concernant les capacités psioniques et comment déterminer sur ce potentiel existe seront trouvés dans la section \textbf{DETERMINATION DES APTITUDES}.
 
 \bigskip
 
@@ -272,7 +278,7 @@ Les \textbf{clercs} ayant des aptitudes psioniques gagnent aussi l'avantage de p
 
 \bigskip
 
-Les \textbf{voleurs} qui ont un potentiel psychique avéré sont sujets aux mêmes avantages que ceux gagnés par les guerriers. Néanmoins, en plus des pénalités notées pour les guerriers, les voleurs perdent aussi 1 point de dextérité toutes les quatre aptitudes gagnées.
+Les \textbf{voleurs} qui ont un potentiel psychique avéré sont sujets aux mêmes avantages que ceux gagnés par les guerriers. Néanmoins, en plus des malus notés pour les guerriers, les voleurs perdent aussi 1 point de dextérité toutes les quatre aptitudes gagnées.
 
 \subsection*{{\normalsize DETERMINATION DES APTITUDES :}}
 
@@ -282,11 +288,11 @@ Après que les six caractéristiques normales ont été tirées, et que le joueu
 
 \bigskip
 
-\textbf{Bonus et pénalité à l'avancement dus aux aptitudes :}
+\textbf{Bonus et malus à l'avancement dus aux aptitudes :}
 
 \bigskip
 
-Les personnages-joueurs avancent en niveaux comme indiqué par leur classe et leur caractéristique principale. La capacité psionique, néanmoins, est affecté par le potentiel psychique. Un second jet de dés doit être fait pour déterminer ce niveau, ainsi que les bonus et pénalités afférents :
+Les personnages-joueurs avancent en niveaux comme indiqué par leur classe et leur caractéristique principale. La capacité psionique, néanmoins, est affectée par le potentiel psychique. Un second jet de dés doit être fait pour déterminer ce niveau, ainsi que les bonus et malus afférents :
 
 \bigskip
 
@@ -295,7 +301,7 @@ Les personnages-joueurs avancent en niveaux comme indiqué par leur classe et le
 \bigskip
 
 \begin{tabular}{p{3cm}l}
-\textbf{Score} & \textbf{Bonus ou pénalité} \\
+\textbf{Score} & \textbf{Bonus ou malus} \\
 \textbf{des dés} & \textbf{Chance de gagner une aptitude} \\
 01--10 & --6\%/niveau cumulatif \\
 11--25 & --5\%/niveau cumulatif \\
@@ -308,23 +314,23 @@ Les personnages-joueurs avancent en niveaux comme indiqué par leur classe et le
 
 \bigskip
 
-Si un personnage a une pénalité de --4\%, sa chance de base de gagner une aptitude sera de 6\% au lieu de 10\%\footnote{La chance de base est de 10\% par niveau, de manière cumulative (NdT).}. De même, si son bonus est de 3\%, sa chance de base par niveau sera de 13\%, si bien qu'au niveau 3, la chance de gagner une aptitude psionique sera de 39\%.
+Si un personnage a un malus de --4\%, sa chance de base de gagner une aptitude sera de 6\% au lieu de 10\%\footnote{La chance de base est de 10\% par niveau, de manière cumulative (NdT).}. De même, si son bonus est de 3\%, sa chance de base par niveau sera de 13\%, si bien qu'au niveau 3, la chance de gagner une aptitude psionique sera de 39\%.
 
 \bigskip
 
 \textbf{Bonus} : si une aptitude psionique est gagnée, la chance de gagner immédiatement une seconde aptitude est égale au potentiel psychique du personnage.
 
-\begin{center}
-\includegraphics[scale=0.17]{./images/demon-typeVI.jpg}
-\end{center}
-
 \subsection*{\normalsize NIVEAUX ET POINTS D'EXPERIENCE POUR LES ATTEINDRE}
 
-Les personnages-joueurs possédant des aptitudes psioniques progressent de la façon standard dans le type de personnage qu'ils ont choisi au départ. Néanmoins, à partir du niveau~1, ils ont la possibilité d'acquérir une aptitude de type psionique. Les aptitudes psioniques sont listées dans la section \textbf{SORTS}. La probabilité de gagner une aptitude est de 10\% par niveau d'expérience, de sorte qu'un personnage de niveau 1 dispose d'une chance de 10\% d'avoir une aptitude psionique, un personnage de niveau 2 aura 20\% de chances, et ainsi de suite jusqu'au personnage de niveau 10ayant 100\% de chances.
+Les personnages-joueurs possédant des aptitudes psioniques progressent de la façon standard dans le type de personnage qu'ils ont choisi au départ. Néanmoins, à partir du niveau~1, ils ont la possibilité d'acquérir une aptitude de type psionique. Les aptitudes psioniques sont listées dans la section \textbf{SORTS}. La probabilité de gagner une aptitude est de 10\% par niveau d'expérience, de sorte qu'un personnage de niveau 1 dispose d'une chance de 10\% d'avoir une aptitude psionique, un personnage de niveau 2 aura 20\% de chances, et ainsi de suite jusqu'au personnage de niveau 10 ayant 100\% de chances.
 
 \bigskip
 
 La sélection de l'aptitude de type psionique est faite aléatoirement, mais si le sort indique une aptitude déjà possédée, il est nécessaire de rejouer  jusqu'à ce qu'une aptitude non possédée par le personnage soit tirée. Quand le personnage dispose de 100\% de chances de gagner une aptitude (10\textsuperscript{ème} niveau), le personnage peut choisir n'importe quelle aptitude quand il gagne un niveau d'expérience.
+
+\begin{center}
+\includegraphics[scale=0.17]{./images/demon-typeVI.jpg}
+\end{center}
 
 \subsection*{\normalsize COMBAT PSIONIQUE}
 
@@ -352,6 +358,8 @@ E. & Écrasement psychique (25*)   && J. & Tour de volonté de fer (10) \\
 \multicolumn{5}{p{15cm}}{(Le coût d'utilisation en points de force psionique est montré entre parenthèses)} \\
 \multicolumn{5}{p{15cm}}{*Si le joueur possède moins de points, altérer la probabilité de succès en \% en conséquence} \\
 \end{tabular}}
+
+\bigskip
 
 Tout personnage doué de pouvoirs psychiques gagne immédiatement son premier mode d'attaque (onde de choc psionique) dès qu'il gagne sa première aptitude. Les aptitudes devraient être sélectionnées aléatoirement, mais un personnage ne devrait \textbf{jamais} avoir plus d'aptitudes supérieures que d'aptitudes basiques. Dans la sélection aléatoire, il est suggéré de mettre un poids supérieur aux probabilités de gain d'aptitudes liées à des aptitudes déjà possédées, par exemple empathie augmenterait les chances de gagner ESP, télépathie animale et projection télépathique. Les modes d'attaques additionnels sont gagnés à hauteur de un à chaque quatre aptitudes (cinq pour les guerriers). La force psionique totale est deux fois la force d'attaque psionique (ou la force psionique d'attaque et de défense additionnées).Pour les détails sur la restauration des points de force psionique, se référer à la section FORCE PSIONIQUE. %TODO vérifier que cette section existe
 
@@ -437,6 +445,8 @@ Note : & L'attaque Coup de fouet sur l'ego qui donne un résultat "D" veut dire 
 
 \bigskip
 
+\newpage
+
 AJUSTEMENTS AU JET DE SAUVEGARDE :
 
 \medskip
@@ -464,7 +474,7 @@ Un heaume de télépathie porté par le défenseur \textbf{étourdira} l'attaqua
 
 \subsection*{\normalsize MATRICE B : COMBAT PSIONIQUE COMPLET, AVEC DOMMAGES}
 
-\begin{tabular}{clccccc}
+\begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
 \small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
 \small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
 \small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
@@ -493,7 +503,7 @@ Un heaume de télépathie porté par le défenseur \textbf{étourdira} l'attaqua
 90 & Écrasement & 10\% & 06\% & 04\% & 01\% & -  \\
 \end{tabular}
 
-\begin{tabular}{clccccc}
+\begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
 \small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
 \small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
 \small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
@@ -1062,7 +1072,7 @@ Le heaume de télépathie augmente la capacité télépathique de la même mani�
 
 \subsection*{SYSTEME DE COMBAT ALTERNATIF}
 
-Pour ceux qui voudraient inclure les types d'armes dans la détermination des probabilités de toucher, le tableau suivant, extrait de la section \og combat en mêlée \fg{} de CHAINMAIL est offert. Si ce système est utilisé, il est suggéré d'employer le tableau des dommages par type d'arme et type de monstre.
+Pour ceux qui voudraient inclure les types d'armes dans la détermination des probabilités de toucher, le tableau suivant, extrait de la section \og combat en mêlée \fg{} de CHAINMAIL est offert\footnote{Toute cette partie est extraite du supplément \texttt{Greyhawk} (NdT).}. Si ce système est utilisé, il est suggéré d'employer le tableau des dommages par type d'arme et type de monstre.
 
 Traiter les Voleurs et Clerc en termes d'avancement en paliers -- quatre niveaux/groupe (1--4, 5--8, 9--12, etc.). En ce qui concerne les jets de sauvegarde, traiter les Voleurs comme des magiciens.
 
@@ -1087,10 +1097,10 @@ Arme d'hast*      & -1 &  0 &  0 & +1 & +1 & +2 & +2 & +2 \\
 Hallebarde*       &  0 & +1 & +1 & +2 & +1 &  0 &  0 &  0 \\
 Epée à deux mains & +1 & +2 & +3 & +3 & +2 & +2 & +2 & +2 \\
 Lance de tournoi  &  0 &  0 & +1 & +2 & +3 & +3 & +3 & +3 \\
-Pique             & -1 &  0 &  0 &  0 &  0 &  0 &  0 &  0 \\   
+Pique             & -1 &  0 &  0 &  0 &  0 &  0 &  0 &  0 \\
 \multicolumn{9}{l}{..................} \\
-Arc court (15)       & \footnotesize-3-5-7 & \footnotesize-2-3-5 & \footnotesize0-1-2 
-& \footnotesize0 0-1 & \footnotesize+1 0 0 & \footnotesize+2+1 0 
+Arc court (15)       & \footnotesize-3-5-7 & \footnotesize-2-3-5 & \footnotesize0-1-2
+& \footnotesize0 0-1 & \footnotesize+1 0 0 & \footnotesize+2+1 0
 & \footnotesize+2+1 0 & \footnotesize+2+1 0 \\
 Arc monté (18)       & \footnotesize-3-4-7 & \footnotesize-2-3-5 & \footnotesize0-1-2 & \footnotesize0 0-1 & \footnotesize+1 0 0 & \footnotesize+2+1 0 & \footnotesize+2+1 0 & \footnotesize+3+2+1 \\
 Petite arbalète (18) & \footnotesize-3-5-7 & \footnotesize-2-3-5 & \footnotesize0-1-4 & \footnotesize0 0-1 & \footnotesize+2+1 0 & \footnotesize+3+1 0 & \footnotesize+3+1 0 & \footnotesize+3+2+1 \\
@@ -1118,41 +1128,205 @@ astérisques &&&&&& \\
 
 {\parindent2cm \parbox{14.5cm}{Les nombres entre parenthèses sont les portées maximales, et les nombres montrés sont pour les portées courte (premier tiers de la portée), moyenne (tiers suivant de la portée) et longue (dernier tiers de la portée).}}
 
-\bigskip
+\begin{center}
+\includegraphics[width=0.8\linewidth]{./images/black-pudding.png}
+\end{center}
 
 \subsubsection*{Dommages causés par type d'armes :}
 
 Si le système de dommage variables par type d'armes est utilisé, les divers monstres devront aussi être sujets à recevoir des points de dommages additionnels ou des dés de dommages. (Voir \textbf{Attaques et dommages par type de monstre}).
 
-\begin{center}
-\includegraphics[width=0.8\linewidth]{./images/black-pudding.png}
-\end{center}
-
 \bigskip
 
 \begin{tabular}{lccc}
-&& \textit{-Opposants} & \textit{-Opposants} \\
-\textit{Type d'armes} & \textit{vs.-} & \textit{taille humaine} & \textit{plus grands} \\
-Dague                          & 
-Hache à main                   & 
-Masse, piolet, marteau de nain &
-Epée                           & 
-Hache de bataille*             & 
-Masse à pointes** &
-Fléau d'armes *** &
-Lance, lancée/enfoncée & 
-Lance, enfoncée contre charge & 
-Lance, posée contre charge &
-Armes d'hast**** &
-Hallebarde*** &
-Epée à deux mains*** &
-Lance de tournoi &
-Pique**** &
-Flèche ou carreau &
-Pierre de fronde & 
+\textit{Type d'armes} & \textit{contre-} & \textit{-Opposants taille humaine-} & \textit{-Opposants plus grands-} \\
+Dague                          && 1--4 points  & 1--3 points \\
+Hache à main                   && 1--6 points  & 1--4 points \\
+Masse, piolet*, marteau de nain && 1--6 points  & 1--4 points \\
+Epée                           && 1--8 points  & 1--12 points \\
+Hache de bataille*             && 1--8 points  & 1--8 points \\
+Masse à pointes**              && 1--8 points  & 1--6 points \\
+Fléau d'armes ***              && 1--8 points  & 1--8 points \\
+Lance, lancée/enfoncée         && 1--6 points  & 1--8 points \\
+Lance, enfoncée contre charge  && 1--8 points  & 2--12 points \\
+Lance, posée contre charge     && 1--10 points & 2--16 points \\
+Armes d'hast****               && 1--8 points  & 1--12 points \\
+Hallebarde***                  && 1--10 points & 2--12 points \\
+Epée à deux mains***           && 1--10 points & 3--18 points \\
+Lance de tournoi               && 1--8 points  & 2--24 points \\
+Pique****                      && 1--8 points  & 1--12 points \\
+Flèche ou carreau              && 1--6 points  & 1--6 points \\
+Pierre de fronde               && 1--4 points  & 1--6 points \\
+\end{tabular}
+
+\begin{tabular}{rp{15cm}}
+\multicolumn{1}{r}{*} & l'arme requiert au moins 1.2m d'espace de chaque côté du porteur \\
+\multicolumn{1}{r}{**} & l'arme requiert au moins 1.5m d'espace de chaque côté du porteur \\
+\end{tabular}
+
+\begin{tabular}{rp{15cm}}
+\multicolumn{1}{r}{***} & l'arme requiert au moins 1.8m d'espace de chaque côté du porteur \\
+\multicolumn{1}{r}{****} & la règle générale est que ces armes ne sont pas utilisables dans les donjons en raison de leur longueur \\
+\end{tabular}
+
+\subsubsection*{Attaques et dommages par type de monstre}
+
+Ce système doit être utilisé avec les dommages variables par arme et, en aucun cas, il n'est recommandé de l'utiliser sans la mécanique susmentionnée.
+
+\bigskip
+
+\begin{tabular}{p{4cm}>{\raggedright\arraybackslash}p{5cm}>{\raggedright\arraybackslash}p{6.5cm}}
+\textit{Type de monstre} && \textit{Points de dommages} \\
+\hspace{0.5cm}\textit{attaquant} & \textit{Nombre d'attaques} & \hspace{0.5cm}\textit{par attaque} \\
+Homme & 1 ou 2 & Dépend du type d'arme \\
+Gobelin/Kobold & 1 & 1--4 ou par type d'arme \\
+Orc & 1 & 1--6 ou par type d'arme \\
+Hobgobelin/Gnoll & 1 & 1--8 ou par type d'arme \\
+Ogre  & 1 & 1--10 \\
+Troll & 2 griffes/1 morsure & 1--4/griffe, 1--8/morsure \\
+Géant & 1 & COLLINE --- 2--16 \\
+&& PIERRE --- 3--18 \\
+&& GIVRE --- 4--24 \\
+&& FEU --- 5--30 \\
+&& NUAGE --- 6--36 \\
+Squelette & 1 & 1--6 \\
+Zombie & 1 & 1--8 \\
+Goule & 2 griffes/1 morsure & 1--3/griffe, 1--4/morsure \\
+Wight & 1 & Drain d'énergie seulement \\
+Wraith & 1 & 1--6 et drain d'énergie \\
+Momie & 1 & 1--12 \\
+Spectre & 1 & 1--8 et drain d'énergie \\
+Vampire & 1 & 1--10 et drain d'énergie \\
+Cocatrix & 1 & 1--6 et changement en pierre \\
+Basilic & 1 & 1--10 et changement en pierre \\
+Méduse & 1 ou 2 & par type d'arme et changement en pierre \\
+Gorgone* & 1 coup & 2--12/coup \\
+Manticore & 2 griffes/1 morsure/24 pics & 1--3/griffe, 1--8/morsure, 1--6/pic \\
+Hydre & 1 par tête & 1--6, 1--8, 1--10 selon la taille \\
+Chimère & 2 griffes/3 têtes & 1--3/griffe ;\\
+&& TETE DE CHEVRE --- 1--4/corne \\
+&& TETE DE LION --- 1--8/morsure \\
+&& TETE DE DRAGON --- 3-12/morsure** \\
+Wyverne & 1 morsure/1 dard & 2-16/morsure, 1-6/dard*** \\
 \end{tabular}
 
 
+\begin{tabular}{p{4cm}>{\raggedright\arraybackslash}p{5cm}>{\raggedright\arraybackslash}p{6.5cm}}
+\textit{Type de monstre} && \textit{Points de dommages} \\
+\hspace{0.5cm}\textit{attaquant} & \textit{Nombre d'attaques} & \hspace{0.5cm}\textit{par attaque} \\
+Dragon* & 2 griffes/1 morsure & 1--4/griffe ; \\
+&& BLANC --- 2--16/morsure \\
+&& NOIR --- 3--18/morsure \\
+&& VERT --- 2--20/morsure \\
+&& BLEU --- 2--24/morsure \\
+&& ROUGE --- 3--30/morsure \\
+&& DORE --- 3--36/morsure \\
+Gargouille & 2 griffes/1 morsure/1 corne & 1--3/griffe, 1--6/morsure, 1--4/corne \\
+Lycanthrope & LOUP --- 1 morsure & 2--8/morsure \\
+& SANGLIER --- 1 morsure & 2--12/morsure \\
+& TIGRE --- 2 griffes/1 morsure & 1--4/griffe, 1--10/morsure \\
+& OURS --- 2 griffes/1 morsure & 1--3/griffe****, 2--8/morsure \\
+Vert pourpre & 1 morsure/1 piqûre & 2-24/morsure, 1-8/piqûre*** \\
+Monstre marin & 1/tête ou /tentacule ou par griffe & entre 3--24 et 5--50/tête, ou 2--12 et 4--24/tentacule ou 2--8 et 4--32/griffe \\
+Minotaure & 1 coup/1 morsure/1 arme & 2--8/coup, 1--3/morsure, par type d'arme \\
+Centaure & 2 sabots/1 arme & 1--6/sabot, par type d'arme \\
+Licorne & 2 sabots/1 corne & 1--8/sabot, 1-16/corne \\
+Nixe & 1 & 1--4 ou par type d'arme \\
+Dryade & 1 & 1--4 ou par type d'arme \\
+Gnome & 1 & 1--6 ou par type d'arme \\
+Nain & 1 & 1--8 ou par type d'arme \\
+Elfe & 1 & 1--10 ou par type d'arme \\
+Ent & 2 & 2--16, 3--18, ou 4--24/attaque selon taille \\
+Pégase & 2 sabots & 1--8/sabot \\
+Hippogriffe & 2 griffes/1 morsure & 1--6/griffe, 1--10/morsure \\
+Rokh & 2 griffes/1 morsure & 1--8, 2--12 ou 4--16/griffe, 2--12, 3--18 ou 4--24/morsure selon taille \\
+Griffon & 2 griffes/1 morsure & 1--4/griffe, 2--16/morsure \\
+Harceleur invisible & 1 & 4--16 \\
+Elémentaire***** & 1 & AIR --- 2--16 \\
+&& TERRE --- 4--32 \\
+&& FEU --- 3--24 \\
+&& EAU --- 3--30 \\
+Djinn & 1 & 2--16 \\
+Efrit & 1 & 3--24 \\
+Gelée ocre & 1 & 2--12 \\
+Black Pudding & 1 & 3--24 \\
+Slime vert & 1 & spécial \\
+Vase grise & 1 & 2--16 \\
+\end{tabular}
+
+\begin{tabular}{p{4cm}>{\raggedright\arraybackslash}p{5cm}>{\raggedright\arraybackslash}p{6.5cm}}
+\textit{Type de monstre} && \textit{Points de dommages} \\
+\hspace{0.5cm}\textit{attaquant} & \textit{Nombre d'attaques} & \hspace{0.5cm}\textit{par attaque} \\
+Moisissure jaune & 1 & spécial \\
+Petit cheval & 2 sabots & 1--4/sabot \\
+Cheval moyen & 2 sabots/1 morsure & 1--6/sabot, 1-3/morsure \\
+Grand cheval & 2 sabots/1 morsure & 1--8/sabot, 1-3/morsure \\
+Rat géant (de Sumatra) & 1 morsure & 1-3/morsure \\
+Loup & 1 morsure & 1-6/morsure \\
+Canis Dirus & 1 morsure & 1-8/morsure \\
+Lion & 2 griffes/1 morsure & 1--3/griffe, 1--10/morsure \\
+Tigre à dents de sabre & 2 griffes/1 morsure & 1--4/griffe, 2--12/morsure \\
+Belette géante & 1 morsure & 2--8/morsure plus drain de sang \\
+Mammouth & 2 défenses/1 tronc/2 pieds & 3--18/défense, 2--16/tronc,
+2--12/pied \\
+Araignée géante & 1 morsure & 1--3*** plus toiles \\
+Lézard géant & 1 morsure & 1--8/morsure \\
+Crapaud géant & 1 morsure & 1--10/morsure \\
+Serpent géant & 1 morsure, une constriction & 1--6/morsure***, 2--8/tour de constriction \\
+Crabe géant & 2 pinces & 2--12/pince \\
+Scarabée géant & 1 morsure & 3--30/morsure \\
+Scorpion géant & 2 pinces/1 dard & 1--10/pince, 1--4***/dard \\
+Crocodile & 1 morsure & 3--12/morsure \\
+Tyrannosaurus rex & 1 morsure & 5--40/morsure \\
+Triton & 1 & 3--18 plus spécial \\
+Bugbear & 1 & 2--8 \\
+Ogre mage & 1 & 1--12 \\
+Géant, ORAGE & 1 & 7--42 \\
+Titan & 1 & 7--42 \\
+Ombre & 1 & 1--4 plus spécial \\
+Feu follet & spécial & spécial \\
+Liche & 1 & 1--10 plus spécial \\
+Harpie & 2 griffes/1 arme & 1--3/griffe, 1--6/arme \\
+Homme-lézard & 2 griffes/1 morsure & 1--3/griffe, 1--8/morsure \\
+Doppleganger & 1 & 1--12 plus spécial \\
+Dragon & 2 griffes/1 morsure & 1--4/griffe \\
+&& AIRAIN --- 4--16/morsure \\
+&& CUIVRE --- 5--20/morsure \\
+&& BRONZE --- 3--24/morsure \\
+&& ARGENT --- 3-30/morsure \\
+Lycanthrope : Rat-garou ou homme-rat & 1 morsure/1 arme & 1--3/morsure, par type d'arme \\
+Lammasu & 2 griffes & 1--6/griffe plus spécial \\
+\end{tabular}
+
+\begin{tabular}{p{4cm}>{\raggedright\arraybackslash}p{5cm}>{\raggedright\arraybackslash}p{6.5cm}}
+\textit{Type de monstre} && \textit{Points de dommages} \\
+\hspace{0.5cm}\textit{attaquant} & \textit{Nombre d'attaques} & \hspace{0.5cm}\textit{par attaque} \\
+Salamandre***** & 1 touché/1 constriction/1 arme & spécial, 2--8/tour de constriction, par type d'arme \\
+Beholder & 1 morsure & 2--5 plus spécial \\
+Mastodonte des ombres & 2 griffes/1 morsure & 1--12/griffe, 2--8/morsure \\
+Bête éclipsante & 2 tentacules & 2--8/tentacule \\
+Chien esquiveur & 1 morsure & 1--6/morsure \\
+Chien de chasse infernal* & 1 morsure & 1--6/morsure \\
+Araignée de phase & 1 morsure & 1--6/morsure*** \\
+Oxydeur & 1 toucher & spécial \\
+Stirge & 1 morsure & 1--3 plus draine le sang \\
+Tique géante & 1 morsure & 1--4 plus draine le sang \\
+Ours-Hiboux & 2 griffes/1 morsure & 1--6/griffe****, 2--12/morsure \\
+Charognard rampant & 8 tentacules & spécial \\
+Cube gélatineux & 1 & 2--8 spécial \\
+Limace géante & 1 morsure & 1--12 plus spécial \\
+Homoncule & 1 morsure & 1--3 plus spécial \\
+Golem & 1 & CHAIR --- 2--16 \\
+&& PIERRE --- 3--24 \\
+&& FER --- 4--32 \\
+\end{tabular}
+\begin{tabular}{rp{14.5cm}}
+\multicolumn{1}{r}{*} & possèdent aussi leur souffle comme arme \\
+\multicolumn{1}{r}{**} & à moins que le souffle soit utilisé \\
+\multicolumn{1}{r}{***} & quelque soit le résultat, jet de sauvegarde contre le poison \\
+\multicolumn{1}{r}{****} & une étreinte avec un score de 18 ou plus cause 2--16 points de dommages supplémentaires \\
+\multicolumn{1}{r}{*****} & voir les différentes sections concernant tous les types d'élémentaires car des ajustements pourraient être requis en raison des circonstances
+\end{tabular}
 
 
 
@@ -1406,6 +1580,47 @@ il suivra la suggestion. (L'arbitre doit utiliser son jugement dans ce cas, car 
 
 Le score aux dés peut être modifié par des additions ou des soustractions pour des choses telles que des pots-de-vin offerts, la peur, l'alignement des parties concernées, etc.
 
+\newpage
+%==========================================================================SECTION
+\section*{Hommes \& Magie}
+
+\subsection*{Pouvoirs psioniques}
+
+Conditions :
+\begin{itemize}
+\item Etre humain,
+\item Ne pas être un moine ou un druide,
+\item Avoir un score non modifié de 15 en Intelligence, Sagesse oui Charisme,
+\item Faire plus de 90 (91--100) sur un jet de pourcentage.
+
+\end{itemize}
+
+\bigskip
+
+\begin{tabular}{lcp{4cm}p{4cm}}
+\textbf{Classe} & \textbf{Toutes les} & \textbf{Perte} & \textbf{Exemple}\\
+Guerrier & 4 aptitudes psioniques & 1 pt de Force & \\
+Magicien & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitude psionique & 1\textsuperscript{ère} aptitude : 1 niveau de sorts (un sort de niveau 1) \\
+&&& 2\textsuperscript{ème} aptitude : 2 niveaux de sorts (un sort de niveau 2 ou deux sorts de niveau 1) \\
+Clerc & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitude psionique + un rang dans la table de retournement des morts-vivants & \\
+Voleur & 4 aptitudes psioniques & 1 pt de Force et 1 point de Dextérité & \\
+\end{tabular}
+
+Deviennent sensibles aux monstres ayant des capacités psioniques.
+
+Détermination du potentiel psychique : lancer 1d100.
+
+Les aptitudes psioniques se gagnent soit à la création du personnage, soit au changement de niveau. La chance de base est de :
+
+(10\% + bonus/malus du potentiel psychique) x Niveau
+
+Lancer 1d100 si c'est inférieur ou égal => choisir une aptitude psionique
+
+Si c'est inférieur ou égal, refaire un jet sous le potentiel psychique pour voir si l'on peut obtenir une seconde aptitude psionique.
+
+
+
+
 
 %==========================================================================SECTION
 \newpage
@@ -1419,11 +1634,15 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \textbf{Aura Alteration} : Altération de l'aura. Pouvoir psionique.
 
+\textbf{Blink Dog} : Chien esquiveur. Monstre.
+
 \textbf{Body control} : Contrôle du corps. Pouvoir psionique.
 
 \textbf{Body Equilibrium} : Changer le poids du corps. Pouvoir psionique.
 
 \textbf{Body Weaponry} : Corps comme arme. Pouvoir psionique.
+
+\textbf{Carrion Crawler} : Charognard rampant. Monstre.
 
 \textbf{Cell adjustment} : Ajustement cellulaire. Pouvoir psionique.
 
@@ -1439,6 +1658,10 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \textbf{Dimension Walking} : Marche dimensionnelle. Pouvoir psionique.
 
+\textbf{Dire Wolf} : Canis Dirus (littéralement \og loup sinistre \fg) est un canidé qui a habité l'Amérique du Nord et la Sibérie au Pléistocène et s’est éteint il y a environ 10 000 ans (source : Wikipedia).
+
+\textbf{Displacer Beast} : bête éclipsante. Monstre.
+
 \textbf{Domination} : Domination. Pouvoir psionique.
 
 \textbf{Empathy} : Empathie. Pouvoir psionique.
@@ -1453,7 +1676,9 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \textbf{Fighting-man, fighting-men} : guerrier, guerriers. Certaines traductions proposent \og combattant \fg{} à la place, mais la traduction de guerrier nous a semblé plus proche des traductions habituelles de D\&D.
 
-\textbf{Horse bow} : Arc monté.
+\textbf{Hell Hound} : Chien de chasse infernal. Monstre
+
+\textbf{Horse bow} : Arc monté. Arme.
 
 \textbf{Hypnosis} : Hypnose. Pouvoir psionique.
 
@@ -1465,7 +1690,7 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \textbf{Mass Domination} : Domination des masses. Pouvoir psionique.
 
-\textbf{Military pick} : Piolet.
+\textbf{Military pick} : Piolet. Arme.
 
 \textbf{Mind Bar} : Barrière mentale. Pouvoir psionique.
 
@@ -1477,9 +1702,13 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \textbf{Molecular Rearrangement} : Réarrangement moléculaire. Pouvoir psionique.
 
-\textbf{Morning star} : Masse à pointes.
+\textbf{Morning star} : Masse à pointes. Arme.
 
-\textbf{Mtd Lance, Mounted Lance} : Lance de tournoi.
+\textbf{Mtd Lance, Mounted Lance} : Lance de tournoi. Arme.
+
+\textbf{Ochre Jelly} : Gelée ocre. Monstre.
+
+\textbf{Phase Spider} : Araignée de phase. Monstre.
 
 \textbf{Polymorphing self} : Métamorphisme. Sort de magicien.
 
@@ -1489,7 +1718,9 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \textbf{Reduction} : Réduction. Pouvoir psionique.
 
-\textbf{Roc} : Rokh, oiseau fabuleux des contes d'origine persane et indienne écrit en langue arabe.
+\textbf{Roc} : Rokh, oiseau fabuleux des contes d'origine persane et indienne écrit en langue arabe. Monstre.
+
+\textbf{Rust Monster} : Oxydeur. Monstre.
 
 \textbf{Shape Alteration} : Altération de la forme. Pouvoir psionique.
 
@@ -1500,6 +1731,12 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 \textbf{Telepathic Projection} : Projection télépathique. Pouvoir psionique.
 
 \textbf{Teleportation} : Téléportation. Pouvoir psionique.
+
+\textbf{Treant} : Ent, arbre géant vivant. Monstre.
+
+\textbf{Umber Hulk} : Mastodonte des ombres. Monstre.
+
+\textbf{Will O’ Wisp} ou \textbf{will-o'-the-wisp} : Feu follet. Monstre.
 
 }% parindent
 
