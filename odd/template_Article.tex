@@ -242,7 +242,7 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 %==========================================================================SECTION
 \section*{Hommes \& Magie}
 
-\subsection*{{\normalsize PERSONNAGES :}}
+\subsection*{\normalsize PERSONNAGES :}
 
 {\parindent0pt
 
@@ -280,7 +280,7 @@ Les \textbf{clercs} ayant des aptitudes psioniques gagnent aussi l'avantage de p
 
 Les \textbf{voleurs} qui ont un potentiel psychique avéré sont sujets aux mêmes avantages que ceux gagnés par les guerriers. Néanmoins, en plus des malus notés pour les guerriers, les voleurs perdent aussi 1 point de dextérité toutes les quatre aptitudes gagnées.
 
-\subsection*{{\normalsize DETERMINATION DES APTITUDES :}}
+\subsection*{\normalsize DETERMINATION DES APTITUDES :}
 
 \medskip
 
@@ -592,6 +592,7 @@ Dormir && 24 points/heure \\
 
 \newpage
 \subsection*{\normalsize APTITUDES PSIONIQUES}
+
 \textbf{Guerriers (incluant les Paladins et les Rangers) \& Voleurs (incluant les Assassins)}
 
 \bigskip
@@ -625,7 +626,7 @@ Perception extrasensorielle (1/tour) && Porte dimensionnelle (10) \\
 Hypnose (spécial) && Télékinésie (3/tour) \\
 Lévitation (1/tour) && Téléportation (20) \\
 Clairaudience (1/tour) && Projection astrale (spécial) \\
-Clairvoyance (1/tour) && Transformation éthérée (5/tour) \\
+Clairvoyance (1/tour) && Forme éthérée (5/tour) \\
 Réduction (aucun) && Altération de la forme (spécial) \\
 Expansion (spécial) && \\
 Agitation moléculaire (2/tour) && \\
@@ -633,7 +634,7 @@ Agitation moléculaire (2/tour) && \\
 
 \bigskip
 
-\textbf{Clercs (incluant les Moines et les Druides)}
+\textbf{Clercs (incluant les Moines et les Druides\footnote{Incohérence avec la mention du début du livret indiquant que les moines et les druides ne pouvaient pas avoir de pouvoirs mentaux (NdT).})}
 
 \bigskip
 
@@ -644,7 +645,7 @@ Lévitation (1/tour) && Prémonition (spécial) \\
 Hypnose (1/tour) && Projection télépathique (3/tour) \\
 Domination (spécial) && Marche dimensionnelle (spécial) \\
 Perception extrasensorielle (1/tour) && Projection astrale (spécial) \\
-Contrôle cellulaire (spécial) && Domination des masses (spécial) \\
+Ajustement cellulaire (spécial) && Domination des masses (spécial) \\
 Contrôle de l'esprit sur le corps (aucun) &&  Voyage probabiliste \\
 Changer le poids du corps (1/tour) && \\
 Télépathie animale (2/tour) && \\
@@ -1582,33 +1583,237 @@ Le score aux dés peut être modifié par des additions ou des soustractions pou
 
 \newpage
 %==========================================================================SECTION
-\section*{Hommes \& Magie}
+\section*{POUVOIRS PSIONIQUES}
 
-\subsection*{Pouvoirs psioniques}
+\subsection*{Introduction}
 
-Conditions :
+Cette section n'est pas dans le supplément original \texttt{Eldritch Wizardry} ; c'est une synthèse et une réorganisation des règles ayant pour but de les rendre plus accessibles.
+
+\subsection*{Conditions d'accès aux pouvoirs psioniques}
+
+Les conditions suivantes doivent être remplies :
 \begin{itemize}
 \item Etre humain,
-\item Ne pas être un moine ou un druide,
-\item Avoir un score non modifié de 15 en Intelligence, Sagesse oui Charisme,
-\item Faire plus de 90 (91--100) sur un jet de pourcentage.
-
+\item Pas de restriction de classe\footnote{L'édition originale indique que les moines ou les druides ne peuvent pas avoir de pouvoirs mentaux, ce qui est quand même étrange. Plus loi, dans la description des aptitudes psychiques, les aptitudes sont données pour les clercs, les moines et les druides. Nous avons donc choisi, dans cette synthèse, de ne pas retenir la restriction de classes.}
+\item Avoir un score non modifié de 15 en Intelligence, Sagesse ou Charisme,
+\item Faire plus de 90 (91--100) sur un jet de pourcentage (une chance sur 10).
 \end{itemize}
 
 \bigskip
 
-\begin{tabular}{lcp{4cm}p{4cm}}
-\textbf{Classe} & \textbf{Toutes les} & \textbf{Perte} & \textbf{Exemple}\\
-Guerrier & 4 aptitudes psioniques & 1 pt de Force & \\
-Magicien & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitude psionique & 1\textsuperscript{ère} aptitude : 1 niveau de sorts (un sort de niveau 1) \\
-&&& 2\textsuperscript{ème} aptitude : 2 niveaux de sorts (un sort de niveau 2 ou deux sorts de niveau 1) \\
-Clerc & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitude psionique + un rang dans la table de retournement des morts-vivants & \\
-Voleur & 4 aptitudes psioniques & 1 pt de Force et 1 point de Dextérité & \\
+Les personnages ayant des pouvoirs psioniques deviennent sensibles aux monstres ayant des capacités psioniques.
+
+\subsection*{Potentiel psychique}
+
+Lorsque le personnage a accès pour la première fois aux pouvoirs psioniques, le joueur fait un jet de 1d100 pour déterminer le potentiel psychique (voir table ci-dessous).
+\bigskip
+
+{\parindent3cm\begin{tabular}{cl}
+\textbf{Potentiel psychique} & \textbf{Chance de gagner une aptitude} \\
+01--10 & niveau x 4\% \\
+11--25 & niveau x 5\% \\
+26--50 & niveau x 6\% \\
+51--75 & niveau x 10\% \\
+76--90 & niveau x 11\% \\
+91--99 & niveau x 12\% \\
+\hspace{0.4cm}00 & niveau x 13\% \\
+\end{tabular}}
+
+\bigskip
+
+Le joueur doit dans la foulée un jet de 1d100 sous sa chance de gagner une aptitude psionique.
+
+\subsection*{Aptitudes psioniques}
+
+\subsubsection*{\textit{Gain}}
+
+Si le jet de 1d100 sous la Chance de gagner une aptitude psionique est réussi :
+\begin{enumerate}
+\item Le joueur lance 1d20 et consulte la table relative à sa classe ;
+\item Le joueur lance 1d100 sous son potentiel psychique ; si le jet est réussi, il gagne une seconde aptitude psionique.
+\end{enumerate}
+
+\newpage
+
+Notes :
+\begin{itemize}
+\item Le personnage ne peut pas disposer de plus d'aptitudes supérieures qu'il ne possède d'aptitudes inférieures. En cas de violation de cette règle, relancer 1d20 jusqu'à ce que la contrainte soit remplie.
+\item Si la chance de gagner une aptitude psionique est supérieure à 100\%, alors le joueur peut choisir librement son aptitude.
+\item Option : les aptitudes psioniques sont réparties par catégorie (de A à D). Au lieu de lancer 1d20, l'arbitre peut choisir de restreindre les choix à des catégories connexes des aptitudes déjà possédées par le personnage. \footnote{C'est un des moyens pour remplir l'exigence originale : \og Dans la sélection aléatoire, il est suggéré de mettre un poids supérieur
+aux probabilités de gain d’aptitudes liées à des aptitudes déjà possédées, par exemple Empathie
+augmenterait les chances de gagner Perception extrasensorielle, Télépathie animale et Projection télépathique\fg{}.}. Voir la table Choix d'aptitude par catégorie après la table relative à chaque classe de personnages.
+\end{itemize}
+
+\subsubsection*{\textit{Aptitudes psioniques par catégorie}}
+
+Les aptitudes psioniques ont été classées en quatre catégories :
+\begin{itemize}
+\item[A :] Contrôle de la matière et de l'énergie,
+\item[B :] Contrôle de son propre esprit et de l'esprit des autres via l'esprit,
+\item[C :] Développement des sens,
+\item[D :] Voyage psychique de l'esprit et/ou du corps.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{lll}
+\textbf{A -- Contrôle de la matière} & \textbf{B -- Contrôle de l'esprit}   & \textbf{D -- Voyage psychique} \\
+\textbf{et de l'énergie}             & \textbf{via l'esprit}                & Forme éthérée \\
+Agitation moléculaire                & Altération de l'aura                 & Marche dimensionnelle \\
+Ajustement cellulaire               & Barrière mentale                     & Porte dimensionnelle \\
+Altération de la forme              & Domination                           & Projection astrale \\
+Changer le poids du corps           & Domination des masses                & Téléportation \\
+Contrôle de l'énergie               & Empathie                             &  Voyage probabiliste\\
+Contrôle de l'esprit sur le corps   & Hypnose & \\
+Contrôle du corps                   & Perception extrasensorielle & \\
+Corps comme arme                    & Projection télépathique &\\
+Expansion                           & Télépathie animale &\\
+Hibernation                         & \textbf{C -- Sens} & \\
+Invisibilité                        & Clairaudience & \\
+Lévitation                          & Clairvoyance & \\
+Manipulation moléculaire            & Détection de la magie & \\
+Réarrangement moléculaire           & Détection du Mal/du Bien & \\
+Réduction                           & Prémonition & \\
+Télékinésie                && \\
+\end{tabular}
+\end{center}
+
+\bigskip
+
+\subsubsection*{\textit{Aptitudes psioniques pour les Guerriers, Paladins, Rangers, Voleurs et Assassins}}
+
+\begin{tabular}{cclccl}
+1d20 & CAT & APTITUDES BASIQUES & 1d20 & CAT & APTITUDES SUPERIEURES \\
+1 & A:1 & Réduction & 13 & A:9 & Contrôle de l'énergie  \\
+2 & A:2 & Expansion & 14 & A:10 & Télékinésie \\
+3 & A:3 &Lévitation & 15 & D:1 & Marche dimensionnelle \\
+4 & B:1 & Domination  & 16 & D:2 &Projection astrale  \\
+5 & A:4 & Contrôle de l'esprit sur le corps & 17 & A:11 & Réarrangement moléculaire \\
+6 & A:5 & Invisibilité & 18 & A:12 & Manipulation moléculaire \\
+7 & C:1 & Prémonition  & 19 & A:13 & Contrôle de l'esprit sur le corps \\
+8 & A:6 & Hibernation & 20 & B:2 & Barrière mentale \\
+9 & A:7 & Changer le poids du corps  &&& \\
+10 & C:2 & Clairaudience &&& \\
+11 & C:3 & Clairvoyance  &&& \\
+12 & A:8 & Corps comme arme &&& \\
 \end{tabular}
 
-Deviennent sensibles aux monstres ayant des capacités psioniques.
+\bigskip
 
-Détermination du potentiel psychique : lancer 1d100.
+\begin{center}
+\begin{tabular}{ccl}
+\multicolumn{3}{c}{OPTION : CHOIX D'APTITUDE PAR CATEGORIE} \\
+\textbf{Catégorie} &  \textbf{Nb d'aptitudes} & \textbf{Jet} \\
+\textbf{A} & 13 & 1d20 : rejouer si 14--20 \\
+\textbf{B} & 2 & 1d6 : pair = 1, impair = 2 \\
+\textbf{C} & 3 & 1d6 : 1--2=1, 3--4=2, 5--6=3 \\
+\textbf{D} & 2 & 1d6 : pair = 1, impair = 2 \\
+\end{tabular}
+\end{center}
+
+\subsubsection*{\textit{Aptitudes psioniques pour les Magiciens et les Illusionnistes}}
+
+\begin{center}
+\begin{tabular}{cclccl}
+1d20& CAT & APTITUDES BASIQUES &  1d20                & CAT & APTITUDES SUPERIEURES \\
+1   & C:1 & Détection du Mal/Bien & 11            & B:3 & Projection télépathique  \\
+2   & C:2 & Détection de la magie & 12            & C:5 & Prémonition \\
+3   & B:1 & Perception extrasensorielle  & 13     & D:1 & Porte dimensionnelle  \\
+4   & B:2 & Hypnose  & 14                         & A:5 & Télékinésie  \\
+5   & A:1 & Lévitation  & 15                      & D:2 & Téléportation  \\
+6   & C:3 & Clairaudience  & 16                   & D:3 & Projection astrale \\
+7   & C:4 & Clairvoyance  & 17                    & D:4 & Forme éthérée  \\
+8   & A:2 & Réduction  & 18                       & A:6 & Altération de la forme  \\
+9   & A:3 & Expansion & 19                        && Relancer 1d20 \\
+10  & A:4 & Agitation moléculaire  & 20          && Relancer 1d20\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccl}
+\multicolumn{3}{c}{OPTION : CHOIX D'APTITUDE PAR CATEGORIE} \\
+\textbf{Catégorie} &  \textbf{Nb d'aptitudes} & \textbf{Jet} \\
+\textbf{A} & 6 & 1d6 \\
+\textbf{B} & 3 & 1d6 : 1--2=1, 3--4=2, 5--6=3 \\
+\textbf{C} & 5 & 1d6 : rejouer si 6 \\
+\textbf{D} & 4 & 1d4 \\
+\end{tabular}
+\end{center}
+
+\subsubsection*{\textit{Aptitudes psioniques pour les Clercs, les Moines et les Druides}}
+
+\bigskip
+
+\begin{center}
+\begin{tabular}{cclccl}
+1d20 & CAT & APTITUDES BASIQUES & 1d20 & CAT & APTITUDES SUPERIEURES \\
+1   & C:1 & Détection du Mal/Bien  & 11     & A:5 & Réarrangement moléculaire  \\
+2   & B:1 & Empathie  & 12                  & B:6 & Altération de l'aura  \\
+3   & A:1 & Lévitation & 13                 & C:2 & Prémonition  \\
+4   & B:2 & Hypnose  & 14                   & B:7 & Projection télépathique  \\
+5   & B:3 & Domination  & 15                & D:1 & Marche dimensionnelle \\
+6   & B:4 & Perception extrasensorielle & 16 & D:2 & Projection astrale  \\
+7   & A:2 & Ajustement cellulaire  & 17     & B:8 & Domination des masses  \\
+8   & A:3 & Contrôle de l'esprit sur le corps  & 18 & D:3 & Voyage probabiliste \\
+9   & A:4 & Changer le poids du corps  & 19 && Relancer 1d20 \\
+10  & B:5 & Télépathie animale  & 20 && Relancer 1d20 \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccl}
+\multicolumn{3}{c}{OPTION : CHOIX D'APTITUDE PAR CATEGORIE} \\
+\textbf{Catégorie} &  \textbf{Nb d'aptitudes} & \textbf{Jet} \\
+\textbf{A} & 5 & 1d6 : rejouer si 6 \\
+\textbf{B} & 8 & 1d8 \\
+\textbf{C} & 2 & 1d6 : pair = 1, impair = 2 \\
+\textbf{D} & 3 & 1d4 : rejouer si 4 \\
+\end{tabular}
+\end{center}
+
+\subsubsection*{\textit{Conséquences du gain d'aptitude psionique}}
+
+Acquérir une aptitude psionique peut avoir 2 impacts :
+\begin{itemize}
+\item Un impact sur les modes d'attaque et les modes de défense,
+\item Un impact sur la baisse des caractéristiques ou avantages du personnage.
+\end{itemize}
+
+
+
+\subsection*{Modes d'attaques et modes de défense}
+
+%reprendre ici
+
+
+\subsection*{Pertes de caractéristiques}
+
+
+\bigskip
+
+
+\begin{tabular}{lcp{10cm}}
+\textbf{Classe} & \textbf{Toutes les} & \textbf{Perte}\\
+Guerrier & 4 aptitudes psioniques & 1 pt de Force \\
+Magicien & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitudes psioniques \\
+&& 1\textsuperscript{ère} aptitude : 1 niveau de sorts (un sort de niveau 1) \\
+&& 2\textsuperscript{ème} aptitude : 2 niveaux de sorts (un sort de niveau 2 ou deux sorts de niveau 1) \\
+Clerc & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitudes psioniques + un rang dans la table de retournement des morts-vivants \\
+Voleur & 4 aptitudes psioniques & 1 pt de Force + 1 point de Dextérité \\
+\end{tabular}
+
+\bigskip
+
+\subsection*{Progression}
+
+Gagner des aptitudes psioniques
+
+A chaque passage de niveau, le joueur doit lancer 1d100 sous sa chance de gagner une aptitude psionique
+
+
+
+
+
+
 
 Les aptitudes psioniques se gagnent soit à la création du personnage, soit au changement de niveau. La chance de base est de :
 
@@ -1617,6 +1822,39 @@ Les aptitudes psioniques se gagnent soit à la création du personnage, soit au 
 Lancer 1d100 si c'est inférieur ou égal => choisir une aptitude psionique
 
 Si c'est inférieur ou égal, refaire un jet sous le potentiel psychique pour voir si l'on peut obtenir une seconde aptitude psionique.
+
+
+
+
+
+
+
+
+\subsection*{Annexe à la feuille de personnage}
+
+Exemple de personnage : Rustik, guerrier, a réussi son jet de psionique alors qu'il est de niveau 4.
+
+\bigskip
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Classe} : Guerrier} & \multicolumn{3}{|c|}{\textbf{Niveau} : 4} \\ \hline
+\textbf{FOR} & \textbf{CON} & \textbf{DEX} & \textbf{INT} & \textbf{SAG} & \textbf{CHA} \\ \hline
+16 & 13 & 10 & \textbf{15} & 9 & 8 \\ \hline
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Potentiel psychique} & \textbf{Gain d'aptitude (formule)}\\ \hline
+77 & niveau x 11\% \\ \hline
+\end{tabular}
+
+Il dispose donc de 4 x 11\% = 44\% d'avoir une aptitude psionique. Il lance 1d100 et obtient 31.
+
+Il lance 1d20 sur la table des aptituds psioniques
+
 
 
 
