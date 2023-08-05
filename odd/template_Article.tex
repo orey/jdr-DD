@@ -97,6 +97,10 @@ bookmarksopen=true,
 % Place les footnotes en bas et supprimer l'indentation dans la footnote
 \usepackage[bottom]{footmisc}
 
+% Pur résoudre les problèmes de underline avec la ligne qui varie en hauteur
+\newcommand{\uline}[1]{\underline{\smash{#1}\vphantom{T}}\vphantom{#1}}
+
+
 %Macro pour réduire l'espace sous le titre
 \newcommand{\myunderline}[1]{\underline{\smash{#1}}}
 
@@ -240,6 +244,43 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 
 \phantomsection\section*{Index}
 \addcontentsline{toc}{section}{Index}
+
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+\newpage
+\phantomsection\addcontentsline{toc}{section}{SUPPLEMENT III -- ELDRITCH WIZARDRY}\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
+
+\vspace{1.8cm}
+
+{\Large \textbf{Supplément III}}
+
+\vspace{1.3cm}
+
+{\Huge \ODDtitlebisfont{ELDRITCH}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{WIZARDRY}}
+
+\vspace{2.0cm}
+
+{\Large \textbf{MAGIE ANCIENNE ET PUISSANTE}}
+
+\vspace{0.5cm}
+
+{\Large \textbf{POUVOIRS PSIONIQUES}}
+
+\vspace{1cm}
+
+{\large PAR
+
+\vspace{0.1cm}
+
+GARY GYGAX \& BRIAN BLUME}
+\end{center}
 
 \newpage
 
@@ -633,7 +674,7 @@ Domination (spécial) && Projection astrale (spécial) \\
 Contrôle de l'esprit sur le corps (aucun) && Réarrangement moléculaire (spécial) \\
 Invisibilité (2/tour) && Manipulation moléculaire (50) \\
 Prémonition (spécial) && Contrôle du corps (5/tour) \\
-Hibernation (aucun) && Barrière mentale (aucun) \\
+Hibernation (aucun) && Barrière de l'esprit (aucun) \\
 Changer le poids du corps (1/tour) && \\
 Clairaudience (2/tour) && \\
 Clairvoyance (2/tour) && \\
@@ -673,7 +714,7 @@ Hypnose (1/tour) && Projection télépathique (3/tour) \\
 Domination (spécial) && Marche dimensionnelle (spécial) \\
 Perception extrasensorielle (1/tour) && Projection astrale (spécial) \\
 Ajustement cellulaire (spécial) && Domination des masses (spécial) \\
-Contrôle de l'esprit sur le corps (aucun) &&  Voyage probabiliste \\
+Contrôle de l'esprit sur le corps (aucun) &&  Voyage probabiliste (spécial) \\
 Changer le poids du corps (1/tour) && \\
 Télépathie animale (2/tour) && \\
 \end{tabular}
@@ -735,7 +776,7 @@ Pour chaque niveau à partir duquel l'aptitude a été gagnée, la probabilité 
 
 \bigskip
 
-\textbf{Clairaudience} : l'aptitude d'entendre à distance, l'individu possédant ce pouvoir est capable d'entendre ce qui se passe jusqu'à 9 mètres de distance, mais le pouvoir est directionnel. 30cm de pierre équivaut à 3m d'espace vide. Après chaque niveau auquel l'individu a acquis cette aptitude, ce dernier gagne une distance additionnelle de 3m par niveau cumulatif (au second niveau de possession, cela veut dire 6m, au troisième niveau 6m de plus, ou un total de 24m\footnote{9m + 6m + 9m = 24m (NdT).}, etc.). Ce pouvoir peut être utilisé en conjonction avec une boule de cristal. Il est sujet à des dispositifs d'entraves magiques et non magiques, comme mentionné dans les explications du sort du même nom.
+\textbf{Clairaudience} : l'aptitude d'entendre à distance, l'individu possédant ce pouvoir est capable d'entendre ce qui se passe jusqu'à 9 mètres de distance, mais le pouvoir est directionnel. 30cm de pierre équivaut à 3m d'espace vide. Après chaque niveau auquel l'individu a acquis cette aptitude, ce dernier gagne une distance additionnelle de 3m par niveau cumulatif (au second niveau de possession, cela veut dire 6m, au troisième niveau 9m de plus, ou un total de 24m\footnote{9m + 6m + 9m = 24m (NdT).}, etc.). Ce pouvoir peut être utilisé en conjonction avec une boule de cristal. Il est sujet à des dispositifs d'entraves magiques et non magiques, comme mentionné dans les explications du sort du même nom.
 
 \bigskip
 
@@ -743,7 +784,7 @@ Pour chaque niveau à partir duquel l'aptitude a été gagnée, la probabilité 
 
 \bigskip
 
-\textbf{Corps comme arme} : cette aptitude requiert de la personne qui l'a obtenue de renoncer à l'utilisation de toute arme et armure pour que son corps assume leurs fonctions. L'individu altère psioniquement son corps pour l'endurcir pour frapper ou se défendre. Au premier niveau de possession de l'aptitude, cette aptitude lui donne une classe d'armure de 8, et avec chaque niveau de possession, la classe d'armure s'améliore, ce qui signifie une classe d'armure de 7 au second niveau, de 6 au troisième niveau, etc. L'attaque progresse de manière similaire\footnote{Dans OD\&D, dans le système alternatif d'attaques décrit en pages 19 et 20, la probabilité de toucher lors d'une attaque ne dépend que du niveau du personnage, pas de son arme. Les dommages sont aussi constants selon les armes (1d6 si pas de modificateurs). Dans le premier supplément \texttt{Greyhawk}, en page 13, un système de modificateurs est proposé pour inclure la gestion des armes dans la probabilité de toucher. ce système va avec un système de dommages par arme et un système de dommage par monstre. Les détails du pouvoir Corps comme arme semblent utiliser cette extension (NdT). } :
+\textbf{Corps comme arme} : cette aptitude requiert de la personne qui l'a obtenue de renoncer à l'utilisation de toute arme et armure pour que son corps assume leurs fonctions. L'individu altère psioniquement son corps pour l'endurcir pour frapper ou se défendre. Au premier niveau de possession de l'aptitude, cette aptitude lui donne une classe d'armure de 8, et avec chaque niveau de possession, la classe d'armure s'améliore, ce qui signifie une classe d'armure de 7 au second niveau, de 6 au troisième niveau, etc. L'attaque progresse de manière similaire\footnote{Dans OD\&D, dans le système alternatif d'attaques décrit en pages 19 et 20, la probabilité de toucher lors d'une attaque ne dépend que du niveau du personnage, pas de son arme. Les dommages sont aussi constants selon les armes (1d6 si pas de modificateurs). Dans le premier supplément \texttt{Greyhawk}, en page 13, un système de modificateurs est proposé pour inclure la gestion des armes dans la probabilité de toucher. Ce système va avec un système de dommages par arme et un système de dommage par monstre. Les détails du pouvoir Corps comme arme semblent utiliser cette extension. Voir annexes (NdT). } :
 
 {\parindent2cm\begin{tabular}{cp{2.5cm}c}
 \textbf{Niveau de maîtrise} && \\
@@ -766,7 +807,7 @@ dixième && épée + 5 \\
 
 \bigskip
 
-Tous les plus sur l'arme équivalente s'appliquent à la probabilité de toucher ainsi qu'aux dommages. Noter que, en ce qui concerne le facteur arme, le Corps comme arme est considéré comme ayant une classe de moins que la dague en ce qui concerne le facteur vitesse, mais la même classe en ce qui concerne la longueur\footnote{Décaler d'une colonne dans la table des modificateurs du système de combat alternatif de \texttt{Greyhawk} si la vitesse entre en jeu (NdT).}.
+Tous les plus sur l'arme équivalente s'appliquent à la probabilité de toucher ainsi qu'aux dommages. Noter que, en ce qui concerne le facteur arme, le Corps comme arme est considéré comme ayant une classe de moins que la dague en ce qui concerne le facteur vitesse, mais la même classe en ce qui concerne la longueur\footnote{Décaler d'une colonne dans la table des modificateurs du système de combat alternatif de \texttt{Greyhawk} si la vitesse entre en jeu. Voir annexes (NdT).}.
 
 \bigskip
 
@@ -793,13 +834,13 @@ huitième et au delà &  +25\% &     0 & 0     & -10\% & -50\% \
 
 \bigskip
 
-\textbf{Projection astrale} : cette aptitude est similaire à celle du sort du même nom. Quand elle est projetée astralement, la personne ne peut pas être détectée excepté par quelques rares créatures, et son corps astral n'est pas sujet aux dangers habituels. Au premier niveau de maîtrise, le possesseur ne peut avancer qu'au rythme de la marche ; au second, il peut courir aussi vite qu'un petit cheval ; au troisième, il est capable de voler aussi vite qu'un rokh, et la vitesse, après, double avec chaque niveau de maîtrise ; en plus, au dixième niveau de maîtrise, le possesseur de l'aptitude est capable de se projeter dans l'espace à la vitesse de la lumière. Les dangers sont basiquement de deux types : premièrement, il est possible de rencontrer une créature qui peut opérer dans le plan astral (les démons le font, les méduses et les basilics regardent dedans, etc.). S Secondement, le corps astral est attaché au corps physique par un cordon d'argent. Si ce cordon est cassé, alors le corps et le corps astral sont morts. Un vent psychique affecte aussi les personnes projetées astralement comme suit :
+\textbf{Projection astrale} : cette aptitude est similaire à celle du sort du même nom. Quand elle est projetée astralement, la personne ne peut pas être détectée excepté par quelques rares créatures, et son corps astral n'est pas sujet aux dangers habituels. Au premier niveau de maîtrise, le possesseur ne peut avancer qu'au rythme de la marche ; au second, il peut courir aussi vite qu'un petit cheval ; au troisième, il est capable de voler aussi vite qu'un rokh, et la vitesse, après, double avec chaque niveau de maîtrise ; en plus, au dixième niveau de maîtrise, le possesseur de l'aptitude est capable de se projeter dans l'espace à la vitesse de la lumière. Les dangers sont basiquement de deux types : premièrement, il est possible de rencontrer une créature qui peut opérer dans le plan astral (les démons le font, les méduses et les basilics regardent dedans, etc.). Secondement, le corps astral est attaché au corps physique par un cordon d'argent. Si ce cordon est cassé, alors le corps et le corps astral sont morts. Un vent psychique affecte aussi les personnes projetées astralement comme suit :
 
 \bigskip
 
 {\parindent0.7cm\begin{tabular}{c >{\centering\arraybackslash}p{5cm} >{\centering\arraybackslash}p{5cm}}
 \textbf{Niveau de maîtrise de} & \multicolumn{2}{c}{\textbf{Chance pour un vent psychique...}} \\
-\textbf{le projection astrale} & \textbf{Emporté} & \textbf{Perte de 1--100 jours} \\
+\textbf{la projection astrale} & \textbf{Emporté} & \textbf{Perte de 1--100 jours} \\
 premier            & 08\% & 20\% \\
 deuxième           & 07\% & 18\% \\
 troisième          & 05\% & 15\% \\
@@ -852,7 +893,7 @@ dixième    & murs épais de pierre, 60 cm d'épaisseur, trou de la taille d'un 
 
 \bigskip
 
-\textbf{Barrière mentale} : cette aptitude protège le corps physique et l'esprit d'une possession. Elle peut être utilisée quand le corps est abandonné (comme en cas de projection astrale) ou à d'autres moments pour le protéger de possession par urnes magiques, démons ou diables. Pour autant, cette aptitude ne fonctionne pas contre des attaques psioniques. La chance pour que le possesseur puisse établir la barrière de son esprit avec succès est de 10\% par niveau de maîtrise. Après le dixième niveau de maîtrise, le pourcentage de chances qu'il soit capable de localiser l'urne ou amulette de l'être qui tente de le posséder croît de la même façon.
+\textbf{Barrière de l'esprit} : cette aptitude protège le corps physique et l'esprit d'une possession. Elle peut être utilisée quand le corps est abandonné (comme en cas de projection astrale) ou à d'autres moments pour le protéger de possessions par urnes magiques, démons ou diables. Pour autant, cette aptitude ne fonctionne pas contre des attaques psioniques. La chance pour que le possesseur puisse établir la barrière de son esprit avec succès est de 10\% par niveau de maîtrise. Après le dixième niveau de maîtrise, le pourcentage de chances qu'il soit capable de localiser l'urne ou amulette de l'être qui tente de le posséder croît de la même façon.
 
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{Magiciens}
@@ -1056,6 +1097,74 @@ Le heaume de télépathie augmente la capacité télépathique de la même mani�
 
 \textbf{Voyage probabiliste} : au moyen de cette aptitude, le possesseur est capable de pénétrer dans des mondes parallèles et entrer dans les plans différents. Cela est extrêmement dangereux néanmoins, car cela correspond à de la projection astrale avec l'enveloppe corporelle. Le vent psychique affecte le voyageur probabiliste, comme s'il se projetait dans l'espace. Pour chaque probabilité ou plan croisé, 10 points d'énergie sont dépensés de manière psionique. Le voyageur est capable d'entrer en communion avec des pouvoirs amicaux, par exemple -- ou risquer d'entrer dans des plans hostiles à son alignement, ou tenter d'explorer les probabilités suivant une ligne de conduite faite sienne.
 
+
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+\newpage
+\phantomsection\addcontentsline{toc}{section}{D\&D VOLUME I -- HOMMES \& MAGIE}\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
+
+\vspace{1.8cm}
+
+{\Large \textbf{Volume I}}
+
+\vspace{1.3cm}
+
+{\Huge \ODDtitlebisfont{HOMMES \&} MAGIE}
+
+\vspace{5cm}
+
+{\large PAR
+
+\vspace{0.1cm}
+
+GARY GYGAX \& DAVE ARNESON}
+\end{center}
+
+\newpage
+
+%==========================================================================SECTION
+\phantomsection\section*{Hommes \& Magie}
+\addcontentsline{toc}{section}{Hommes \& Magie}
+
+\begin{center}
+\textbf{[SELECTION]}
+\end{center}
+
+%----------------------------------------------------- SUB SECTION
+\phantomsection\subsection*{SYSTEME DE COMBAT ALTERNATIF}
+\addcontentsline{toc}{subsection}{SYSTEME DE COMBAT ALTERNATIF}
+
+Ce système est basé sur les capacités offensives et défensives des combattants ; des choses comme la vitesse, la férocité ou les armes employées par les monstres attaquant sont incluses dans les matrices. Deux tableaux sont proposés : un pour les hommes contre les hommes ou les monstres, et un pour les monstres (incluant les kobolds, les gobelins, les orcs, et.) contre les hommes.
+
+\bigskip
+
+\textbf{MATRICE D'ATTAQUE 1 : HOMMES ATTAQUANT}
+
+\bigskip
+
+\begin{tabular}{cccccccccccc}
+\textbf{Niveau du } & \textbf{Niveau du } & \textbf{Niveau du } & \multicolumn{8}{c}{\textbf{Classe d'armure du défenseur}} \\
+\textbf{guerrier}   & \textbf{magicien}   & \textbf{clerc}   & \textbf{9} & \textbf{8} & \textbf{7} & \textbf{6} & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} \\
+\textbf{1--3}   & \textbf{1--5}   & \textbf{1--4}   & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\
+\textbf{4--6}   & \textbf{6--10}  & \textbf{5--8}   &  8 &  9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+\textbf{7--9}   & \textbf{11--15} & \textbf{9--12}  &  5 &  6 &  7 &  8 &  9 & 10 & 11 & 12 \\
+\textbf{10--12} & \textbf{16--20} & \textbf{13--16} &  3 &  4 &  5 &  6 &  7 &  8 &  9 & 10 \\
+\textbf{13--15} & \textbf{21--25} & \textbf{17--20} &  1 &  2 &  3 &  4 &  5 &  6 &  7 &  8 \\
+\textbf{16\&+}  & \textbf{26\&+}  & \textbf{21\&+}  &  1 &  1 &  1 &  1 &  2 &  3 &  4 &  5 \\
+\end{tabular}
+
+\bigskip
+
+Les hommes normaux équivalent à des guerriers de niveau 1.
+
+\bigskip
+
+Toutes les attaques font 1d6 points de dommages sauf indication contraire.
+
 %----------------------------------------------------- SUB SECTION
 \phantomsection\subsection*{EXPLICATION DES SORTS}
 \addcontentsline{toc}{subsection}{EXPLICATION DES SORTS}
@@ -1076,7 +1185,11 @@ Le heaume de télépathie augmente la capacité télépathique de la même mani�
 
 \bigskip
 
-\textbf{Suggestion} : un sort qui fonctionne que le principe de l'hypnose. Si une créature sur laquelle le sort est lancé rate son jet de sauvegarde contre la magie, elle sera la victime de la suggestion, immédiatement ou de manière différée au bon vouloir du magicien. Le fait que la créature s'autodétruise est improbable à 99\%, mais des suggestions formulées avec attention peuvent, selon l'estimation de l'arbitre, altérer cette probabilité. Les suggestions doivent être simples et relativement courtes, soit une phrase ou deux. Durée : une semaine de temps de jeu\footnote{Issu du supplément \texttt{Greyhawk} (NdT).}.
+\textbf{Clairvoyance} : comme le sort Perception extrasensorielle excepté que le lanceur du sort peut visualiser au lieu de détecter des pensées\footnote{Extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).}.
+
+\bigskip
+
+\label{sort-clairaudience}\textbf{Clairaudience} : comme le sort de Clairvoyance excepté qu'il permet d'entendre plutôt que de voir. C'est un des rares sorts qui peut être lancé au travers d'une boule de cristal\footnote{Extrait du premier livret de OD\&D, \texttt{Men and Magic} (NdT).}.
 
 \bigskip
 
@@ -1104,17 +1217,381 @@ Le heaume de télépathie augmente la capacité télépathique de la même mani�
 
 \bigskip
 
-\textbf{Neuvième niveau :}
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+\newpage
+\phantomsection\addcontentsline{toc}{section}{D\&D VOLUME II -- MONSTRES \& TRESORS}\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
+
+\vspace{1.8cm}
+
+{\Large \textbf{Volume I}}
+
+\vspace{1.3cm}
+
+{\Huge \ODDtitlebisfont{MONSTRES \&}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{TRESORS}}
+
+\vspace{4cm}
+
+{\large PAR
+
+\vspace{0.1cm}
+
+GARY GYGAX \& DAVE ARNESON}
+\end{center}
+
+\newpage
+
+%==========================================================================SECTION
+\newpage
+\phantomsection\section*{Monstres \& Trésors}
+\addcontentsline{toc}{section}{Monstres \& Trésors}
+
+%----------------------------------------------------- SUB SECTION
+\phantomsection\subsection*{EXPLICATIONS DES OBJETS MAGIQUES}
+\addcontentsline{toc}{subsection}{EXPLICATIONS DES OBJETS MAGIQUES}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{EPEES :}
+\addcontentsline{toc}{subsubsection}{EPEES}
+{\parindent0pt
+
+Parmi les armes magiques, seules les épées possèdent certains attributs humains (et surhumains) ; les épées ont un \myunderline{Alignement} (Loyal, Neutre ou Chaotique), un facteur d'\myunderline{Intelligence}, et un score d'\myunderline{Egoïsme} (ainsi qu'une détermination optionnelle de leur \myunderline{origine/objectif}). Ces déterminations sont faites de la manière suivante :
 
 \bigskip
 
-\textbf{Sort astral} : un sort qui permet à l'utilisateur d'envoyer sa forme astrale, indétectable pour tous sauf pour ceux du plan astral, depuis son corps vers d'autres endroits. Noter qu'un sort ``Mot de pouvoir aveuglant'' ne pourrait pas empêcher ce sort et ne pourrait pas aveugler la forme astrale. Le magicien peut utiliser des sorts quand il est dans sa forme astrale, mais il y a 5\% de risques par niveau de sort que le sort échoue. Si le sort échoue, il y a un risque de 2\% par niveau de sort que le magicien soit forcé de retourner dans son corps. Exemple : un magicien du dix-huitième niveau dans sa forme astrale tente de jeter un sort du sixième niveau. Il y  30\% de chances que le sort échoue, et s'il échoue, il y a 12\% de chances qu'il soit obligé de réintégrer son corps. Si, pendant que le magicien a quitté son corps et se trouve dans le plan astral, son corps est bougé en dehors de la porté du sort ou détruit, la forme astrale du magicien est immédiatement envoyée pour bafouiller et hurler au plus bas niveau de l'enfer. Durée : dans les souterrains -- 12 tours ; à l'extérieur -- 8 heures de jeu. Portée : dans les souterrains -- 7m ; à l'extérieur -- 160km/niveau à partir du 18\textsuperscript{ème}. Mouvement du corps astral : dans les souterrains -- 4m/tour ; à l'extérieur 160km par heure de jeu depuis le 18\textsuperscript{ème} niveau\footnote{Issu du supplément \texttt{Greyhawk} (NdT).}.
+\textbf{Alignement} : lancez un dé de pourcentage pour déterminer l'Alignement.
+
+\bigskip
+
+{\parindent2.5cm
+\begin{tabular}{p{2.8cm}l}
+01 - 65
+& L'épée est Loyale \\
+66 - 90
+& L'épée est Neutre \\
+91 - 00
+& L'épée est Chaotique \\
+\end{tabular}}
+
+\medskip
+
+Notez que les pourcentages ci-dessus sont inversés pour l'épée ayant la capacité de drainer un niveau d'énergie vitale (83 sur la Table des Epées\footnote
+{Se référer au second au manuel \texttt{Monsters \& Treasure} des règles originales de OD\&D. Le mécanisme est expliqué dans la description des \texttt{Wights} (esprits) : il s'agit essentiellement de perdre temporairement un niveau et un dé de vie (NdT).}). Si l'épée est Chaotique, elle affecte les créatures notées entre parenthèses (clercs, chevaux ailés, hippogriffes, rockhs, ents) au lieu de ceux indiqués en premier\footnote{Dans la Table des Epées.} (trolls et morts-vivants).
+
+\medskip
+
+Si un personnage se saisit d'une épée qui n'est pas du même Alignement que lui-même, il subit les dommages suivants :
+
+\medskip
+
+{\parindent2cm Loi -- Chaos : 2 Dés (2-12 points)
+
+Neutralité - Loi/Chaos : 1 Dé (1--6 Points)}
+
+\medskip
+
+Si on ordonne à un PNJ de prendre une épée, les dommages ne seront que de la moitié de ceux indiqués ci-dessus, car la personne n'agit pas de manière libre. De plus, l'épée pourrait libérer celui qui l'a prise d'un sortilège, le faire changer d'Alignement, ou alors lui faire gagner des pouvoirs, ce qui les enlèverait au précédent maître de l'épée.
+
+\medskip
+
+De plus, si l‘Intelligence/Egoïsme de l'épée (voir ci-dessous) est supérieur de 6 points ou plus à celle du personnage qui l'a prise, l'épée contrôlera la personne, le faisant même prendre l'Alignement de l'épée, et agir en conséquence. Cela pourrait vouloir dire qu'un mercenaire d'un PJ Loyal à qui on ordonnerait de prendre une épée Neutre, et qui se ferait dominer par l'épée, mentirait délibérément à propos de ses pouvoirs ; si l'épée était Chaotique, il attaquerait.
+
+\medskip
+
+Après avoir déterminé l'Alignement, il faut définir l'Intelligence de l'épée.
+
+\medskip
+
+\myunderline{Intelligence} : l'Intelligence conditionne deux facteurs : les pouvoirs mentaux et la capacité à communiquer. Tous deux sont déterminés par un seul jet de dé.
+
+\medskip
+
+\begin{tabular}{c l c}
+\textbf{Intelligence} & &\myunderline{\textbf{Capacité de}} \\
+\textbf{\myunderline{(Jet de dé)}} & \myunderline{\textbf{Pouvoirs mentaux}} & \myunderline{\textbf{communication}} \\
+1--6 & Aucun & Aucune* \\
+7 & Un Pouvoir Primaire & Empathie \\
+8 & Deux Pouvoirs Primaires & Empathie \\
+9 & Trois Pouvoirs Primaires & Empathie \\
+10 & Trois Pouvoirs Primaires et l'usage de langues** & Parole \\
+11 & Comme 10 plus Lecture de la Magie & Parole \\
+12 & Comme 11 plus une Capacité Extraordinaire & Télépathie \\
+\end{tabular}
+
+\medskip
+
+* Même incapable de communiquer, l'épée confère au porteur ses pouvoirs, mais ceux-ci devront être découverts par l'utilisateur.
+
+\medskip
+
+** Le nombre de langues parlées \myunderline{en plus de la langue d'alignement de l'épée} est déterminé par un jet de dé.
+
+\medskip
+
+\begin{tabular}[t]{ll}
+
+\begin{tabular}[t]{lp{7cm}}
+\multicolumn{2}{l}{\myunderline{\textbf{Pouvoirs Primaires}}} \\
+\textbf{\myunderline{Jet de dés}} & \myunderline{\textbf{Pouvoir}} \\
+01--15 & Remarquer des parois \& salles coulissantes \\
+16--30 & Détecter des passages inclinés \\
+31--40 & Localiser les portes secrètes \\
+41--50 & Détecter les pièges \\
+51--60 & Voir les objets invisibles \\
+61--70 & Détecter le mal et/ou l'or \\
+71--80 & Détecter la nourriture et son type \\
+81--90 & Détecter la magie \\
+91--95 & Détecter les bijoux (nombre et taille) \\
+96--99 & Faire deux jets en ignorant les scores au dessus de 95 excepté 00 \\
+\hspace{0.4cm}00 & Faire un jet sur la table des Capacités Extraordinaires au lieu de celle-ci \\
+\end{tabular}
+
+\begin{tabular}[t]{lp{3cm}}
+\multicolumn{2}{l}{\myunderline{\textbf{Langues parlées}}} \\
+\textbf{\myunderline{Jet de dés}} & \myunderline{\textbf{Nb. langues}} \\
+01--50 & Un \\
+51--70 & Deux \\
+71--85 & Trois \\
+86--90 & Quatre \\
+90--99 & Cinq \\
+\hspace{0.4cm}00 & Faire deux jets en ignorant 00 s'il est tiré \\
+\end{tabular}
+\end{tabular}
+
+\begin{center}
+\includegraphics[scale=0.042]{./images/medusa.jpg}
+\end{center}
+
+\begin{tabular}[t]{p{3cm}p{12cm}}
+\multicolumn{2}{l}{\myunderline{\textbf{Table des Capacités Extraordinaires}}} \\
+\textbf{\myunderline{Jet de dé}} & \myunderline{\textbf{Capacité}} \\
+01--10 & Clairaudience \\
+11--20 & Clairvoyance \\
+21--30 & Perception extra-sensorielle (ESP) \\
+31--40 & Télépathie \\
+41--50 & Télékinésie \\
+51--59 & Téléportation \\
+60--68 & Vision rayons X \\
+69--77 & Génération d'illusions \\
+78--82 & Lévitation \\
+83--87 & Vol \\
+88--92 & Soins (1 point par 6 tours ou 6 points par jour) \\
+93--97 & 1--4 fois la force normale pendant 1--10 tours, peut être employé une fois par jour \\
+98-99 & Refaire deux jets en ignorant les jets au-dessus de 97 \\
+\hspace{0.4cm}00 & Refaire trois jets en ignorant les jets au-dessus de 97 \\
+\end{tabular}
+
+\medskip
+
+Tous les Pouvoirs Primaires et Capacités Extraordinaires sont transmis à l'utilisateur de l'épée. Si vous tirez la même capacité deux fois , cela signifie que la capacité est doublée en termes de force, de portée, de précision, et.
+
+\bigskip
+
+\myunderline{\textbf{Egoïsme}} : seules les épées avec une Intelligence de 7 ou plus ont un score d'Egoïsme. L'Egoïsme est compris dans l'intervalle 1--12, plus le nombre est grand et plus grand est l'Egoïsme de l'épée. L'Egoïsme de l'épée peut lui faire faire les choses suivantes :
+
+\begin{enumerate}
+\item Obliger l'utilisateur à se défaire de meilleures armes,
+\item Mettre l'utilisateur dans des situations très dangereuses afin d'exalter son rôle dans le combat,
+\item Se laisser capturer par un personnage ou une créature de niveau plus élevé qui est plus proche de l'esprit de l'épée,
+\item Se laisser capturer par un personnage ou une créature de niveau plus faible dans le but d'exercer un plus grand contrôle sur son utilisateur, et
+\item Exiger qu'une partie des trésors conquis lui soit consacré, sous la forme de meilleurs fourreaux, d'incrustations de joyaux, ou de dispositifs magiques pour la garder lorsque personne ne l'utilise.
+\end{enumerate}
+
+A chaque moment où une situation se présente durant laquelle une des possibilités listées ci-dessus existe, l'Egoïsme de l'épée intervient. Ce dernier influencera toujours sa relation à l'utilisateur, bien que de vrais rapports puissent voir le jour si l'alignement et les buts du personnage/utilisateur coïncident avec l'\myunderline{origine/objectife} de l'épée. La détermination de chaque facteur est décrite ci-après:
+
+\begin{center}
+\begin{minipage}{0.8\linewidth}
+\textbf{Influence de l'Egoïsme dans des Situations Clef} : l'arbitre additionne l'Intelligence et l'Egoïsme de l'épée (entre 8 et 24) et ajoute 1 pour chaque Capacité Extraordinaire (entre 1 et 4 si applicable). Le total (dans l'intervalle 8--28) est comparé à la somme de l'Intelligence et de la Force du personnage (6--36) modifié par une variable basée sur l'état physique de l'utilisateur. Si le personnage est frais et relativement exempt de dommages (moins de 10\% de dommages), il faut \myunderline{ajouter} 1--6 points à son total (pour arriver à un intervalle de 7--42). S'il est mentalement ou physiquement fatigué, ou s'il a subi des dommages compris entre 10\% et 50\%, il faut \myunderline{déduire} 1--4 points de son total (pour arriver à un intervalle de 2--35). Si les dommages subis dépassent les 50\%, ou le personnage a été sous le coup d'une tension mentale sévère venant d'une forme de magie, il faut \myunderline{déduire} 2--8 points (pour arriver à un intervalle de 0--34).
+
+\bigskip
+
+{\parindent0.5cm \begin{tabular}{ll}
+\textbf{\myunderline{Différence}} & \myunderline{\textbf{Résultat}} \\
+6 ou plus & Le plus haut score l'emporte \\
+2--5 & 75\% de chances que le plus haut score l'emporte \\
+0--1 & 50\% de chances pour chacun \\
+\end{tabular}}
+
+\bigskip
+
+\textbf{L'Egoïsme dans les relations au long cours avec l'utilisateur} : cette détermination est assez simple, car elle est basée sur la comparaison du score d'Egoïsme de l'épée (1--12) avec le niveau du guerrier l'utilisant. Consultez la table des \myunderline{Situations Clef} ci-dessus. Si l'une des parties a une différence positive de 6 ou plus, celle-ci l'emportera toujours et plus aucun test (incluant les Situations Clef) ne sera nécessaire. Une différence positive de 2--5 indiquera que celle ayant le plus haut score l'emporte généralement, et les tests ne devront être effectués que dans les Situations Clef. Une différence de 0--1 indique un combat continu entre l'épée et son utilisateur, et durant les situations stressantes, les deux devraient être testés afin de déterminer qui l'emporte.
+
+\end{minipage}
+\end{center}
+
+\myunderline{\textbf{Origine/Objectif}} : naturellement, l'origine de chaque épée est la Loi, la Neutralité ou le Chaos, mais certaines de ces armes sont forgés par des forces plus puissantes pour un objectif particulier. Pour déterminer si une épée possède un tel objectif, faire un jet de pourcentage et un jet de 91 ou plus indique que l'épée possède une mission spéciale. Les épées avec des objectifs spéciaux voient automatiquement leur score l'Intelligence et d'Egoïsme poussés au maximum et elles gagnent une capacité additionnelle :
+
+\bigskip
+
+{\parindent1cm \textbf{Loi}: capacité de paralyser les opposants chaotiques,
+
+\textbf{Neutralité} : ajoute +1 à tous les jets de sauvegarde,
+
+\textbf{Chaos} : capacité de désintégrer les opposants loyaux.}
+
+\bigskip
+
+La capacité spéciale ne sera applicable que pour ceux que l'épée a été chargée de détruire, ou ceux qui les servent.
+
+\myunderline{\textbf{Objectifs}}:
+
+\medskip
+
+{\parindent1.5cm\begin{tabular}{p{4.6cm}p{4.6cm}p{4.6cm}}
+Tuer les magiciens & Tuer les guerriers & Vaincre la Loi \\
+Tuer les clercs & Tuer les monstres & Vaincre le Chaos \\
+\end{tabular}}
+
+\bigskip
+
+Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (chaotiques) les paralysera ainsi que leurs sbires, mais elle n'utilisera pas ses pouvoirs de paralysie contre un géant errant. Néanmoins, les épées ayant un objectif large utiliseraient leurs pouvoirs pour vaincre tous les opposants de nature Loyale ou Chaotique. Les épées ayant un objectif spécial de Neutralité agiront contre la Loi et le Chaos de la même manière. Les épées ayant un objectif spécial chercheront toujours à l'accomplir, et chaque tentative des utilisateurs de le contrer se soldera immédiatement par un test d'influence.
+
+\bigskip
+
+\myunderline{\textbf{EPEES, BONUS AUX DOMMAGES}} : Les épées reçoivent toutes des bonus pour ce qui est de la probabilité de toucher un opposant, mais certaine sd'entre elles reçoivent aussi un bonus aux dommages quand elles touchent. Ces épées sont celles qui ont un +2 ou +3 contre certaines créatures, mais pas celles qui ont un bonus général de +2 ou +3.
+
+
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{DIVERS OBJETS MAGIQUES :}
+\addcontentsline{toc}{subsubsection}{DIVERS OBJETS MAGIQUES}
+
+\label{boulecristal}\textbf{Boules de cristal} : généralement, l'utilisation réussie de ces objets est mise à mal par les grandes distances, le fait de ne pas connaître vraiment le sujet, quand des sorts sont utilisés pour empêcher cette utilisation, quand du plomb s'interpose entre le magicien et le sujet, etc. Seulement trois tentatives par jour peuvent être faites dans les circonstances mentionnées ci-dessus pour ne pas rendre fou le magicien. Une utilisation longue de la boule de cristal demande au magicien de se reposer et de récupérer le jour suivant. Les sorts ne peuvent pas être lancés au travers d'une boule de cristal, mais l'opérateur peut, par exemple, lancer un sort d'infravision sur lui-même, puis regarder dans l'objet et voir dans les ténèbres.
+
+\bigskip
+
+\textbf{Médaillons de perception extrasensorielle} : ces objets sont utilisables par toutes les classes de personnages, même les Nains. Lancer 1d6 à leur utilisation ; ils dysfonctionnent si l'obtient 6.
+
+\bigskip
+
+\textbf{Amulette de captation} : fonctionne avec une boule de cristal ou l'utiliation du sort Perception extrasensorielle. Cet objet donne la localisation, la vision, ou les pensées récupérées par la boule de cristal ou l'utilisation du sort. Il fonctionne toujours.
+
+\bigskip
+
+\textbf{Heaume de télépathie} : permet au porteur de lire les pensées de toute créature dans un rayon de 3m. Si son Intelligence est plus grande que la créature humaine ou humanoïde dans la portée du heaume, le porteur peut tenter de contrôler leur esprit avec des suggestions implantées de manière télépathique. De telles suggestions auront un effet de +2 dans leur probabilité d'être suivies (voir Vol. III pour les actions aléatoires des monstres\footnote{Voir section \og Actions aléatoires par monstre \fg{} de ce document.}). Pour les personnages du jeu, faites un jet de pourcentage en ajoutant 10\% au porteur du heaume, et si le personnage échoue à battre son score,%Quel score?
+il suivra la suggestion. (L'arbitre doit utiliser son jugement dans ce cas, car une suggestion de se suicider ne devrait pas avoir de chances d'être suivie par un événement.) Traiter comme un heaume non protégeant si le casque est porté en mêlée.
+
+}% parindent
+
+
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+\newpage
+\phantomsection\addcontentsline{toc}{section}{D\&D VOLUME III -- AVENTURES DANS LE MONDE SOUTERRAIN \& DANS LES REGIONS SAUVAGES}\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
+
+\vspace{1.8cm}
+
+{\Large \textbf{Volume III}}
+
+\vspace{1.3cm}
+
+{\Huge \ODDtitlebisfont{AVENTURES}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{DANS LE MONDE}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{SOUTERRAIN}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{ \& DANS LES}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{REGIONS}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{SAUVAGES}}
+
+\vspace{3cm}
+
+{\large PAR
+
+\vspace{0.1cm}
+
+GARY GYGAX \& DAVE ARNESON}
+\end{center}
+
+\newpage
+
+%==========================================================================SECTION
+\newpage
+\phantomsection\section*{Aventures dans le monde souterrain \& dans les régions sauvages}
+\addcontentsline{toc}{section}{Aventures dans le monde souterrain \& dans les régions sauvages}
+
+%----------------------------------------------------- SUB SECTION
+\phantomsection\subsection*{LES MONSTRES DU MONDE SOUTERRAIN}
+\addcontentsline{toc}{subsection}{LES MONSTRES DU MONDE SOUTERRAIN}
+
+\textbf{Actions aléatoires par monstre} : dans les autres situations qu'en poursuite, les plus intelligents des monstres agiront de manière aléatoire, en accord avec les résultats obtenus en faisant un jet de deux dés (à six faces) :
+
+\bigskip
+
+{\parindent6cm \begin{tabular}{cl}
+2--5 & réaction négative \\
+6--8 & réaction incertaine \\
+9--12 & réaction positive \\
+\end{tabular}}
+
+\medskip
+
+Le score aux dés peut être modifié par des additions ou des soustractions pour des choses telles que des pots-de-vin offerts, la peur, l'alignement des parties concernées, etc.
+
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+\newpage
+\phantomsection\addcontentsline{toc}{section}{SUPPLEMENT I -- GREYHAWK}\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
+
+\vspace{1.8cm}
+
+{\Large \textbf{Supplément I}}
+
+\vspace{1.3cm}
+
+{\Huge \ODDtitlebisfont{GREYHAWK}}
+
+\vspace{5cm}
+
+{\large PAR
+
+\vspace{0.1cm}
+
+GARY GYGAX \& ROB KUNTZ}
+\end{center}
+
+\newpage
+
+
+%==========================================================================SECTION
+\phantomsection\section*{Hommes \& Magie}
+\addcontentsline{toc}{section}{Hommes \& Magie}
 
 %----------------------------------------------------- SUB SECTION
 \phantomsection\subsection*{SYSTEME DE COMBAT ALTERNATIF}
 \addcontentsline{toc}{subsection}{SYSTEME DE COMBAT ALTERNATIF}
+\label{combat-alternatif}
 
-Pour ceux qui voudraient inclure les types d'armes dans la détermination des probabilités de toucher, le tableau suivant, extrait de la section \og combat en mêlée \fg{} de CHAINMAIL est offert\footnote{Toute cette partie est extraite du supplément \texttt{Greyhawk} (NdT).}. Si ce système est utilisé, il est suggéré d'employer le tableau des dommages par type d'arme et type de monstre.
+Pour ceux qui voudraient inclure les types d'armes dans la détermination des probabilités de toucher, le tableau suivant, extrait de la section \og combat en mêlée \fg{} de CHAINMAIL est offert. Si ce système est utilisé, il est suggéré d'employer le tableau des dommages par type d'arme et type de monstre.
 
 Traiter les Voleurs et Clerc en termes d'avancement en paliers -- quatre niveaux/groupe (1--4, 5--8, 9--12, etc.). En ce qui concerne les jets de sauvegarde, traiter les Voleurs comme des magiciens.
 
@@ -1374,6 +1851,44 @@ Golem & 1 & CHAIR --- 2--16 \\
 \multicolumn{1}{r}{*****} & voir les différentes sections concernant tous les types d'élémentaires car des ajustements pourraient être requis en raison des circonstances
 \end{tabular}
 
+%----------------------------------------------------- SUB SECTION
+\phantomsection\subsection*{EXPLICATION DES SORTS :}
+\addcontentsline{toc}{subsection}{EXPLICATION DES SORTS}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{\textit{Magiciens :}}
+\addcontentsline{toc}{subsubsection}{Magiciens}
+
+\textit{Troisième niveau :}
+
+\bigskip
+
+\textbf{Suggestion} : un sort qui fonctionne que le principe de l'hypnose. Si une créature sur laquelle le sort est lancé rate son jet de sauvegarde contre la magie, elle sera la victime de la suggestion, immédiatement ou de manière différée au bon vouloir du magicien. Le fait que la créature s'autodétruise est improbable à 99\%, mais des suggestions formulées avec attention peuvent, selon l'estimation de l'arbitre, altérer cette probabilité. Les suggestions doivent être simples et relativement courtes, soit une phrase ou deux. Durée : une semaine de temps de jeu.
+
+\bigskip
+
+\textit{Neuvième niveau :}
+
+\bigskip
+
+\label{sort-astral}\textbf{Sort astral} : un sort qui permet à l'utilisateur d'envoyer sa forme astrale, indétectable pour tous sauf pour ceux du plan astral, depuis son corps vers d'autres endroits. Noter qu'un sort ``Mot de pouvoir aveuglant'' ne pourrait pas empêcher ce sort et ne pourrait pas aveugler la forme astrale. Le magicien peut utiliser des sorts quand il est dans sa forme astrale, mais il y a 5\% de risques par niveau de sort que le sort échoue. Si le sort échoue, il y a un risque de 2\% par niveau de sort que le magicien soit forcé de retourner dans son corps. Exemple : un magicien du dix-huitième niveau dans sa forme astrale tente de jeter un sort du sixième niveau. Il y  30\% de chances que le sort échoue, et s'il échoue, il y a 12\% de chances qu'il soit obligé de réintégrer son corps. Si, pendant que le magicien a quitté son corps et se trouve dans le plan astral, son corps est bougé en dehors de la porté du sort ou détruit, la forme astrale du magicien est immédiatement envoyée pour bafouiller et hurler au plus bas niveau de l'enfer. Durée : dans les souterrains -- 12 tours ; à l'extérieur -- 8 heures de jeu. Portée : dans les souterrains -- 7m ; à l'extérieur -- 160km/niveau à partir du 18\textsuperscript{ème}. Mouvement du corps astral : dans les souterrains -- 4m/tour ; à l'extérieur 160km par heure de jeu depuis le 18\textsuperscript{ème} niveau.
+
+%==========================================================================SECTION
+\newpage
+\phantomsection\section*{Monstres \& Trésors}
+\addcontentsline{toc}{subsection}{Monstres \& Trésors}
+
+%----------------------------------------------------- SUB SECTION
+\phantomsection\subsection*{EXPLICATIONS DES OBJETS MAGIQUES}
+\addcontentsline{toc}{subsection}{EXPLICATIONS DES OBJETS MAGIQUES}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{POTIONS :}
+\addcontentsline{toc}{subsubsection}{POTIONS}
+
+\textit{Huile éthérée} : quand l'utilisateur est oint de cette substance, il est capable de traverser des substance solides comme il le souhaite, comme s'il revêtait l'Armure Ethérée. Noter que quand l'utilisateur est ainsi oint, il n'est pas capable de manipuler des objets normaux car ses mains leur passent au travers.
+
+
 
 
 %================================================Test
@@ -1389,261 +1904,63 @@ Golem & 1 & CHAIR --- 2--16 \\
 
 %reprendre ici
 
-%==========================================================================SECTION
+
+
+
+
+
+
+
+
+
+
+
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
+%+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= PART
 \newpage
-\phantomsection\section*{Monstres \& Trésors}
-\addcontentsline{toc}{subsection}{Monstres \& Trésors}
+\phantomsection\addcontentsline{toc}{section}{SUPPLEMENT III bis -- ELDRITCH WIZARDRY}\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
 
-%----------------------------------------------------- SUB SECTION
-\phantomsection\subsection*{EXPLICATIONS DES OBJETS MAGIQUES}
-\addcontentsline{toc}{subsection}{EXPLICATIONS DES OBJETS MAGIQUES}
+\vspace{1.8cm}
 
-%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
-\phantomsection\subsubsection*{EPEES :}
-\addcontentsline{toc}{subsubsection}{EPEES}
-{\parindent0pt
+{\Large \textbf{Supplément III bis}}
 
-Parmi les armes magiques, seules les épées possèdent certains attributs humains (et surhumains) ; les épées ont un \myunderline{Alignement} (Loyal, Neutre ou Chaotique), un facteur d'\myunderline{Intelligence}, et un score d'\myunderline{Egoïsme} (ainsi qu'une détermination optionnelle de leur \myunderline{origine/objectif}). Ces déterminations sont faites de la manière suivante :
+\vspace{1.3cm}
 
-\bigskip
+{\Huge \ODDtitlebisfont{ELDRITCH}}
 
-\textbf{Alignement} : lancez un dé de pourcentage pour déterminer l'Alignement.
+\vspace{0.3cm}
 
-\bigskip
+{\Huge \ODDtitlebisfont{WIZARDRY}}
 
-{\parindent2.5cm
-\begin{tabular}{p{2.8cm}l}
-01 - 65
-& L'épée est Loyale \\
-66 - 90
-& L'épée est Neutre \\
-91 - 00
-& L'épée est Chaotique \\
-\end{tabular}}
+\vspace{2.0cm}
 
-\medskip
+{\Large \textbf{MAGIE ANCIENNE ET PUISSANTE}}
 
-Notez que les pourcentages ci-dessus sont inversés pour l'épée ayant la capacité de drainer un niveau d'énergie vitale (83 sur la Table des Epées\footnote
-{Se référer au second au manuel \texttt{Monsters \& Treasure} des règles originales de OD\&D. Le mécanisme est expliqué dans la description des \texttt{Wights} (esprits) : il s'agit essentiellement de perdre temporairement un niveau et un dé de vie (NdT).}). Si l'épée est Chaotique, elle affecte les créatures notées entre parenthèses (clercs, chevaux ailés, hippogriffes, rockhs, ents) au lieu de ceux indiqués en premier\footnote{Dans la Table des Epées.} (trolls et morts-vivants).
+\vspace{0.5cm}
 
-\medskip
+{\Large \textbf{POUVOIRS PSIONIQUES}}
 
-Si un personnage se saisit d'une épée qui n'est pas du même Alignement que lui-même, il subit les dommages suivants :
+\vspace{1cm}
 
-\medskip
+{\large PAR
 
-{\parindent2cm Loi -- Chaos : 2 Dés (2-12 points)
+\vspace{0.1cm}
 
-Neutralité - Loi/Chaos : 1 Dé (1--6 Points)}
-
-\medskip
-
-Si on ordonne à un PNJ de prendre une épée, les dommages ne seront que de la moitié de ceux indiqués ci-dessus, car la personne n'agit pas de manière libre. De plus, l'épée pourrait libérer celui qui l'a prise d'un sortilège, le faire changer d'Alignement, ou alors lui faire gagner des pouvoirs, ce qui les enlèverait au précédent maître de l'épée.
-
-\medskip
-
-De plus, si l‘Intelligence/Egoïsme de l'épée (voir ci-dessous) est supérieur de 6 points ou plus à celle du personnage qui l'a prise, l'épée contrôlera la personne, le faisant même prendre l'Alignement de l'épée, et agir en conséquence. Cela pourrait vouloir dire qu'un mercenaire d'un PJ Loyal à qui on ordonnerait de prendre une épée Neutre, et qui se ferait dominer par l'épée, mentirait délibérément à propos de ses pouvoirs ; si l'épée était Chaotique, il attaquerait.
-
-\medskip
-
-Après avoir déterminé l'Alignement, il faut définir l'Intelligence de l'épée.
-
-\medskip
-
-\myunderline{Intelligence} : l'Intelligence conditionne deux facteurs : les pouvoirs mentaux et la capacité à communiquer. Tous deux sont déterminés par un seul jet de dé.
-
-\medskip
-
-\begin{tabular}{c l c}
-\textbf{Intelligence} & &\myunderline{\textbf{Capacité de}} \\
-\textbf{\myunderline{(Jet de dé)}} & \myunderline{\textbf{Pouvoirs mentaux}} & \myunderline{\textbf{communication}} \\
-1--6 & Aucun & Aucune* \\
-7 & Un Pouvoir Primaire & Empathie \\
-8 & Deux Pouvoirs Primaires & Empathie \\
-9 & Trois Pouvoirs Primaires & Empathie \\
-10 & Trois Pouvoirs Primaires et l'usage de langues** & Parole \\
-11 & Comme 10 plus Lecture de la Magie & Parole \\
-12 & Comme 11 plus une Capacité Extraordinaire & Télépathie \\
-\end{tabular}
-
-\medskip
-
-* Même incapable de communiquer, l'épée confère au porteur ses pouvoirs, mais ceux-ci devront être découverts par l'utilisateur.
-
-\medskip
-
-** Le nombre de langues parlées \myunderline{en plus de la langue d'alignement de l'épée} est déterminé par un jet de dé.
-
-\medskip
-
-\begin{tabular}[t]{ll}
-
-\begin{tabular}[t]{lp{7cm}}
-\multicolumn{2}{l}{\myunderline{\textbf{Pouvoirs Primaires}}} \\
-\textbf{\myunderline{Jet de dés}} & \myunderline{\textbf{Pouvoir}} \\
-01--15 & Remarquer des parois \& salles coulissantes \\
-16--30 & Détecter des passages inclinés \\
-31--40 & Localiser les portes secrètes \\
-41--50 & Détecter les pièges \\
-51--60 & Voir les objets invisibles \\
-61--70 & Détecter le mal et/ou l'or \\
-71--80 & Détecter la nourriture et son type \\
-81--90 & Détecter la magie \\
-91--95 & Détecter les bijoux (nombre et taille) \\
-96--99 & Faire deux jets en ignorant les scores au dessus de 95 excepté 00 \\
-\hspace{0.4cm}00 & Faire un jet sur la table des Capacités Extraordinaires au lieu de celle-ci \\
-\end{tabular}
-
-\begin{tabular}[t]{lp{3cm}}
-\multicolumn{2}{l}{\myunderline{\textbf{Langues parlées}}} \\
-\textbf{\myunderline{Jet de dés}} & \myunderline{\textbf{Nb. langues}} \\
-01--50 & Un \\
-51--70 & Deux \\
-71--85 & Trois \\
-86--90 & Quatre \\
-90--99 & Cinq \\
-\hspace{0.4cm}00 & Faire deux jets en ignorant 00 s'il est tiré \\
-\end{tabular}
-\end{tabular}
-
-\begin{center}
-\includegraphics[scale=0.042]{./images/medusa.jpg}
+GARY GYGAX \& BRIAN BLUME \& ROUBOUDOU}
 \end{center}
 
 \newpage
-
-\begin{tabular}[t]{p{3cm}p{12cm}}
-\multicolumn{2}{l}{\myunderline{\textbf{Table des Capacités Extraordinaires}}} \\
-\textbf{\myunderline{Jet de dé}} & \myunderline{\textbf{Capacité}} \\
-01--10 & Clairaudience \\
-11--20 & Clairvoyance \\
-21--30 & Perception extra-sensorielle (ESP) \\
-31--40 & Télépathie \\
-41--50 & Télékinésie \\
-51--59 & Téléportation \\
-60--68 & Vision rayons X \\
-69--77 & Génération d'illusions \\
-78--82 & Lévitation \\
-83--87 & Vol \\
-88--92 & Soins (1 point par 6 tours ou 6 points par jour) \\
-93--97 & 1--4 fois la force normale pendant 1--10 tours, peut être employé une fois par jour \\
-98-99 & Refaire deux jets en ignorant les jets au-dessus de 97 \\
-\hspace{0.4cm}00 & Refaire trois jets en ignorant les jets au-dessus de 97 \\
-\end{tabular}
-
-\medskip
-
-Tous les Pouvoirs Primaires et Capacités Extraordinaires sont transmis à l'utilisateur de l'épée. Si vous tirez la même capacité deux fois , cela signifie que la capacité est doublée en termes de force, de portée, de précision, et.
-
-\bigskip
-
-\myunderline{\textbf{Egoïsme}} : seules les épées avec une Intelligence de 7 ou plus ont un score d'Egoïsme. L'Egoïsme est compris dans l'intervalle 1--12, plus le nombre est grand et plus grand est l'Egoïsme de l'épée. L'Egoïsme de l'épée peut lui faire faire les choses suivantes :
-
-\begin{enumerate}
-\item Obliger l'utilisateur à se défaire de meilleures armes,
-\item Mettre l'utilisateur dans des situations très dangereuses afin d'exalter son rôle dans le combat,
-\item Se laisser capturer par un personnage ou une créature de niveau plus élevé qui est plus proche de l'esprit de l'épée,
-\item Se laisser capturer par un personnage ou une créature de niveau plus faible dans le but d'exercer un plus grand contrôle sur son utilisateur, et
-\item Exiger qu'une partie des trésors conquis lui soit consacré, sous la forme de meilleurs fourreaux, d'incrustations de joyaux, ou de dispositifs magiques pour la garder lorsque personne ne l'utilise.
-\end{enumerate}
-
-A chaque moment où une situation se présente durant laquelle une des possibilités listées ci-dessus existe, l'Egoïsme de l'épée intervient. Ce dernier influencera toujours sa relation à l'utilisateur, bien que de vrais rapports puissent voir le jour si l'alignement et les buts du personnage/utilisateur coïncident avec l'\myunderline{origine/objectife} de l'épée. La détermination de chaque facteur est décrite ci-après:
-
-\begin{center}
-\begin{minipage}{0.8\linewidth}
-\textbf{Influence de l'Egoïsme dans des Situations Clef} : l'arbitre additionne l'Intelligence et l'Egoïsme de l'épée (entre 8 et 24) et ajoute 1 pour chaque Capacité Extraordinaire (entre 1 et 4 si applicable). Le total (dans l'intervalle 8--28) est comparé à la somme de l'Intelligence et de la Force du personnage (6--36) modifié par une variable basée sur l'état physique de l'utilisateur. Si le personnage est frais et relativement exempt de dommages (moins de 10\% de dommages), il faut \myunderline{ajouter} 1--6 points à son total (pour arriver à un intervalle de 7--42). S'il est mentalement ou physiquement fatigué, ou s'il a subi des dommages compris entre 10\% et 50\%, il faut \myunderline{déduire} 1--4 points de son total (pour arriver à un intervalle de 2--35). Si les dommages subis dépassent les 50\%, ou le personnage a été sous le coup d'une tension mentale sévère venant d'une forme de magie, il faut \myunderline{déduire} 2--8 points (pour arriver à un intervalle de 0--34).
-
-\bigskip
-
-{\parindent0.5cm \begin{tabular}{ll}
-\textbf{\myunderline{Différence}} & \myunderline{\textbf{Résultat}} \\
-6 ou plus & Le plus haut score l'emporte \\
-2--5 & 75\% de chances que le plus haut score l'emporte \\
-0--1 & 50\% de chances pour chacun \\
-\end{tabular}}
-
-\bigskip
-
-\textbf{L'Egoïsme dans les relations au long cours avec l'utilisateur} : cette détermination est assez simple, car elle est basée sur la comparaison du score d'Egoïsme de l'épée (1--12) avec le niveau du guerrier l'utilisant. Consultez la table des \myunderline{Situations Clef} ci-dessus. Si l'une des parties a une différence positive de 6 ou plus, celle-ci l'emportera toujours et plus aucun test (incluant les Situations Clef) ne sera nécessaire. Une différence positive de 2--5 indiquera que celle ayant le plus haut score l'emporte généralement, et les tests ne devront être effectués que dans les Situations Clef. Une différence de 0--1 indique un combat continu entre l'épée et son utilisateur, et durant les situations stressantes, les deux devraient être testés afin de déterminer qui l'emporte.
-
-\end{minipage}
-\end{center}
-
-\myunderline{\textbf{Origine/Objectif}} : naturellement, l'origine de chaque épée est la Loi, la Neutralité ou le Chaos, mais certaines de ces armes sont forgés par des forces plus puissantes pour un objectif particulier. Pour déterminer si une épée possède un tel objectif, faire un jet de pourcentage et un jet de 91 ou plus indique que l'épée possède une mission spéciale. Les épées avec des objectifs spéciaux voient automatiquement leur score l'Intelligence et d'Egoïsme poussés au maximum et elles gagnent une capacité additionnelle :
-
-\bigskip
-
-{\parindent1cm \textbf{Loi}: capacité de paralyser les opposants chaotiques,
-
-\textbf{Neutralité} : ajoute +1 à tous les jets de sauvegarde,
-
-\textbf{Chaos} : capacité de désintégrer les opposants loyaux.}
-
-\bigskip
-
-La capacité spéciale ne sera applicable que pour ceux que l'épée a été chargée de détruire, ou ceux qui les servent.
-
-\myunderline{\textbf{Objectifs}}:
-
-\medskip
-
-{\parindent1.5cm\begin{tabular}{p{4.6cm}p{4.6cm}p{4.6cm}}
-Tuer les magiciens & Tuer les guerriers & Vaincre la Loi \\
-Tuer les clercs & Tuer les monstres & Vaincre le Chaos \\
-\end{tabular}}
-
-\bigskip
-
-Ainsi, une épée au service de la Loi ayant pour but de tuer les magiciens (chaotiques) les paralysera ainsi que leurs sbires, mais elle n'utilisera pas ses pouvoirs de paralysie contre un géant errant. Néanmoins, les épées ayant un objectif large utiliseraient leurs pouvoirs pour vaincre tous les opposants de nature Loyale ou Chaotique. Les épées ayant un objectif spécial de Neutralité agiront contre la Loi et le Chaos de la même manière. Les épées ayant un objectif spécial chercheront toujours à l'accomplir, et chaque tentative des utilisateurs de le contrer se soldera immédiatement par un test d'influence.
-
-\bigskip
-
-\myunderline{\textbf{EPEES, BONUS AUX DOMMAGES}} : Les épées reçoivent toutes des bonus pour ce qui est de la probabilité de toucher un opposant, mais certaine sd'entre elles reçoivent aussi un bonus aux dommages quand elles touchent. Ces épées sont celles qui ont un +2 ou +3 contre certaines créatures, mais pas celles qui ont un bonus général de +2 ou +3.
-
-%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
-\phantomsection\subsubsection*{POTIONS :}
-\addcontentsline{toc}{subsubsection}{POTIONS}
-
-\textbf{Huile éthérée} : quand l'utilisateur est oint de cette substance, il est capable de traverser des substance solides comme il le souhaite, comme s'il revêtait l'Armure Ethérée. Noter que quand l'utilisateur est ainsi oint, il n'est pas capable de manipuler des objets normaux car ses mains leur passent au travers\footnote{Potion issue du supplément \texttt{Greyhawk} (NdT).}.
-
-%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
-\phantomsection\subsubsection*{DIVERS OBJETS MAGIQUES :}
-\addcontentsline{toc}{subsubsection}{DIVERS OBJETS MAGIQUES}
-
-\textbf{Heaume de télépathie} : permet au porteur de lire les pensées de toute créature dans un rayon de 3m. Si son Intelligence est plus grande que la créature humaine ou humanoïde dans la portée du heaume, le porteur peut tenter de contrôler leur esprit avec des suggestions implantées de manière télépathique. De telles suggestions auront un effet de +2 dans leur probabilité d'être suivies (voir Vol. III pour les actions aléatoires des monstres\footnote{Voir section \og Actions aléatoires par monstre \fg{} de ce document.}). Pour les personnages du jeu, faites un jet de pourcentage en ajoutant 10\% au porteur du heaume, et si le personnage échoue à battre son score,%Quel score?
-il suivra la suggestion. (L'arbitre doit utiliser son jugement dans ce cas, car une suggestion de se suicider ne devrait pas avoir de chances d'être suivie par un événement.) Traiter comme un heaume non protégeant si le casque est porté en mêlée.
-
-}% parindent
-
 %==========================================================================SECTION
-\newpage
-\phantomsection\section*{Aventures dans le monde souterrain \& dans les régions sauvages}
-\addcontentsline{toc}{section}{Aventures dans le monde souterrain \& dans les régions sauvages}
+\phantomsection\section*{Hommes \& Magie}
+\addcontentsline{toc}{section}{Hommes \& Magie}
 
-%----------------------------------------------------- SUB SECTION
-\phantomsection\subsection*{LES MONSTRES DU MONDE SOUTERRAIN}
-\addcontentsline{toc}{subsection}{LES MONSTRES DU MONDE SOUTERRAIN}
-
-\textbf{Actions aléatoires par monstre} : dans les autres situations qu'en poursuite, les plus intelligents des monstres agiront de manière aléatoire, en accord avec les résultats obtenus en faisant un jet de deux dés (à six faces) :
-
-\bigskip
-
-{\parindent6cm \begin{tabular}{cl}
-2--5 & réaction négative \\
-6--8 & réaction incertaine \\
-9--12 & réaction positive \\
-\end{tabular}}
-
-\medskip
-
-Le score aux dés peut être modifié par des additions ou des soustractions pour des choses telles que des pots-de-vin offerts, la peur, l'alignement des parties concernées, etc.
-
-\newpage
-%==========================================================================SECTION
-\phantomsection\section*{POUVOIRS PSIONIQUES}
-\addcontentsline{toc}{section}{POUVOIRS PSIONIQUES}
-
-Cette section n'est pas dans le supplément original \texttt{Eldritch Wizardry} ; c'est une synthèse et une réorganisation des règles ayant pour but de les rendre plus accessibles. Lorsqu'une option proposée n'est pas dans les règles originales, le lecteur est averti.
 
 %----------------------------------------------------- SUB SECTION
 \phantomsection\subsection*{Introduction}
@@ -1768,7 +2085,7 @@ Le fait de trier les aptitudes psioniques par catégories permet de restreindre 
 \textbf{A -- Contrôle de la matière} & \textbf{B -- Contrôle de l'esprit}   & \textbf{D -- Voyage psychique} \\
 \textbf{et de l'énergie}             & \textbf{via l'esprit}                & Forme éthérée \\
 Agitation moléculaire                & Altération de l'aura                 & Marche dimensionnelle \\
-Ajustement cellulaire               & Barrière mentale                     & Porte dimensionnelle \\
+Ajustement cellulaire               & Barrière de l'esprit                 & Porte dimensionnelle \\
 Altération de la forme              & Domination                           & Projection astrale \\
 Changer le poids du corps           & Domination des masses                & Téléportation \\
 Contrôle de l'énergie               & Empathie                             &  Voyage probabiliste\\
@@ -1854,11 +2171,11 @@ Chaque table ci-dessous est munie deux colonnes, une avec les scores du 120 et l
 13      & A:9   & Contrôle de l'énergie     & SUP & Spécial \\
 14      & A:10  & Télékinésie               & SUP & 3/tour\\
 15      & D:1   & Marche dimensionnelle     & SUP & Spécial\\
-16      & D:2   & Projection astrale        & SUP & Spécial\\
+16      & D:2   & Projection astrale        & SUP & 0\\
 17      & A:11  & Réarrangement moléculaire & SUP & Spécial\\
 18      & A:12  & Manipulation moléculaire  & SUP & 50\\
 19      & A:13  & Contrôle du corps         & SUP & 5/tour\\
-20      & B:2   & Barrière mentale          & SUP & 0\\
+20      & B:2   & Barrière de l'esprit      & SUP & 0\\
 \end{tabular}
 
 \bigskip
@@ -1879,20 +2196,21 @@ Chaque table ci-dessous est munie deux colonnes, une avec les scores du 120 et l
 \phantomsection\subsubsection*{Guerriers}
 \addcontentsline{toc}{subsubsection}{Guerriers}
 
-\textbf{\color{blue}Réduction} : la capacité de rendre le corps plus petit en taille (-1/3m par niveau de maîtrise).
+%++++++++APTITUDE
+\textbf{\uline{Réduction (0)}} : la capacité de rendre le corps plus petit en taille (-1/3m par niveau de maîtrise).
 
 \bigskip
 
-\textbf{Durée} : Inconnue
-
-\textbf{Coût} : 0
-
-\bigskip
-
-{\parindent1cm\begin{tabular}{lcccccc}
-\textbf{Niveau de maîtrise} & 1 & 2 & 3 & 4 & 5 & 6* \\
-\textbf{Réduction maximale} & 1/3m & 2/3m & 1m & 1m 1/3 & 1m 2/3 & 2m \\
-\end{tabular}}
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Réduction} \\
+premier     & 1/3m \\
+deuxième    & 2/3m \\
+troisième   & 1m \\
+quatrième   & 1m 1/3 \\
+cinquième   & 1m 2/3 \\
+sixième*    & 2m \\
+...         & ... \\
+\end{tabular}
 
 \medskip
 
@@ -1900,39 +2218,108 @@ Chaque table ci-dessous est munie deux colonnes, une avec les scores du 120 et l
 
 \bigskip
 
-\textbf{\color{blue}Expansion} : la capacité pour le corps de devenir plus grand en taille (+2/3m par niveau de maîtrise). La croissance en masse et en force est proportionnée, de sorte qu'au maximum, la croissance de la force atteint celle d'un géant des tempêtes (8m est la limite au niveau 12 de maîtrise).
+%++++++++APTITUDE
+\textbf{\uline{Expansion (spécial)}} : la capacité pour le corps de devenir plus grand en taille (+2/3m par niveau de maîtrise). La croissance en masse et en force est proportionnée, de sorte qu'au maximum, la croissance de la force atteint celle d'un géant des tempêtes (8m est la limite au niveau 12 de maîtrise).
 
 \bigskip
 
-{\parindent1cm\begin{tabular}{lcccccccc}
-\textbf{Niveau de maîtrise} & 1 & 2 & 3 & 4 & 5 & 6 & ... & 12* \\
-\textbf{Expansion maximale} & 2/3m & 1m 1/3 & 2m & 2m 2/3 & 3m 1/3 & 4m & ... & 8m \\
-\end{tabular}}
-
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Expansion} \\
+premier     & 2/3m \\
+deuxième    & 1m 1/3 \\
+troisième   & 2m \\
+quatrième   & 2m 2/3 \\
+cinquième   & 3m 1/3 \\
+sixième     & 4m \\
+...         & ... \\
+douzième    & 8m (maximum) \\
+\end{tabular}
 \bigskip
 
 Durée : il est possible de rester à sa taille maximale pendant deux tours. Mais si le personnage choisit une expansion d'un niveau inférieur à son niveau de maîtrise, il accroît l'endurance pour un tour par niveau. Exemple :si l'expansion potentielle était de 4m (niveau 6), une expansion de seulement 2m (niveau 3) permettrait à l'individu de rester à cette taille pour cinq (2 + 3) tours de jeu.
 
 \bigskip
 
-\textbf{Lévitation} : De manière similaire à la lévitation magique, cette aptitude permet à l'individu de léviter un tour par niveau de possession de l'aptitude. Ainsi, si l'aptitude a été possédée depuis un niveau, la personne peut léviter un tour : si elle a possédé l'aptitude pendant deux niveaux, deux tours de plus sont ajoutés, ce qui fait un total de trois ; au troisième niveau de possession, trois tours sont ajoutés, et ainsi de suite.
+%++++++++APTITUDE
+\textbf{\uline{Lévitation (1/tour)}} : De manière similaire à la lévitation magique, cette aptitude permet à l'individu de léviter un tour par niveau de possession de l'aptitude.
 
 \bigskip
 
-\textbf{Domination} : La capacité de forcer quelqu'un à agir selon votre volonté. L'utilisation de cette aptitude requiert une grande concentration, et elle utilise des points de force psionique à hauteur de un point par niveau de créature dominée par minute de domination. Si la domination requiert le dominé de faire des choses qui sont grandement contre sa volonté, la dépense de points de force psionique est doublée.
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Durée maximale} \\
+premier     & 1 tour \\
+deuxième    & 3 tours (1+2) \\
+troisième   & 6 tours (1+2+3) \\
+quatrième   & 10 tours (1+2+3+4) \\
+...         & ... \\
+\end{tabular}
 
 \bigskip
 
-\textbf{Contrôle de l'esprit sur le corps} : la capacité de supprimer certains besoins corporels (ou de les satisfaire avec des moyens psioniques) ; nourriture, eau, et sommeil peuvent être complètement ignorés pour deux jours par niveau de possession du pouvoir. Ainsi, une personne ayant possédé l'aptitude depuis deux niveaux peut se passer de dormir, manger ou boire pour une période allant jusqu'à quatre jours. Plus tard, néanmoins, la personne \textbf{doit} passer un nombre de jours équivalent à se reposer pour restaurer son aptitude : un échec à faire cela ne mettra pas à mal le corps, mais l'aptitude ne sera plus utilisables tant qu'un tel repos n'est pas pris.
+%++++++++APTITUDE
+\textbf{\uline{Domination (spécial)}} : La capacité de forcer quelqu'un à agir selon votre volonté. L'utilisation de cette aptitude requiert une grande concentration, et elle utilise des points de force psionique à hauteur de un point par niveau de créature dominée par minute de domination. Si la domination requiert le dominé de faire des choses qui sont grandement contre sa volonté, la dépense de points de force psionique est doublée.
 
 \bigskip
 
-\textbf{Prémonition} : la capacité d'estimer la meilleure probabilité de déroulé des événements, ou d'estimer le résultat le plus probable d'actions entreprises. ce pouvoir ne s'applique qu'au futur immédiat. L'estimation devient plus juste quand le niveau du personnage auquel il a acquis l'aptitude augmente, pourvu que le nombre de facteurs inconnus reste constant. La précision de la prémonition dépend aussi de la
-combinaison des scores d'intelligence et de sagesse :
+%++++++++APTITUDE
+\textbf{\uline{Contrôle de l'esprit sur le corps (0)}} : la capacité de supprimer certains besoins corporels (ou de les satisfaire avec des moyens psioniques) ; nourriture, eau, et sommeil peuvent être complètement ignorés pour deux jours par niveau de possession du pouvoir.
+
+\bigskip
+
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Durée maximale} \\
+premier     & 2 jours \\
+deuxième    & 4 jours \\
+troisième   & 6 jours \\
+...         & ... \\
+\end{tabular}
+
+\bigskip
+
+Plus tard, néanmoins, la personne doit passer un nombre de jours équivalent à se reposer pour restaurer son aptitude : un échec à faire cela ne mettra pas à mal le corps, mais l'aptitude ne sera plus utilisables tant qu'un tel repos n'est pas pris.
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Prémonition (spécial)}} : la capacité d'estimer la meilleure probabilité de déroulé des événements, ou d'estimer le résultat le plus probable d'actions entreprises. Ce pouvoir ne s'applique qu'au futur immédiat.
+
+\bigskip
+
+La difficulté de prédiction dépend des facteurs suivants (voir table ci-dessous\footnote{Nous avons traduit la règle originale. La seule innovation que nous avons ajoutée est les seuils sur le nombre de facteurs inconnus. Nous avons choisi 5 et 10 mais un MD pourrait choisir d'autres seuils.}) :
+
+\bigskip
+
+\begin{itemize}
+\item Du moment prévu dans le futur,
+\item Du nombre de facteurs inconnus attachés à la prédiction.
+\end{itemize}
+
+\bigskip
+
+\begin{tabular}{lccc}
+DIFFICULTE DE LA PREDICTION & \multicolumn{3}{c}{\textbf{Moment prévu dans le futur}} \\
+                    & \textbf{Proche}        & \textbf{Moyennement proche}    & \textbf{Lointain}  \\
+\textbf{Nombre de facteurs}  & \textbf{(1--4 tours)}  & \textbf{(5--30 tours) }  & \textbf{(+30 tours)} \\
+Moins de 5          & Faible        & Moyenne               & Haute \\
+5--10               & Moyenne       & Haute                 & Haute \\
+Plus de 10          & Haute         & Haute                 & Haute \\
+\end{tabular}
+
+\bigskip
+
+La chance de prédire dépend de deux paramètres :
+
+\bigskip
+
+\begin{itemize}
+\item Du total des scores d'Intelligence et de Sagesse du personnage, qui donne la chance de base par difficulté,
+\item Du niveau de maîtrise de l'aptitude du personnage, qui donne un bonus à cette chance de base.
+\end{itemize}
 
 \bigskip
 
 \begin{tabular}{c>{\centering\arraybackslash}p{3.2cm}>{\centering\arraybackslash}p{3.2cm}>{\centering\arraybackslash}p{3.2cm}}
+\multicolumn{4}{c}{CHANCE DE BASE DE PREMONITION} \\
 \textbf{Total des scores} & \multicolumn{3}{c}{\textbf{Probabilité de prémonition par difficulté}} \\
 \textbf{Intelligence et Sagesse} & \textbf{Faible} & \textbf{Moyenne} & \textbf{Haute} \\
 Inférieur à 30 & 40\% & 30\% & 20\% \\
@@ -1941,85 +2328,276 @@ Inférieur à 30 & 40\% & 30\% & 20\% \\
 36 \& plus     & 70\% & 50\% & 40\% \\
 \end{tabular}
 
-\medskip
-
-Pour chaque niveau à partir duquel l'aptitude a été gagnée, la probabilité d'être capable de prédire augmente d'un pourcentage égal au nombre de niveaux, cela de manière cumulative (2 niveaux impliquent 2\%, 3 niveaux 5 \%, etc.) mais jamais au delà d'une probabilité maximale de prédiction de 99\%. La dépense de force psionique est directement reliée au nombre de facteurs inconnus qui doivent être prédits, ce qui veut dire que s'il existe six facteurs inconnus pouvant être basiquement résolus, le coût est de 6 points, et le coût n'est pas connu de celui qui prédit jusqu'à ce que la prédiction soit réalisée. (Afin de prédire les résultats d'une mêlée, par exemple, chaque attaque doit être faite et comptée comme inconnue, et, dans une mêlée impliquant plusieurs individus et plusieurs monstres, le coût par round de mêlée pourrait facilement atteindre ou dépasser 10 points.) Si l'individu ayant des pouvoirs psioniques ne dispose pas de suffisamment de points pour prévoir complètement, alors la prémonition cesse au moment où il n'a plus de force pour continuer. Le temps est aussi un facteur dans la prémonition -- une durée courte implique typiquement un facteur de difficulté faible. Si 1--4 tours peuvent être considérés comme une durée courte, 5--30 tours est de difficulté moyenne et tout ce qui dépasse 30 tours (5 heures) devient une prémonition de difficulté haute ; néanmoins, les facteurs inconnus vont altérer cette règle, de sorte qu'une prémonition court terme avec beaucoup de facteurs inconnus (basiquement insolubles) devient une prémonition de haute difficulté. \textbf{N.B. La prémonition dépend entièrement de l'arbitre, et il doit attacher la plus grande attention à l'usage de cette aptitude.}
-
 \bigskip
 
-\textbf{Hibernation} : cette aptitude permet de suspendre virtuellement toutes les fonctions vitales du corps. L'individu qui dispose de cette aptitude est capable de se "régler" pour se réveiller à un moment dans le futur et de redémarrer ses fonctions. Par niveau de possession de l'aptitude, l'individu est capable d'hiberner pendant une semaine par niveau de manière cumulative (une semaine pour le premier niveau de possession, trois semaines pour le deuxième niveau de possession, etc.).L'individu hibernant ne peut pas être réveillé avant le moment qu'il a lui-même "réglé" pour son réveil. Pour chaque semaine passée en hibernation, l'individu doit passer une journée d'activité normale avant de pouvoir hiberner de nouveau.
-
-\bigskip
-
-\textbf{Changer le poids du corps} : cette aptitude permet à l'individu d'ajuster le poids du corps à la surface sur laquelle il marche, de sorte qu'il ne s'enfonce pas dans elle, par exemple dans l'eau, les sables mouvants, la boue, etc. Pour chaque niveau à partir duquel l'individu a possédé cette aptitude, il est capable de changer le poids de son corps une heure par jour.
-
-\bigskip
-
-\textbf{Clairaudience} : l'aptitude d'entendre à distance, l'individu possédant ce pouvoir est capable d'entendre ce qui se passe jusqu'à 9 mètres de distance, mais le pouvoir est directionnel. 30cm de pierre équivaut à 3m d'espace vide. Après chaque niveau auquel l'individu a acquis cette aptitude, ce dernier gagne une distance additionnelle de 3m par niveau cumulatif (au second niveau de possession, cela veut dire 6m, au troisième niveau 6m de plus, ou un total de 24m\footnote{9m + 6m + 9m = 24m (NdT).}, etc.). Ce pouvoir peut être utilisé en conjonction avec une boule de cristal. Il est sujet à des dispositifs d'entraves magiques et non magiques, comme mentionné dans les explications du sort du même nom.
-
-\bigskip
-
-\textbf{Clairvoyance} : comme l'aptitude de clairaudience ci-dessus, excepté que la portée est dix fois supérieure, et au septième niveau de possession, la portée devient illimitée en distance.
-
-\bigskip
-
-\textbf{Corps comme arme} : cette aptitude requiert de la personne qui l'a obtenue de renoncer à l'utilisation de toute arme et armure pour que son corps assume leurs fonctions. L'individu altère psioniquement son corps pour l'endurcir pour frapper ou se défendre. Au premier niveau de possession de l'aptitude, cette aptitude lui donne une classe d'armure de 8, et avec chaque niveau de possession, la classe d'armure s'améliore, ce qui signifie une classe d'armure de 7 au second niveau, de 6 au troisième niveau, etc. L'attaque progresse de manière similaire\footnote{Dans OD\&D, dans le système alternatif d'attaques décrit en pages 19 et 20, la probabilité de toucher lors d'une attaque ne dépend que du niveau du personnage, pas de son arme. Les dommages sont aussi constants selon les armes (1d6 si pas de modificateurs). Dans le premier supplément \texttt{Greyhawk}, en page 13, un système de modificateurs est proposé pour inclure la gestion des armes dans la probabilité de toucher. ce système va avec un système de dommages par arme et un système de dommage par monstre. Les détails du pouvoir Corps comme arme semblent utiliser cette extension (NdT). } :
-
-{\parindent2cm\begin{tabular}{cp{2.5cm}c}
-\textbf{Niveau de maîtrise} && \\
-\textbf{de Corps comme arme} && \textbf{Attaque équivalente à*} \\
-premier && dague \\
-deuxième && hache à main \\
-troisième && masse \\
-quatrième && hache de bataille \\
-cinquième && épée \\
-sixième && épée + 1 \\
-septième && épée + 2 \\
-huitième && épée + 3 \\
-neuvième && épée + 4 \\
-dixième && épée + 5 \\
-\end{tabular}}
-
-\bigskip
-
-* La probabilité de toucher due au type d'arme est toujours la plus favorable si l'on considère la classe d'armure qui s'oppose à l'attaque, tandis que les dommages sont donnés par le type d'armes équivalent indiqué, de sorte que celui qui possède l'aptitude depuis trois niveaux frappe comme une dague, une hache à main, ou une masse et inflige les dommages qui sont ceux d'une masse.
-
-\bigskip
-
-Tous les plus sur l'arme équivalente s'appliquent à la probabilité de toucher ainsi qu'aux dommages. Noter que, en ce qui concerne le facteur arme, le Corps comme arme est considéré comme ayant une classe de moins que la dague en ce qui concerne le facteur vitesse, mais la même classe en ce qui concerne la longueur\footnote{Décaler d'une colonne dans la table des modificateurs du système de combat alternatif de \texttt{Greyhawk} si la vitesse entre en jeu (NdT).}.
-
-\bigskip
-
-\textbf{Contrôle de l'énergie} : cette aptitude permet à l'utilisateur de canaliser l'énergie dirigée vers lui autour de son corps et de la dissiper. Ainsi, si un sort est dirigé sur lui ou sur l'endroit où il se trouve, il peut utiliser son aptitude pour rendre l'énergie du sort inoffensive. Le coût d'utilisation de cette aptitude de 5 points de force psionique par niveau d'énergie dissipée. (Comme règle générale, considérez chaque dé de dommage qui peut être fait par l'énergie comme un niveau, et si aucun dé de dommage n'est applicable, le niveau du sort peut être utilisé comme mesure de niveau.)
-
-\bigskip
-
-\textbf{Télékinésie} : la capacité de bouger les objets par le pouvoir de l'esprit. Le possesseur est capable de bouger un poids de 50 pièces d'or par niveau de maîtrise, cumulatif, ce qui implique qu'au second niveau, il peut bouger un poids (maximum) de 150 pièces d'or, et au troisième un poids de 300 pièces d'or, et ainsi de suite. Le temps pendant lequel il peut faire cela est une fonction de l'énergie psychique.
-
-\bigskip
-
-\textbf{Marche dimensionnelle} : la maîtrise de cette aptitude permet à l'individu de se déplacer entre les dimensions pour arriver à un endroit distant en un temps relativement court. Le problème de se perdre en route demeure néanmoins, ce qui implique qu'il faille utiliser la table suivante pour déterminer la durée réelle du déplacement. La durée de base est d'une heure pour 160km de distance :
-
-\bigskip
-
-\begin{tabular}{l>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}}
-& \multicolumn{5}{c}{\textbf{Altération du temps par jet de dé}} \\
-\textbf{Niveau de maîtrise} & \textbf{1--2} & \textbf{3--5} & \textbf{6--8} & \textbf{9-11} & \textbf{12} \\
-premier             & +100\% & +50\% & +25\% & +10\% & 0 \\
-deuxième--quatrième & +100\% & +25\% & +10\% & 0     & 0 \\
-cinquième--septième &  +50\% & +10\% & 0     & 0     & -10\% \\
-huitième et au delà &  +25\% &     0 & 0     & -10\% & -50\% \
+\begin{tabular}{cc}
+\multicolumn{2}{c}{BONUS A LA CHANCE DE BASE DE PREMONITION} \\
+\textbf{Niveau de maîtrise} & \textbf{Durée maximale} \\
+premier     & +0\% \\
+deuxième    & +2\% \\
+troisième   & +5\% (2+3) \\
+quatrième   & +9\% (2+3+4) \\
+...         & ... \\
 \end{tabular}
 
 \bigskip
 
-\textbf{Projection astrale} : cette aptitude est similaire à celle du sort du même nom. Quand elle est projetée astralement, la personne ne peut pas être détectée excepté par quelques rares créatures, et son corps astral n'est pas sujet aux dangers habituels. Au premier niveau de maîtrise, le possesseur ne peut avancer qu'au rythme de la marche ; au second, il peut courir aussi vite qu'un petit cheval ; au troisième, il est capable de voler aussi vite qu'un rokh, et la vitesse, après, double avec chaque niveau de maîtrise ; en plus, au dixième niveau de maîtrise, le possesseur de l'aptitude est capable de se projeter dans l'espace à la vitesse de la lumière. Les dangers sont basiquement de deux types : premièrement, il est possible de rencontrer une créature qui peut opérer dans le plan astral (les démons le font, les méduses et les basilics regardent dedans, etc.). S Secondement, le corps astral est attaché au corps physique par un cordon d'argent. Si ce cordon est cassé, alors le corps et le corps astral sont morts. Un vent psychique affecte aussi les personnes projetées astralement comme suit :
+Coût : la dépense de force psionique est directement reliée au nombre de facteurs inconnus qui doivent être prédits.
 
 \bigskip
 
-{\parindent0.7cm\begin{tabular}{c >{\centering\arraybackslash}p{5cm} >{\centering\arraybackslash}p{5cm}}
-\textbf{Niveau de maîtrise de} & \multicolumn{2}{c}{\textbf{Chance pour un vent psychique...}} \\
-\textbf{le projection astrale} & \textbf{Emporté} & \textbf{Perte de 1--100 jours} \\
+Exemples :
+
+\bigskip
+
+\begin{itemize}
+\item S'il existe six facteurs inconnus pouvant être basiquement résolus, le coût est de 6 points.
+\item Afin de prédire les résultats d'une mêlée, par exemple, chaque attaque doit être faite et comptée comme inconnue, et, dans une mêlée impliquant plusieurs individus et plusieurs monstres, le coût par round de mêlée pourrait facilement atteindre ou dépasser 10 points.
+\end{itemize}
+
+\bigskip
+
+Notes :
+
+\bigskip
+
+\begin{itemize}
+\item Le coût n'est pas connu de celui qui prédit jusqu'à ce que la prédiction soit réalisée.
+\item Si l'individu ayant des pouvoirs psioniques ne dispose pas de suffisamment de points pour prévoir complètement, alors la prémonition cesse au moment où il n'a plus de force pour continuer.
+\end{itemize}
+
+\bigskip
+
+N.B. La prémonition dépend entièrement de l'arbitre, et il doit attacher la plus grande attention à l'usage de cette aptitude.
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Hibernation (0)}} : cette aptitude permet de suspendre virtuellement toutes les fonctions vitales du corps.
+
+\bigskip
+
+L'individu qui dispose de cette aptitude est capable de se "régler" pour se réveiller à un moment dans le futur et de redémarrer ses fonctions.
+
+\bigskip
+
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Durée maximale} \\
+premier     & 1 semaine \\
+deuxième    & 3 semaines (1+2)\% \\
+troisième   & 6 semaines (1+2+3) \\
+...         & ... \\
+\end{tabular}
+
+\bigskip
+
+L'individu hibernant ne peut pas être réveillé avant le moment qu'il a lui-même "réglé" pour son réveil. Pour chaque semaine passée en hibernation, l'individu doit passer une journée d'activité normale avant de pouvoir hiberner de nouveau.
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Changer le poids du corps (1/tour)}} : cette aptitude permet à l'individu d'ajuster le poids du corps à la surface sur laquelle il marche, de sorte qu'il ne s'enfonce pas dans elle, par exemple dans l'eau, les sables mouvants, la boue, etc.
+
+\bigskip
+
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Durée maximale} \\
+premier     & 1h/jour \\
+deuxième    & 2h/jour \\
+troisième   & 3h/jour \\
+...         & ... \\
+\end{tabular}
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Clairaudience (2/tour)}} : l'aptitude d'entendre à distance. L'individu possédant ce pouvoir est capable d'entendre ce qui se passe jusqu'à 9 mètres de distance, mais le pouvoir est directionnel.
+
+\bigskip
+
+30cm de pierre équivaut à 3m d'espace vide. Après chaque niveau auquel l'individu a acquis cette aptitude, ce dernier gagne une distance additionnelle de 3m par niveau cumulatif.
+
+\bigskip
+
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Portée maximale} \\
+premier     & 9m \\
+deuxième    & 15m (9+2x3) \\
+troisième   & 24m (9+2x3+3x3) \\
+...         & ... \\
+\end{tabular}
+
+\bigskip
+
+Ce pouvoir peut être utilisé en conjonction avec une boule de cristal (voir page \pageref{boulecristal}). Il est sujet à des dispositifs d'entraves magiques et non magiques, comme mentionné dans les explications du sort du même nom (voir page \pageref{sort-clairaudience}).
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Clairvoyance(2/tour)}} : comme l'aptitude de clairaudience ci-dessus, excepté que la portée est dix fois supérieure, et au septième niveau de possession, la portée devient illimitée en distance.
+
+\bigskip
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Portée maximale} \\
+premier     & 90m \\
+deuxième    & 150m \\
+troisième   & 240m \\
+quatrième   & 360m \\
+cinquième   & 510m \\
+sixième     & 690m \\
+septième    & illimitée \\
+\end{tabular}
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Corps comme arme (0)}} : cette aptitude requiert de la personne qui l'a obtenue de renoncer à l'utilisation de toute arme et armure pour que son corps assume leurs fonctions. L'individu altère psioniquement son corps pour l'endurcir pour frapper ou se défendre.
+
+\bigskip
+
+Selon le niveau de maîtrise du pouvoir, la classe d'armure, les modificateurs à l'attaque (voir page \pageref{custom-combat-alternatif}) et les bonus dommages sont donnés par la table suivante (les dommages sont ceux de l'arme équivalente).
+
+\bigskip
+
+\begin{tabular}{cccc}
+\textbf{Niveau de maîtrise} & \textbf{Classe d'armure} & \textbf{Attaque équivalente à} & \textbf{Bonus aux dommages}\\
+premier     & 8  & Dague                & 0 \\
+deuxième    & 7  & Hache à main         & 0 \\
+troisième   & 6  & Masse                & 0 \\
+quatrième   & 5  & Hache de bataille    & 0 \\
+cinquième   & 4  & Epée                 & 0 \\
+sixième     & 3  & Epée                 & +1 \\
+septième    & 2  & Epée                 & +2 \\
+huitième    & 1  & Epée                 & +3 \\
+neuvième    & 0  & Epée                 & +4 \\
+dixième     & -1 & Epée                 & +5 \\
+\end{tabular}
+
+\bigskip
+
+Note : dans les trois premiers livrets de D\&D, si l'on n'utilise pas les règles de CHAINMAIL, la probabilité de toucher lors d'une attaque ne dépend que du niveau du personnage et de la classe d'armure de son opposant, et pas de son arme. Les dommages sont aussi constants selon les armes (1d6 si pas de modificateurs).
+
+\bigskip
+
+"Corps comme arme" utilise le système de combat alternatif proposé dans le supplément I, \texttt{Greyhawk} (voir page \pageref{custom-combat-alternatif}). La ligne "Attaque équivalente à" fait référence aux armes listées dans le système de combat alternatif, ce dernier faisant intervenir l'arme du porteur à deux niveaux :
+
+\bigskip
+
+\begin{itemize}
+\item Comme modificateur à l'attaque, selon la classe d'armure du défenseur ;
+\item Comme arme ayant des dommages particuliers (au lieu du 1d6 des livrets initiaux).
+\end{itemize}
+
+\bigskip
+
+Précision : celui qui possède l'aptitude depuis trois niveaux (niveau de maîtrise 3) peut frapper comme une dague, une hache à main ou une masse (prendre le bonus le plus favorable) mais, dans tous les cas, il inflige les dommages qui sont ceux d'une masse (dommages selon son niveau de maîtrise).
+
+\bigskip
+
+Noter que, en ce qui concerne le facteur arme, le "Corps comme arme" est considéré comme ayant une classe de moins que la dague en ce qui concerne le facteur vitesse, mais la même classe en ce qui concerne la longueur. Cela signifie qu'il faut décaler d'une colonne vers la droite dans la table des modificateurs du système de combat alternatif de \texttt{Greyhawk} si la vitesse entre en jeu (voir page \pageref{custom-combat-alternatif}).
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Contrôle de l'énergie (spécial)}} : cette aptitude permet à l'utilisateur de canaliser l'énergie dirigée vers lui autour de son corps et de la dissiper. Ainsi, si un sort est dirigé sur lui ou sur l'endroit où il se trouve, il peut utiliser son aptitude pour rendre l'énergie du sort inoffensive.
+
+\bigskip
+
+Le coût d'utilisation de cette aptitude de 5 points de force psionique par niveau d'énergie dissipée. Comme règle générale, considérez chaque dé de dommage qui peut être fait par l'énergie comme un niveau, et si aucun dé de dommage n'est applicable, le niveau du sort peut être utilisé comme mesure de niveau.
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Télékinésie (3/tour)}} : la capacité de bouger les objets par le pouvoir de l'esprit. Le possesseur est capable de bouger un poids de 50 pièces d'or par niveau de maîtrise, cumulatif.
+
+\bigskip
+
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Poids maximum (en PO)} \\
+premier     & 50 \\
+deuxième    & 150 (50+2x50) \\
+troisième   & 300 (50+2x50+3x50) \\
+...         & ... \\
+\end{tabular}
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Marche dimensionnelle (spécial)}} : la maîtrise de cette aptitude permet à l'individu de se déplacer entre les dimensions pour arriver à un endroit distant en un temps relativement court. Le problème de se perdre en route demeure néanmoins, ce qui implique qu'il faille utiliser la table suivante pour déterminer la durée réelle du déplacement. La durée de base est d'une heure pour 160km de distance :
+
+\bigskip
+
+\begin{tabular}{c>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{2.1cm}}
+& \multicolumn{5}{c}{\textbf{Altération du temps par jet de dé (1d12)}} \\
+\textbf{Niveau de maîtrise} & \textbf{1--2} & \textbf{3--5} & \textbf{6--8} & \textbf{9-11} & \textbf{12} \\
+premier             & +100\% & +50\% & +25\% & +10\% & 0 \\
+deuxième--quatrième & +100\% & +25\% & +10\% & 0     & 0 \\
+cinquième--septième &  +50\% & +10\% & 0     & 0     & -10\% \\
+huitième et au delà &  +25\% &     0 & 0     & -10\% & -50\% \\
+\end{tabular}
+
+\bigskip
+
+Les règles ne stipulent pas de coût en points de force psionique. Nous proposons 10 points par heure de voyage. Ainsi, si le voyage s'allonge, le nombre de points consommé augmentera.
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Projection astrale (O)}} : cette aptitude est similaire à celle du sort du même nom (voir page \pageref{sort-astral}).
+
+\bigskip
+
+Quand elle est projetée astralement, la personne ne peut pas être détectée excepté par quelques rares créatures, et son corps astral n'est pas sujet aux dangers habituels.
+
+\bigskip
+
+Au premier niveau de maîtrise, le possesseur ne peut avancer qu'au rythme de la marche ; au second, il peut courir aussi vite qu'un petit cheval ; au troisième, il est capable de voler aussi vite qu'un rokh, et la vitesse, après, double avec chaque niveau de maîtrise ; en plus, au dixième niveau de maîtrise, le possesseur de l'aptitude est capable de se projeter dans l'espace à la vitesse de la lumière.
+
+\bigskip
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Vitesse de déplacement} \\
+premier     & marche \\
+deuxième    & petit cheval \\
+troisième   & rokh \\
+quatrième   & rokh x 2 \\
+cinquième   & rokh x 4 \\
+...         & ... \\
+dixième     & lumière \\
+\end{tabular}
+
+\bigskip
+
+Les dangers sont basiquement de deux types :
+
+\bigskip
+
+\begin{itemize}
+\item Premièrement, il est possible de rencontrer une créature qui peut opérer dans le plan astral (les démons le font, les méduses et les basilics regardent dedans, etc.).
+\item Secondement, le corps astral est attaché au corps physique par un cordon d'argent. Si ce cordon est cassé, alors le corps physique et le corps astral meurent.
+\end{itemize}
+
+\bigskip
+
+Lors du déplacement astral, il est nécessaire de tester la présence d'un vent psychique. Lancer 1d100 et consulter la table ci-dessous.
+
+\bigskip
+
+\begin{tabular}{cl}
+\textbf{1d100} & \textbf{Existence du vent psychique} \\
+01--10 & Un vent psychique souffle dans un rayon de 160km autour du corps physique \\
+11--60 & Un vent psychique souffle à plus de 160km autour du corps physique \\
+61--90 & Un vent psychique souffle dans l'espace lointain \\
+91--100 & Aucun vent psychique ne souffle \\
+\end{tabular}
+
+\bigskip
+
+Si un vent psychique souffle à moins de 160km du corps physique, il affecte les personnes projetées astralement comme suit :
+
+\bigskip
+
+\begin{tabular}{ccc}
+\textbf{Niveau de maîtrise} & \textbf{Etre emporté} & \textbf{Perdre 1--100 jours} \\
 premier            & 08\% & 20\% \\
 deuxième           & 07\% & 18\% \\
 troisième          & 05\% & 15\% \\
@@ -2028,27 +2606,33 @@ cinquième          & 04\% & 10\% \\
 sixième            & 02\% & 07\% \\
 septième--neuvième & 01\% & 05\% \\
 dixième            & --   & 02\% \\
-\end{tabular}}
+\end{tabular}
 
 \medskip
 
-La chance de base qu'un vent psychique souffle dans un rayon de 160km autour du corps physique est de 10\%. La chance qu'un vent psychique souffle au delà de cette distance est de 50\%. Il y a 90\% de chances qu'il y ait un tel vent dans l'espace.
+Etre emporté casse le lien d'argent, ce qui implique la mort des corps physique et astral.
 
 \bigskip
 
-Etre emporté casse le lien d'argent. Perdre entre 1--10 jours se produit lorsque la tentative échoue et que le corps astral est projeté à l'intérieur plutôt qu'à l'extérieur. De 1--100 jours seront perdus en raison de la désorientation due au déchirement de l'esprit. Il n'y a pas de coût psionique pour cette aptitude.
+Perdre entre 1--10 jours se produit lorsque la tentative échoue et que le corps astral est projeté à l'intérieur plutôt qu'à l'extérieur. De 1--100 jours seront perdus en raison de la désorientation due au déchirement de l'esprit.
 
 \bigskip
 
-\textbf{Réarrangement moléculaire} : avec cette aptitude, le possesseur est capable d'altérer les molécules des substances métalliques en une autre structure, ainsi les transformant en des métaux différents. Cela, en effet, transmute les métaux, mais ne peut être exécuté qu'une fois par mois au coût de 2 points psioniques par poids de pièce d'or changée. Le poids maximal par niveau de maîtrise est de 10 pièces d'or.
+Il n'y a pas de coût psionique pour cette aptitude.
 
 \bigskip
 
-\textbf{Manipulation moléculaire} : la capacité de décaler les arrangement moléculaires de façon à créer une substance de faible résistance. Avec chaque niveau de maîtrise, le possesseur devient plus adepte de la manipulation :
+%++++++++APTITUDE
+\textbf{\uline{Réarrangement moléculaire (spécial)}} : avec cette aptitude, le possesseur est capable d'altérer les molécules des substances métalliques en une autre structure, ainsi les transformant en des métaux différents. Cela, en effet, transmute les métaux, mais ne peut être exécuté qu'une fois par mois au coût de 2 points psioniques par poids de pièce d'or changée. Le poids maximal par niveau de maîtrise est de 10 pièces d'or.
 
 \bigskip
 
-\begin{tabular}{>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{11.7cm}}
+%++++++++APTITUDE
+\textbf{\uline{Manipulation moléculaire (50)}} : la capacité de décaler les arrangement moléculaires de façon à créer une substance de faible résistance. Avec chaque niveau de maîtrise, le possesseur devient plus adepte de la manipulation :
+
+\bigskip
+
+\begin{tabular}{cc}
 \textbf{Niveau de maîtrise} & \textbf{Capable de manipuler l'équivalent de} \\
 premier    & cordelettes fines \\
 deuxième   & cordes fines \\
@@ -2056,10 +2640,6 @@ troisième  & cordes épaisses ou lanières de cuir\\
 quatrième  & câbles \\
 cinquième  & chaînes légères \\
 sixième    & chaînes lourdes \\
-\end{tabular}
-
-\begin{tabular}{>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{11.7cm}}
-%\textbf{Niveau de maîtrise} & \textbf{Capable de manipuler l'équivalent de} \\
 septième   & fers et menottes\\
 huitième   & barres de fer, 2.5cm de diamètre\\
 neuvième   & barres d'acier, 2.5cm de diamètre \\
@@ -2068,11 +2648,52 @@ dixième    & murs épais de pierre, 60 cm d'épaisseur, trou de la taille d'un 
 
 \bigskip
 
-\textbf{Contrôle du corps} : la capacité d'adapter le corps à des températures extrêmes ou des éléments destructifs hostiles (fumées empoisonnées, eau, acide). cela permet au possesseur de traverser le feu, de respirer sous l'eau, etc., cela pour une durée limitée dépendant du niveau de maîtrise qu'il possède. Comme règle générale, assumer que l'individu est capable de résister à l'équivalent d'un dé de dommages causé par la substance ou l'environnement pendant un tour (dix minutes). Cela implique qu'il pourrait traverser un feu normal ou rester sous l'eau pendant un tour, mais dans un environnement plus hostile, la limite du temps d'exposition serait réduite en conséquence. Pour chaque niveau de maîtrise, le possesseur gagne de manière cumulative une période identique, soit deux périodes au niveau deux, trois périodes au niveau trois, et ainsi de suite. Au dixième niveau de maîtrise, le possesseur aurait 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55 périodes basiques de temps.
+%++++++++APTITUDE
+\textbf{\uline{Contrôle du corps (5/tour)}} : la capacité d'adapter le corps à des températures extrêmes ou des éléments destructifs hostiles (fumées empoisonnées, eau, acide).
 
 \bigskip
 
-\textbf{Barrière mentale} : cette aptitude protège le corps physique et l'esprit d'une possession. Elle peut être utilisée quand le corps est abandonné (comme en cas de projection astrale) ou à d'autres moments pour le protéger de possession par urnes magiques, démons ou diables. Pour autant, cette aptitude ne fonctionne pas contre des attaques psioniques. La chance pour que le possesseur puisse établir la barrière de son esprit avec succès est de 10\% par niveau de maîtrise. Après le dixième niveau de maîtrise, le pourcentage de chances qu'il soit capable de localiser l'urne ou amulette de l'être qui tente de le posséder croît de la même façon.
+Cela permet au possesseur de traverser le feu, de respirer sous l'eau, etc., cela pour une durée limitée dépendant du niveau de maîtrise qu'il possède. Comme règle générale, assumer que l'individu est capable de résister à l'équivalent d'un dé de dommages causé par la substance ou l'environnement pendant un tour (dix minutes).Cela implique qu'il pourrait traverser un feu normal ou rester sous l'eau pendant un tour, mais dans un environnement plus hostile, la limite du temps d'exposition serait réduite en conséquence.
+
+\bigskip
+
+\begin{tabular}{cc}
+\textbf{Niveau de maîtrise} & \textbf{Résistance et durée} \\
+premier     & 1 dé de dommages pendant 1 période \\
+deuxième    & 1 dé de dommages pendant 3 périodes (1+2) \\
+troisième   & 1 dé de dommages pendant 6 périodes (1+2+3) \\
+...         & ... \\
+dixième     & 1 dé de dommages pendant 55 périodes (1+2+3+...+10) \\
+\end{tabular}
+
+\bigskip
+
+%++++++++APTITUDE
+\textbf{\uline{Barrière de l'esprit (0)}} : cette aptitude protège le corps physique et l'esprit d'une possession.
+
+\bigskip
+
+Elle peut être utilisée quand le corps est abandonné (comme en cas de projection astrale) ou à d'autres moments pour le protéger de possessions par urnes magiques, démons ou diables.
+
+\bigskip
+
+ELa chance pour que le possesseur puisse établir la barrière de son esprit avec succès est de 10\% par niveau de maîtrise. Après le dixième niveau de maîtrise, le pourcentage de chances qu'il soit capable de localiser l'urne ou amulette de l'être qui tente de le posséder croît de la même façon.
+
+\bigskip
+
+\begin{tabular}{ccc}
+&\textbf{Chance de réussite} & \textbf{Localisation de} \\
+\textbf{Niveau de maîtrise} & \textbf{Barrière de l'esprit} & \textbf{l'origine de l'attaque}\\
+premier     & 10\%  & 0\% \\
+deuxième    & 20\%  & 0\% \\
+troisième   & 30\%  & 0\% \\
+...         & ...   & ... \\
+dixième     & 100\% & 0\% \\
+onzième     & 100\% & 10\% \\
+douzième    & 100\% & 20\% \\
+...         & ...   & ... \\
+\end{tabular}
+
 
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 
@@ -2172,7 +2793,7 @@ dixième    & murs épais de pierre, 60 cm d'épaisseur, trou de la taille d'un 
 
 
 
-
+\newpage
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Conséquences du gain d'aptitude psionique}}
 \addcontentsline{toc}{subsubsection}{Conséquences du gain d'aptitude psionique}
@@ -2473,10 +3094,71 @@ Normale     & 190 & 95 & 95 \\ \hline
 Courante    & 190 & 95 & 95 \\ \hline
 \end{tabular}
 
+%----------------------------------------------------- SUB SECTION
+\phantomsection\subsection*{SYSTEME DE COMBAT ALTERNATIF}
+\addcontentsline{toc}{subsection}{SYSTEME DE COMBAT ALTERNATIF}
+\label{custom-combat-alternatif}
 
+Ce système est basé sur les capacités offensives et défensives des combattants ; des choses comme la vitesse, la férocité ou les armes employées par les monstres attaquant sont incluses dans les matrices. Deux tableaux sont proposés : un pour les hommes contre les hommes ou les monstres, et un pour les monstres (incluant les kobolds, les gobelins, les orcs, et.) contre les hommes.
 
+\bigskip
 
+\textbf{MATRICE D'ATTAQUE 1 : HOMMES ATTAQUANT}
 
+\bigskip
+
+Nous proposons un tableau consolidé des matrices d'attaque. L'attaquant doit jeter 1d20, ajouter les modificateurs et comparer avec le score à atteindre pour toucher la classe d'armure correspondante.
+
+\bigskip
+
+\begin{tabular}{cccccccccccc}
+\textbf{Niv. } & \textbf{Niv.} & \textbf{Niv.} & \multicolumn{8}{c}{\textbf{Classe d'armure du défenseur}} \\
+\textbf{guerrier}   & \textbf{magicien}   & \textbf{clerc}   & \textbf{9} & \textbf{8} & \textbf{7} & \textbf{6} & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} \\
+1--3   & 1--5   & 1--4   & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\
+4--6   & 6--10  & 5--8   &  8 &  9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+7--9   & 11--15 & 9--12  &  5 &  6 &  7 &  8 &  9 & 10 & 11 & 12 \\
+10--12 & 16--20 & 13--16 &  3 &  4 &  5 &  6 &  7 &  8 &  9 & 10 \\
+13--15 & 21--25 & 17--20 &  1 &  2 &  3 &  4 &  5 &  6 &  7 &  8 \\
+16\&+  & 26\&+  & 21\&+  &  1 &  1 &  1 &  1 &  2 &  3 &  4 &  5 \\
+\multicolumn{11}{l}{\textbf{Modificateurs d'attaques dus aux armes de mêlée (à ajouter au d20)}} \\
+\multicolumn{3}{l}{Dague*}            & -3 & -3 & -1 & -1 &  0 &  0 & +1 & +2 \\
+\multicolumn{3}{l}{Hache à main}      & -3 & -2 & -1 & -1 &  0 &  0 & +1 & +1 \\
+\multicolumn{3}{l}{Masse}             &  0 & +1 &  0 &  0 &  0 &  0 &  0 &  0 \\
+\multicolumn{3}{l}{Marteau}           &  0 & +1 &  0 & +1 &  0 &  0 &  0 &  0 \\
+\multicolumn{3}{l}{Epée*}             & -2 & -1 &  0 &  0 &  0 &  0 &  0 & +1 \\
+\multicolumn{3}{l}{Piolet}            & +2 & +3 & +2 & +3 &  0 &  0 &  0 &  0 \\
+\multicolumn{3}{l}{Hache de bataille} & -1 &  0 & +1 & +1 &  0 &  0 &  0 &  0 \\
+\multicolumn{3}{l}{Masse à pointes}   &  0 &  0 & +1 & +2 & +1 & +1 & +2 & +2 \\
+\multicolumn{3}{l}{Fléau d'armes}     & +2 & +2 & +1 & +2 & +1 & +1 & +1 & +1 \\
+\multicolumn{3}{l}{Lance*}            & -2 & -1 & -1 & -1 &  0 &  0 &  0 &  0 \\
+\multicolumn{3}{l}{Arme d'hast*}      & -1 &  0 &  0 & +1 & +1 & +2 & +2 & +2 \\
+\multicolumn{3}{l}{Hallebarde*}       &  0 & +1 & +1 & +2 & +1 &  0 &  0 &  0 \\
+\multicolumn{3}{l}{Epée à deux mains} & +1 & +2 & +3 & +3 & +2 & +2 & +2 & +2 \\
+\multicolumn{3}{l}{Lance de tournoi}  &  0 &  0 & +1 & +2 & +3 & +3 & +3 & +3 \\
+\multicolumn{3}{l}{Pique}             & -1 &  0 &  0 &  0 &  0 &  0 &  0 &  0 \\
+\multicolumn{11}{l}{\textbf{Modificateurs d'attaques dus aux armes de jet (à ajouter au d20)}} \\
+\multicolumn{3}{l}{Arc court (15)}       & \footnotesize-3-5-7 & \footnotesize-2-3-5 & \footnotesize0-1-2 & \footnotesize0 0-1 & \footnotesize+1 0 0 & \footnotesize+2+1 0 & \footnotesize+2+1 0 & \footnotesize+2+1 0 \\
+\multicolumn{3}{l}{Arc monté (18)}       & \footnotesize-3-4-7 & \footnotesize-2-3-5 & \footnotesize0-1-2 & \footnotesize0 0-1 & \footnotesize+1 0 0 & \footnotesize+2+1 0 & \footnotesize+2+1 0 & \footnotesize+3+2+1 \\
+\multicolumn{3}{l}{Petite arbalète (18)} & \footnotesize-3-5-7 & \footnotesize-2-3-5 & \footnotesize0-1-4 & \footnotesize0 0-1 & \footnotesize+2+1 0 & \footnotesize+3+1 0 & \footnotesize+3+1 0 & \footnotesize+3+2+1 \\
+\multicolumn{3}{l}{Arc long (21)}        & \footnotesize-2-3-5 & \footnotesize 0-2-4 & \footnotesize0 0-1 &\footnotesize+2+1 0 & \footnotesize+3+2+1 & \footnotesize+3+2+1 & \footnotesize+3+2+1 & \footnotesize+3+2+1 \\
+\multicolumn{3}{l}{Arc composite (24)}   & \footnotesize-3-4-5 & \footnotesize 0-3-4 & \footnotesize0-1-2 &\footnotesize+2 0-1 & \footnotesize+3+1 0 & \footnotesize+3+2+1 & \footnotesize+3+2+1 & \footnotesize+3+2+1 \\
+\multicolumn{3}{l}{Arbalète lourde (24)} & \footnotesize-1-2-3 & \footnotesize 0-1-3 &\footnotesize+1 0-1 &\footnotesize+2 0 0 & \footnotesize+3+1 0 & \footnotesize+4+2+1 & \footnotesize+4+2+1 & \footnotesize+4+3+2 \\
+\multicolumn{3}{l}{Arquebuse (18)}       &  \footnotesize0-1-3 & \footnotesize+1 0-1 &\footnotesize+2 0 0 &\footnotesize+2+1 0 & \footnotesize+3+2 0 & \footnotesize+3+2 0 & \footnotesize+3+2 0 & \footnotesize+3+2 0 \\
+\end{tabular}
+
+\bigskip
+
+Notes :
+
+\bigskip
+
+\begin{itemize}
+\item Les nombres entre parenthèses sur les armes de jet sont les portées maximales ; les nombres montrés dans le tableau sont les modificateurs dus aux armes dans le cas des portées courte (premier tiers de la portée), moyenne (tiers suivant de la portée) et longue (dernier tiers de la portée).
+\item Les hommes normaux équivalent à des guerriers de niveau 1.
+\item Les voleurs sont dans le même schéma que les clercs.
+\end{itemize}
+
+\bigskip
 
 %==========================================================================SECTION
 \newpage
@@ -2549,7 +3231,7 @@ Courante    & 190 & 95 & 95 \\ \hline
 
 \textbf{Military pick} : Piolet. Arme.
 
-\textbf{Mind Bar} : Barrière mentale. Pouvoir psionique.
+\textbf{Mind Bar} : Barrière de l'esprit. Pouvoir psionique.
 
 \textbf{Mind Over Body} : Contrôle de l'esprit sur le corps. Pouvoir psionique.
 
@@ -2598,292 +3280,128 @@ Courante    & 190 & 95 & 95 \\ \hline
 }% parindent
 
 
+%==========================================================================SECTION
+\newpage
+\phantomsection\section*{Licence OGL}
+\addcontentsline{toc}{section}{Licence OGL}
 
+OPEN GAME LICENSE Version 1.0a
 
+\bigskip
 
+The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights Reserved.
 
+\bigskip
 
+1. Definitions:
 
+\bigskip
 
+(a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content;
 
+\bigskip
 
+(b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted;
 
+\bigskip
 
-\begin{verbatim}
----
-tags:
-    - Ambre
-    - D&D
-    - Zelazni
----
+(c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute;
 
-# Vocabulaire
+\bigskip
 
-Alors que l'on dit plutôt en français, "pouvoirs psychiques", le terme américain "psionic" est entré progressivement dans le vocabulaire des jeux de rôles, souvent en étant francisé en "psionique". Dans cet article, nous nous limiterons à l'usage du terme "psychique" en français, le terme "psionic" étant réservé à la citation d'ouvrages en anglais.
+(d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity.
 
-# 1976 - OD&D au début de tout (comme souvent)
+\bigskip
 
-## Introduction
+(e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content;
 
-![Alt text](../images/eldritch-wizardry.png)
+\bigskip
 
-En 1976 sort le livre VI de *Dungeons & Dragons* avec le titre *Eldritch Wizardry* cosigné de [Gary Gygax](https://github.com/orey/DandD/tree/master/GaryGygax) et de Brain Blume. Ce livre d'une soixantaine de pages contient essentiellement des suppléments sur les pouvoirs psychiques, sur le druide en tant que classe de personnage et sur les démons.
+(f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor
 
-Ledit supplément est disponible sur [archive.org](https://archive.org/details/tsr02005supplement3eldritchwizardy). Il n'a pas été traduit en français à ma connaissance alors que les règles de OD&D l'ont été : voir sur le très bon site [La Forge de papier](http://la-forge-de-papier.over-blog.com/2017/09/donjons-dragons-la-boite-blanche-elle-aussi-en-francais.html).
+\bigskip
 
-Il semble que ce soit la première apparition des pouvoirs psychiques dans le monde du JDR. Leur apparition au sein de *D&D* a quelque chose d'étrange, car on pourrait y voir une collision de diverses influences dans la fantasy: le médiéval-fantastique qui favorise la magie et les pouvoirs psychiques qui sent plus le JDR contemporain ou futuriste.
+(g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content.
 
-D&D propose les pouvoirs psy comme un genre de supplément optionnel pour "pimenter" les parties. L'introduction de 1976 de [Tim Kask](https://en.wikipedia.org/wiki/Tim_Kask) dudit livre est amusante :
+\bigskip
 
-*L'introduction du combat psionique s'attache à redynamiser des jeux devenus ternes. Cela ouvre des possibilités inédites à la fois pour les joueurs et le MD et, ce faisant, cela permet de se reconnecter à l'un des thèmes favoris des écrivains de science-fiction et de fantasy : les pouvoirs inconnus de l'esprit.*
+(h) "You" or "Your" means the licensee in terms of this agreement.
 
-Pour autant, en lisant entre les lignes, l'introduction des démons dans le jeu semble pousser Gygax à créer les règles des pouvoirs psychiques, mieux adaptés, selon lui, à représenter les pouvoirs de certains démons.
+\bigskip
 
-Comme souvent dans OD&D, les règles sont confuses, incomplètes, éclatées dans le tout le livret, entrecoupées de choses qui n'ont rien à voir (le Druide, un système de combat alternatif basé sur la **Dextérité Ajustée**, etc.). Au niveau édition, *Eldritch Wizardry* est un des pires exemples de l'époque.
+2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License.
 
-## Obtention des Pouvoirs Psychiques (PoP)
+\bigskip
 
-A la création du PJ, un score de 15 ou plus dans INTelligence, WISdom ou CHArisma donne la possibilité de tester si le personnage dispose d'un pouvoir psy (si le personnage est humain). Il est nécessaire de faire 91 ou plus sur 1d100 pour que ce soit le cas. Les moines et les druides ne peuvent pas avoir de pouvoirs psychiques.
+3. Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.
 
-Si le personnage est éligible, il faut faire un nouveau jet de 1d100 pour déterminer le **potentiel psychique** (PP, purement aléatoire). Suivant le PP, le PJ obtient un malus ou un bonus pour avoir des **pouvoirs psychiques** (PoP, de -6% à +3%).
+\bigskip
 
-| PP (1d100) | Bonus/Malus au jet d'obtention de PoP (BMPoP) |
-|------------|-----------------------------------------------|
-| 01–10      | -6% par niveau (cumulatif)                    |
-| 11–25      | -5% par niveau (cumulatif)                    |
-| 26–50      | -4% par niveau (cumulatif)                    |
-| 51–75      | Aucun                                         |
-| 76–90      | +1% par niveau (cumulatif)                    |
-| 91–99      | +2% par niveau (cumulatif)                    |
-| 00         | +3% par niveau (cumulatif)                    |
+4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.
 
-La chance de base pour avoir un PoP est de 10% + BMPoP par niveau. Ainsi, un perso du 4ème niveau avec un PP de 90 aura une base de 10 + 1 = 11 soit 11 x 4 = 44% de chances d'avoir un PoP. Cela veut dire aussi qu'un personnage de niveau 10 aura 100% d'avoir un PoP.
+\bigskip
 
-Notons enfin que donc, ce jet se produit à chaque changement de niveau.
+5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.
 
-Cerise sur le gâteau : si le PJ obtient un PoP, alors s'il réussit un jet de 1d100 sous son PP, il en a automatiquement un second !
+\bigskip
 
-Nous sommes en plein dans le monde Gygaxien des **règles gigognes** :
+6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.
 
-* R1 : INT ou WIS ou CHA > 15,
-* R2 : Si R1 OK, jet de 1d100 pour PP et BMPoP,
-* R3 : Quand R2 OK, jet de BMPoP pour obtenir un PoP,
-* R4 : Si R3 OK, si succès, alors jet de PP pour obtenir un second PoP.
+\bigskip
 
-Nous verrons apparaître ce genre de règles gigognes dans les autres éditions de D&D signées de Gygax.
+7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.
 
-## Pouvoirs psychiques (PoP)
+\bigskip
 
-### Liste des pouvoirs
+8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.
 
-La liste originale est présentée ci-dessous.
+\bigskip
 
-![Listedescompetencespsioniques](../images/od&d-psionics.png)
+9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.
 
-La liste des PoP est fournie ci-dessous, retriée par type (interprétation personnelle) et par classe de personnages.
+\bigskip
 
-| Pouvoir Psychique (PoP)           | Type | Guerriers & Voleurs | Magiciens  | Clercs     |
-|-----------------------------------|------|---------------------|------------|------------|
-| Réduction                         | A    | 1 Oui (B)           | 1 Oui (B)  |            |
-| Expansion                         | A    | 2 Oui (B)           | 2 Oui (B)  |            |
-| Lévitation                        | A    | 3 Oui (B)           | 3 Oui (B)  | 1 Oui (B)  |
-| Changer le poids du corps         | A    | 4 Oui (B)           |            | 2 Oui (B)  |
-| Corps comme arme                  | A    | 5 Oui (B)           |            |            |
-| Réarrangement moléculaire         | A    | 6 Oui (S)           |            | 3 Oui (S)  |
-| Manipulation moléculaire          | A    | 7 Oui (S)           |            |            |
-| Contrôle du corps                 | A    | 8 Oui (S)           |            |            |
-| Barrière mentale                  | A    | 9 Oui (S)           |            |            |
-| Agitation moléculaire             | A    |                     | 4 Oui (B)  |            |
-| Altération de la forme            | A    |                     | 5 Oui (S)  |            |
-| Contrôle cellulaire               | A    |                     |            | 4 Oui (B)  |
-| Contrôle de l'esprit sur le corps | A    | 10 Oui (B)          |            | 5 Oui (B)  |
-| Invisibilité                      | A    | 11 Oui (B)          |            |            |
-| Hibernation                       | A    | 12 Oui (B)          |            |            |
-| Télékinésie                       | A    | 13 Oui (S)          | 6 Oui (S)  |            |
-| Contrôle de l'énergie             | A    | 14 Oui (S)          |            |            |
-| Domination                        | B    | 15 Oui (B)          |            | 6 Oui (B)  |
-| Hypnose                           | B    |                     | 7 Oui (B)  | 7 Oui (B)  |
-| Projection télépathique           | B    |                     | 8 Oui (S)  | 8 Oui (S)  |
-| Altération de l'aura              | B    |                     |            | 9 Oui (S)  |
-| Domination des masses             | B    |                     |            | 10 Oui (S) |
-| ESP                               | B    |                     | 9 Oui (B)  | 11 Oui (B) |
-| Empathie                          | B    |                     |            | 12 Oui (S) |
-| Télépathie animale                | B    |                     |            | 13 Oui (B) |
-| Prémonition                       | C    | 16 Oui (B)          | 10 Oui (S) | 14 Oui (S) |
-| Clairaudience                     | C    | 17 Oui (B)          | 11 Oui (B) |            |
-| Clairvoyance                      | C    | 18 Oui (B)          | 12 Oui (B) |            |
-| Détection du mal/du bien          | C    |                     | 13 Oui (B) | 15 Oui (B) |
-| Détection de la magie             | C    |                     | 14 Oui (B) |            |
-| Marche dimensionnelle             | D    | 19 Oui (S)          |            | 16 Oui (S) |
-| Projection astrale                | D    | 20 Oui (S)          | 15 Oui (S) | 17 Oui (S) |
-| Porte dimensionnelle              | D    |                     | 16 Oui (S) |            |
-| Téléportation                     | D    |                     | 17 Oui (S) |            |
-| Substance éthérée                 | D    |                     | 18 Oui (S) |            |
-| Voyage probabiliste               | D    |                     |            | 18 Oui (S) |
-
-Nous pouvons classer ces pouvoirs en plusieurs catégories (ce n'est pas dans le livre original) :
+10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.
 
-* A : Contrôle de la matière au niveau moléculaire, voire atomique,
-* B : Contrôle via l'esprit de l'esprit,
-* C : Sens,
-* D : Voyage psychique.
-
-Les pouvoirs sont présents chez les types de personnages soient au niveau Basique (B) soit au niveau Supérieur (S). Le fait qu'un PoP soit Supérieur ne se traduit (dans les règles) que par le fait qu'elle soit détectable par un autre personnage ayant des pouvoirs psy au double de la portée du pouvoir (voir plus bas détection des pouvoirs psychiques).
+\bigskip
 
-Les PJ ne peuvent pas avoir plus de PoP Supérieurs que de PoP Basiques.
+11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.
 
-Cette distinction est peu développée et on imagine que le but était d'avoir la possibilité de deux puissances différentes dans les mêmes pouvoirs. Par contre, les pouvoirs eux-mêmes n'utilisent pas cette distinction.
+\bigskip
 
-La détermination des PoPs est aléatoire mais il est suggéré de restreindre le choix à des types de PoP cohérents.
+12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.
 
-### A - Contrôle de la matière et de l'énergie
+\bigskip
 
-On retrouve dans cette dimension pas mal de pouvoirs :
+13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License.
 
-* Réduction ;
-* Expansion ;
-* Lévitation, qui est un moyen de changer le poids du corps ;
-* Changer le poids du corps (*Body Equilibrium*), notamment pour marcher sur l'eau ;
-* Corps comme arme (*Body Weaponry*) ;
-* Réarrangement moléculaire, qui transforme les métaux ;
-* Manipulation moléculaire, qui permet de rendre fragile différentes matières dures ;
-* Contrôle du corps, qui permet d'adapter le corps à des conditions extrêmes comme le froid extrême, le feu, les fumées empoisonnées, etc. ;
-* Barrière mentale ;
-* Agitation moléculaire, agit un peu comme un four à micro-ondes ;
-* Altération de la forme, pour se changer en quelqu'un d'autre ;
-* Contrôle de l'esprit sur le corps, pour se passer de manger, de boire et de dormir ;
-* Invisibilité ;
-* Hibernation (*Suspend Animation*), ou comment suspendre ses fonctions vitales ;
-* Télékinésie, contrôle du mouvement des objets par la pensée ;
-* Contrôle de l'énergie, ou comment dissiper des énergies agressives ;
-* Contrôle cellulaire (*Cellular Adjustment*), qui permet de soigner les blessures et les maladies.
+\bigskip
 
-### B - Contrôle via l'esprit de l'esprit
+14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
 
-On retrouve les pouvoirs suivants :
+\bigskip
 
-* Domination, pour forcer une personne à faire ce que le PJ souhaite ;
-* Hypnose, contrôle des esprits faibles ;
-* Projection télépathique, envoyer des messages ou influence une personne ;
-* Altération de l'aura ;
-* Domination des masses ;
-* ESP ;
-* Empathie ;
-* Télépathie animale.
+15. COPYRIGHT NOTICE
 
-### C - Sens
+\bigskip
 
-On retrouve les pouvoirs suivants :
+Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.
 
-* Prémonition ;
-* Clairaudience ;
-* Clairvoyance ;
-* Détection du mal/du bien ;
-* Détection de la magie.
+\bigskip
 
-### D - Voyage psychique
+System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson.
 
-* Marche dimensionnelle ;
-* Projection astrale ;
-* Porte dimensionnelle
-* Téléportation
-* Substance éthérée ;
-* Voyage probabiliste, une projection astrale avec le corps permettant de passer à travers les plans et les mondes parallèles (comme dans la *Saga des Princes d'Ambres* de Zelazni).
+\bigskip
 
-## Modes d'Attaque et Modes de Défense
+Les sources de ce document sont les 3 premiers livrets de OD\&D et les trois premiers suppléments, à commencer bien sûr par \texttt{Eldritch Wizardry}. Ce contenu est Copyright Wizards of the Coast, Inc.
 
-Une fois que le PJ a son premier PoP, il gagne son premier **Mode d'Attaque** psychique (MA) : *Explosion psionique* (voir tableau ci-dessous).
+\bigskip
 
-Les autres MA sont gagnés tous les 4 PoP (5 pour les Guerriers).
+\textcopyright\ Traduction, adaptation et compléments par Olivier (rouboudou) Rey, rey.olivier@gmail.com, \linebreak \href{https://orey.github.io/blog}{orey.github.io/blog}.
 
-Cette dernière consigne est un peu vague. Elle sous-entend que, lors du passage de niveau, le PJ ayant des pouvoirs psychiques va refaire un test pour avoir un nouveau PoP (sachant qu'il peut en obtenir au maximum deux par niveau). Il gagnera un mode d'attaque alors en fonction du nombre de PoP dont il dispose.
+\bigskip
 
-Concernant les **Modes de Défense** (MD), encore une fois les règles ne sont pas claires. Il est dit qu'ils sont acquis à raison de un tous les 3 PoP acquis (4 pour les Guerriers).
-
-Comme les PJs ayant des pouvoirs psychiques sont capables de combattre psychiquement, il faut supposer que les MDs marchent comme pour les MAs et que le PJ gagne son premier MD avec son premier PoP, puis ensuite tous les 3 (ou 4) PoP acquis.
-
-Une autre interprétation possible serait qu'il faut vraiment avoir 3 ou 4 PoP pour gagner son premier MD. Je trouve cette interprétation un peu bizarre au regard de la suite qui présuppose, dans le combat psionique, que l'attaquant psy a un MA et que le défenseur a un MD. Un défenseur ayant des pouvoirs psychiques sans MD ouvre une brèche dans le système.
-
-Il n'est pas expliqué comment les MA/MD sont attribués : aléatoirement (D6 en rejouant le 6) ou séquentiellement, en utilisant les lettres, ou par simple choix. Comme la puissance de ces attaques est diverse et non linéaire, je pense pas que les lettres soient très importantes pour les MA. Pour les MD, il y a une certaine progression. Au DM de choisir son mode d'attribution.
-
-La liste des modes d'attaque et de défense est présentée ci-dessous avec leur coût en **Force Psionique** entre parenthèses.
-
-| Modes d'Attaque (MA), toutes classes     | Modes de Défense (MD), toutes classes |
-|------------------------------------------|---------------------------------------|
-| A. Explosion psionique (20)[x3]          | F. Esprit vide (1)                    |
-| B. Poussée de l'esprit (10)[x1]          | G. Bouclier de pensée (2)             |
-| C. Coup de fouet sur l'ego (15)[x3]      | H. Barrières mentales (4)             |
-| D. Imposition d'identité (10)[x1]        | I. Forteresse intellectuelle (7)      |
-| E. Ecrasement psychique (25&spades;)[x3] | J. Tour de volonté de fer (10)        |
-
-&spades; Si le PJ possède moins de 25 points de FP, il est demandé au MJ de "modifier la probabilité de succès de manière *ad hoc*".
-
-L'utilisation des MAs peut être détectée par un PJ ou PNJ ayant des pouvoirs psychiques. Le facteur entre crochets donne le multiplicateur de portée du MA dans lequel le PJ ou PNJ peut détecter son usage. Pour mémoire, les pouvoirs
-
-## Force Psionique (FP), Force Psionique d'Attaque (FPA) et de Défense (FPD)
-
-Les formules sont les suivantes :
-
-* FPA = PP + 2 x nombre(PoP) + 5 x nombre(MA) + 5 x nombre(MD)
-* FPD = FPA
-* FP = FPA + FPD = 2 x FPA
-
-Ces scores serviront de réservoirs de points pour les attaques et les défenses psychiques en combat psychique, mais aussi pour les divers PoP que les PJs auront accumulés et dont le coût est expliqué dans les descriptions.
-
-A chaque fois que de la FP est consommée, il faut répartir la consommation à 50%-50% entre la FPA et la FPD, cela pour toutes les consommations. En gros, la FP est un réservoir de points divisés en deux avec une consommation égale dans les deux sous-réservoirs (cela vaut aussi pour la consommation des points en combat, soit avec les MA et MD).
-
-La FP se récupère assez vite en cessant toute activité psychique et en suivant les indications de la table suivante.
-
-| Activité                            | Gain en FP          |
-|-------------------------------------|---------------------|
-| Marcher, parler et autres activités | 6 points par heure  |
-| Se reposer tranquillement           | 12 points par heure |
-| Dormir                              | 24 points par heure |
-
-## Détection des PoP et des MA
-
-La table ci-dessous présente les règles de détection des PoP et MA (nous avons utilisé les lettres pour désigner les MA) de PJs ou PNJs ayant des pouvoirs psychiques et détectant dans leur voisinage des créatures utilisant des pouvoirs.
-
-| Type                     | Niveau/Nom | Portée de la détection | % de base | Cumulatif par tour |
-|--------------------------|------------|------------------------|-----------|--------------------|
-| PoP                      | Basique    | Portée du pouvoir      | 10%       | Oui (+10%)         |
-| PoP                      | Supérieur  | 2 x Portée du pouvoir  | 10%       | Oui (+10%)         |
-| MA                       | A, C, E    | 3 x Portée du pouvoir  | 10%       | Oui (+10%)         |
-| MA                       | B, D       | Portée du pouvoir      | 10%       | Oui (+10%)         |
-| Objet psy                | -          | Portée du pouvoir      | 10%       | Oui (+10%)         |
-| Sort (idem psy)          | -          | Portée du sort         | 10%       | Oui (+10%)         |
-| Objet magique (idem psy) | -          | Portée du sort         | 10%       | Oui (+10%)         |
-
-Si le pouvoir est utilisé en continu, alors les chances de détection dans le cadre de la portée de détection grandissent de 10% par tour.
-
-La créature qui détecte ne pourra pas détecter un pouvoir qu'elle n'a pas, mais pourra, au premier tour détecter dans quelle direction le pouvoir est utilisé, et au second tour avec quelle puissance "relative" ce pouvoir est utilisé.
-
-Les sorts qui sont similaires aux pouvoirs psychiques seront détectés de la même façon que lesdits pouvoirs. Les objets magiques qui ont les mêmes fonctions que les objets psychiques seront, eux-aussi, détectés de la même façon.
-
-## Le PJ psionique selon OD&D
-
-Le PJ psionique a donc les caractéristiques suivantes :
-
-* PP avec BMPoP,
-* Liste des PoPs,
-* FP = FPA + FPD,
-* Listes des MAs et MDs.
-
-## Combat psychique
-
-
-
-
-*En cours*
-
-## Liens
-
-
-
-<div class="mydate">03-20 juin 2023</div>
-
-
-\end{verbatim}
+END OF LICENSE
 
 
 
