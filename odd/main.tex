@@ -104,6 +104,10 @@ bookmarksopen=true,
 %Macro pour réduire l'espace sous le titre
 \newcommand{\myunderline}[1]{\underline{\smash{#1}}}
 
+%Renommer la table des matières en Index
+\renewcommand{\contentsname}{Index}
+
+
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %                               DOCUMENT
@@ -242,8 +246,10 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 
 \newpage
 
-\phantomsection\section*{Index}
-\addcontentsline{toc}{section}{Index}
+%\phantomsection\section*{Index}
+%\addcontentsline{toc}{section}{Index}
+
+\tableofcontents
 
 \input{eldritch-wizardy.tex}
 
@@ -336,7 +342,7 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 
 \textbf{Expansion} : Expansion. Pouvoir psionique.
 
-\textbf{Fighting-man, fighting-men} : guerrier, guerriers. Certaines traductions proposent \og combattant \fg{} à la place, mais la traduction de guerrier nous a semblé plus proche des traductions habituelles de D\&D.
+\textbf{Fighting-man, fighting-men} : guerrier, guerriers. Certaines traductions proposent \og combattant \fg{} à la place, mais la traduction de \textit{guerrier} nous a semblé plus proche des traductions habituelles de D\&D.
 
 \textbf{Hell Hound} : Chien de chasse infernal. Monstre
 

@@ -1523,6 +1523,7 @@ A noter que le heaume de télépathie accroît la force psionique totale de 40 p
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Utilisation des pouvoirs psioniques}}
 \addcontentsline{toc}{subsubsection}{Utilisation des pouvoirs psioniques}
+\label{custom-utilisation-pouvoirs}
 
 Utiliser des pouvoirs psioniques (aptitudes, attaques et défenses) consomme généralement des points de force psionique. Tous les pouvoirs sont donnés avec leur coût.
 
@@ -1537,12 +1538,39 @@ Le comptage des points consommés se fait de la manière suivante :
 & \textbf{psionique} & \textbf{psionique d'attaque} & \textbf{psionique de défense} \\
 Aptitude psionique & 100\%  & 50\%  & 50\%  \\
 Attaque psionique & 100\%   & 100\% & 0\% \\
-défense psionique & 100\%   & 0\%   & 100\% \\
+Défense psionique & 100\%   & 0\%   & 100\% \\
 \end{tabular}
 
 \bigskip
 
-Sachant que nous avons toujours à tout moment : points de force psionique = points de force psionique d'attaque + points de force psionique de défense.
+Cette table est applicable aux points de dommage psychiques encaissés lors des combats psioniques (voir page \pageref{custom-combat}), les points de dommages affectant la force psionique de la même façon qu'une aptitude (50/50)\footnote{Une autre façon de voir les choses serait, dans le combat psionique, de ne décrémenter que les points de force psionique de défense. Mais comme la table d'attaque psionique utilise la totalité de la force psionique, il nous paraît cohérent de décrémenter la force psionique totale du défenseur avec un prorata de 50/50. Mais le choix est laissé au MD d'avoir une autre interprétation des règles.}.
+
+\bigskip
+
+Note : nous avons toujours à tout moment, points de force psionique = points de force psionique d'attaque + points de force psionique de défense.
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{\textit{Conséquence de l'utilisation des pouvoirs psioniques}}
+\addcontentsline{toc}{subsubsection}{Conséquence de l'utilisation des pouvoirs psioniques}
+\label{custom-alerte-pouvoirs}
+
+L'utilisation des pouvoirs psioniques alertera toute créature douée de pouvoirs psioniques dans la portée du pouvoir utilisé.
+
+\bigskip
+
+Si le pouvoir est utilisé de manière continue, la probabilité croît que la direction et le pouvoir lui-même soient identifiés. La chance de base est de 10\% pour chaque pouvoir, et la chance augmente de 10\% pour chaque tour d'utilisation de la même aptitude. L'usage d'une aptitude différente rendra l'identification impossible mais pas la direction. Quand la direction est trouvée, la force relative du pouvoir peut être déterminée au tour suivant.
+
+\bigskip
+
+Les aptitudes supérieures alertent les autres créatures psioniques sur une portée double de celle de l'aptitude.
+
+\bigskip
+
+Le combat psionique (modes d'attaques et de défenses) alertent les créatures psioniques sur une portée triple de la capacité psionique (exception faite de \textit{Poussée de l'esprit} et \textit{Imposition d'identité} où la détection ne se fait au maximum qu'à la portée de la capacité).
+
+\bigskip
+
+Noter que les sorts qui dupliquent les pouvoirs psioniques ou y sont similaires attireront de même l'attention des créatures psioniques. Cela inclut aussi les objets magiques qui tombent dans cette catégorie.
 
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Attaques sur les non psioniques}}
@@ -1654,9 +1682,17 @@ Si aucun individu n'est surpris et que les opposants annoncent simultanément qu
 \addcontentsline{toc}{subsubsection}{Combat psionique complet avec dommages}
 \label{custom-combat}
 
-La table ci-dessous propose la table complète de combat avec dommages.
+La table ci-dessous propose la table complète de combat entre psioniques. Les chiffres montrés sont les points de dommages encaissés par la force psionique (voir page \pageref{custom-utilisation-pouvoirs}).
 
-\medskip
+\bigskip
+
+En ce qui concerne l'utilisation du pouvoir \textit{Ecrasement psychique}, l'attaquant doit faire un jet de 1d100 sous le pourcentage indiqué (inférieur ou égal). Si le jet réussi, l'attaque tue instantanément le défenseur.
+
+\bigskip
+
+A noter que cette table utilise la force psionique totale de l'attaquant et non pas seulement la force psionique d'attaque.
+
+\bigskip
 
 \begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
 \small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
@@ -1667,6 +1703,12 @@ La table ci-dessous propose la table complète de combat avec dommages.
 à  & Fouet      &    8 & 4    & 0 & 0 & 0 \\
    & Imposition &    2 & 5    & 8 & 1 & 2 \\
 40 & Écrasement & 02\% & 01\% & - & - & - \\
+\end{tabular}
+
+\begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
+\small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
+\small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
+\small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
 
 41 & Onde       &    4 & 9    & 5    & 3 & 0 \\
    & Poussée    &   14 & 7    & 02   & 1 & 4 \\
@@ -1685,12 +1727,6 @@ La table ci-dessous propose la table complète de combat avec dommages.
 à  & Fouet      &   17 & 13   & 2    & 0    & 2  \\
    & Imposition &    6 & 11   & 16   & 8    & 10 \\
 90 & Écrasement & 10\% & 06\% & 04\% & 01\% & -  \\
-\end{tabular}
-
-\begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
-\small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
-\small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
-\small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
 
 91  & Onde       &   13 & 17   & 11   & 7    & 1    \\
     & Poussée    &   20 & 13   & 8    & 4    & 7    \\
@@ -1717,79 +1753,9 @@ La table ci-dessous propose la table complète de combat avec dommages.
 plus & Écrasement & 25\% & 18\% & 13\% & 07\% & 04\% \\
 \end{tabular}
 
-%reprendre ici
-
 \bigskip
 
-Un heaume de télépathie porté par le défenseur \textbf{étourdira} l'attaquant pour trois tours si le défenseur réussit son jet de sauvegarde.
-
-\bigskip
-
-Un heaume de télépathie augmente la force psionique de 40.
-
-\bigskip
-
-La table indique le nombre de points de dommages encaissés par les aptitudes psioniques de l'opposant, excepté la ligne concernant l'ECRASEMENT PSYCHIQUE. Quand cette attaque est tentée, les seules défenses pouvant être utilisées sont BOUCLIER DE PENSEES ou l'ABSENCE de défense, mais si le jet de pourcentage est réussi, l'attaque tue instantanément le défenseur.
-
-\bigskip
-
-Quand un guerrier en est réduit à ne plus avoir de capacités défensives, alors toutes les attaques sur lui sont considérées comme devant utiliser la \textbf{Matrice des attaques psioniques spéciales} ci-dessous\footnote{Cette matrice est, de fait, au dessus (NdT).}.
-
-\bigskip
-
-Les capacités psioniques de défense sont les mêmes que la force d'attaque psionique.
-
-\bigskip
-
-La portée courte augmente de 0.3m (et les autres portées augmentent de la même façon proportionnellement) avec chaque niveau de maîtrise d'une capacité d'attaque.
-
-\bigskip
-
-Les attaques à portée moyenne font seulement 80\% des dommages précisés. Les attaques à longue portée font seulement 50\% des dommages précisés.
-
-\bigskip
-
-Les attaques sur un individu surpris sont gérées dans la MATRICE DES ATTAQUES PSIONIQUES SPECIALES.
-
-\bigskip
-
-L'utilisation des pouvoirs psioniques alertera toute créature douée de pouvoirs psioniques dans la portée du pouvoir utilisé, que quelque chose impliquant des pouvoirs psioniques est en train d'arriver. Si le pouvoir est utilisé de manière continue, la probabilité croît que la direction et le pouvoir lui-même soient identifiés.La chance de base est de 10\% pour chaque pouvoir, et la chance augmente de 10\% pour chaque tour d'utilisation de la même aptitude. L'usage d'une aptitude différente rendra l'identification impossible mais pas la direction. Quand la direction est trouvée, la force relative du pouvoir peut être déterminée au tour suivant.
-
-\bigskip
-
-Les aptitudes supérieures alertent les autres créatures psioniques sur une portée double de celle de l'aptitude. Le combat psionique (modes d'attaques) alertent les créatures psioniques sur une portée triple de la capacité psionique (exception faite de Poussée de l'esprit et Imposition d'identité où la détection ne se fait au maximum qu'à la portée de la capacité).
-
-\bigskip
-
-Noter que les sorts qui dupliquent les pouvoirs psioniques ou y sont similaires attireront de même l'attention des créatures psioniques. Cela inclut aussi les objets magiques qui tombent dans cette catégorie.
-
-
-
-
-
-\bigskip
-
-
-
-
-
-
-
-
-
-\medskip
-
-
-
-
-
-
-
-
-
-
-
-
+Quand l'un des combattants en est réduit à ne plus avoir de capacités défensives, toutes les attaques sur lui sont considérées comme devant utiliser la table proposée pour les combattants surpris (page \pageref{custom-surprise}.
 
 \newpage
 %----------------------------------------------------- SUB SECTION
