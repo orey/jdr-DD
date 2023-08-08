@@ -12,8 +12,8 @@
 
 %geometry of the page
 %TODO Enlever le cadre une fois le document terminé
-%\usepackage[vmargin=0.6in,hmargin=1in]{geometry}
-\usepackage[vmargin=0.6in,hmargin=1in,showframe]{geometry}
+\usepackage[vmargin=0.6in,hmargin=1in]{geometry}
+%\usepackage[vmargin=0.6in,hmargin=1in,showframe]{geometry}
 
 \setlength{\parindent}{1cm}
 
@@ -52,15 +52,16 @@
 \usepackage{hyperref}
 \hypersetup{
 pdfauthor={Olivier Rey},
-pdftitle={D\&D 0e - Pouvoirs psioniques},
-pdfkeywords={jdr,d\&d,0e},
-pdfsubject={jeu de rôles},
+pdftitle={OD\&D -- Eldritch Wizardry -- Pouvoirs psioniques},
+pdfkeywords={jdr,D\&D,0e,ODD,Gygax,Blume,TTRPG},
+pdfsubject={OD\&D -- Eldritch Wizardry -- Pouvoirs psioniques},
 pdfcreator={TexStudio for xetex},
 pdflang={French},
 colorlinks=true,
-linkcolor={blue},
-urlcolor={blue},
+linkcolor={teal},
+urlcolor={teal},
 bookmarksopen=true,
+bookmarksopenlevel=2,
 }
 
 % Define light and dark Microsoft blue colours
@@ -100,13 +101,18 @@ bookmarksopen=true,
 % Pur résoudre les problèmes de underline avec la ligne qui varie en hauteur
 \newcommand{\uline}[1]{\underline{\smash{#1}\vphantom{T}}\vphantom{#1}}
 
-
-%Macro pour réduire l'espace sous le titre
+% Macro pour réduire l'espace sous le titre
 \newcommand{\myunderline}[1]{\underline{\smash{#1}}}
 
-%Renommer la table des matières en Index
-\renewcommand{\contentsname}{Index}
+% Renommer la table des matières en Index
+\addto\captionsfrench{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Index}%
+}
 
+% En fait le \label dans le texte ne fonctionne pas toujours avec \pageref
+% Cette commande permet de fixer le sujet
+\newcommand\pagelabel{\phantomsection\label}
 
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -117,7 +123,7 @@ bookmarksopen=true,
 \includepdf[scale=0.9]{pagedegarde.pdf}
 \newpage
 
-{\color{white}a}
+{\color{white}-}
 
 \newpage
 
@@ -185,18 +191,18 @@ Couverture par Deborah Larson}
 
 \vfill
 
-\noindent{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (https://rouboudou.itch.io) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan, gratuite et ne pouvant être vendue.}}
+\noindent{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (\href{https://rouboudou.itch.io}{rouboudou.itch.io}) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan. Elle est soumise à la licence OGL que vous trouverez page \pageref{OGL}.}}
 
 \newpage
 
 \phantomsection\section*{Préface}
 \addcontentsline{toc}{section}{Préface}
 
-Le livre que vous tenez maintenant dans vos mains présente de nouvelles dimensions à un système de jeu déjà fascinant. Il s'agit du troisième supplément à DONJONS \& DRAGONS, produit comme conséquence à une demande toujours croissante de nouveau matériel.
+Le livre que vous tenez maintenant dans vos mains présente de nouvelles dimensions à un système de jeu déjà fascinant. Il s'agit du troisième supplément à DONJONS \& DRAGONS, produit comme conséquence à une demande toujours croissante de matériel nouveau.
 
 Ce livre présente aussi une nouvelle mode dans l'art subtil d'être Maître de Donjon. Fidèle à sa conception d'origine, D\&D n'était limité dans son périmètre que par l'imagination et la dévotion des Maîtres de Donjons où qu'ils soient. Les suppléments ont répondu au besoin d'idées nouvelles et de mécanismes de simulation additionnels. Mais progressivement, D\&D a perdu un peu de sa saveur, et a commencé à devenir prévisible. Cela était dû à la prolifération d'ensembles de règles ; alors que c'était très bien pour nous en tant de compagnie, c'était compliqué pour le MD. Quand tous les joueurs avaient toutes les règles en face d'eux, il devenait presque qu'impossible de les séduire à affronter le danger ou les pièges.
 
-Le nouveau concept innovant présenté dans ces pages devrait faire long feu en réintroduisant un peu de mystère, d'incertitude et de danger, qui refont de D\&D le défi sans équivalent qu'il a toujours été. La légende retrouve sa magie inestimable originale. On ne verra plus d'aventurier imprudent descendre dans un donjon , trouver quelque chose et savoir immédiatement ce que cela fait et comment cela fonctionne. De même, les joueurs ne pourront plus envoyer un de leurs infortunés serviteurs à une mort précoce en le forçant à expérimenter à sa place.
+Le nouveau concept innovant présenté dans ces pages devrait faire long feu en réintroduisant un peu de mystère, d'incertitude et de danger, qui refont de D\&D le défi sans équivalent qu'il a toujours été. La légende retrouve sa magie inestimable originale. On ne verra plus d'aventurier imprudent descendre dans un donjon, trouver quelque chose et savoir immédiatement ce que cela fait et comment cela fonctionne. De même, les joueurs ne pourront plus envoyer un de leurs infortunés serviteurs à une mort précoce en le forçant à expérimenter à la place de son maître.
 
 L'introduction du combat psionique est destiné à revivifier des parties devenues stagnantes. Il ouvre de nouvelles possibilités à la fois aux joueurs et au MD, tout en intégrant un des sujets favoris des auteurs de science-fiction et de fantastique : les pouvoirs inconnus de l'esprit.
 
@@ -223,33 +229,35 @@ Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dan
 
 La version originale de Donjons \& Dragons, dite OD\&D, est publiée en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le premier livret, \texttt{Men \& Magic}, un certain nombre de sorts ressemblant à des pouvoirs psychiques, et dans le deuxième, \texttt{Monsters \& Treasures}, les premières références à des pouvoirs psychiques, dans la section traitant des épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
 
-En 1976, dans le deuxième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentées de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer, en extension à un jeu médiéval-fantastique, une gestion des pouvoirs mentaux, habituellement présents dans les univers de science-fiction.
+En 1976, dans le troisième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, publié après \texttt{Greyhawk} et \texttt{Blackmoor}, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentées de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer, en extension à un jeu médiéval-fantastique, une gestion des pouvoirs mentaux, habituellement présents dans les univers de science-fiction.
 
-Nous proposons ici une double présentation des règles psioniques du supplément \texttt{Eldritch Wizardry} :
+Nous proposons ici une double présentation des règles psioniques du supplément \texttt{Eldritch Wizardry}, supplément qui contient d'autres choses non traduites en ces pages (notamment le Druide, des monstres, etc.) :
 
 \begin{itemize}
-\item La première partie propose les règles originales traduites le plus fidèlement possible ; cette partie inclue toutes les références que l'on trouve dans la partie sur les pouvoirs psioniques sur les règles adjacentes (sorts, objets magiques, potion, système alternatif de combat) ;
-\item la seconde partie propose une réorganisation de ces règles visant à les présenter de manière plus claire et plus logique.
+\item La première partie propose une traduction complète, la plus fidèle possible, des règles originales relatives aux pouvoirs psioniques. En effet, le texte original étant touffu, nous avons veillé à traduire le plus fidèlement possible ses nuances (ce qui donne un style parfois un peu lourd, proche du style original). Dans cette partie, nous avons tenté de respecter l'aspect original des règles (polices, alignements, etc.).
+\item Cette première partie a été, en quelque sorte, \og augmentée \fg{} : en effet, \texttt{Eldritch Wizardry} étant une extension de OD\&D, le texte pointe vers les références présentes dans les livrets précédents ; nous avons extrait ces références pour en proposer une traduction au sein même de ce livre, de sorte que cette compilation devrait se suffire à elle-même et ne pas nécessiter d'ouvrir les ouvrages précédents de la série.
+\item La seconde partie propose une réorganisation complète de ces règles visant à les présenter de manière plus claire et plus logique ; nous espérons que nous aurons été à la hauteur du chantier, plus complexe qu'il n'y paraissait au départ.
 \end{itemize}
 
 La consultation de certains sites américains a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
 
-Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très "gygaxien" (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de psioniques proposant une façon nouvelle de voir les aptitudes psioniques, très différente de la magie de OD\&D, façon qui inspirera beaucoup d'autres systèmes de pouvoirs dont l'utilisation est basée sur la consommation de points.
+Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très \og gygaxien \fg{} (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de pouvoirs psychiques, très différent de la magie de OD\&D, et qu'il inspirera beaucoup d'autres systèmes de pouvoirs basés sur la consommation de points d'énergie psionique.
 
-\vspace{1cm}
+\vspace{0.7cm}
 
 \noindent Rouboudou
 
 \noindent https://orey.github.io/blog
 
-\noindent Juillet 2023
+\noindent Août 2023
 
 \newpage
 
 %\phantomsection\section*{Index}
 %\addcontentsline{toc}{section}{Index}
 
-\tableofcontents
+\phantomsection\tableofcontents
+\addcontentsline{toc}{section}{Index}
 
 \input{eldritch-wizardy.tex}
 
@@ -413,6 +421,7 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 \newpage
 \phantomsection\section*{Licence OGL}
 \addcontentsline{toc}{section}{Licence OGL}
+\label{OGL}
 
 OPEN GAME LICENSE Version 1.0a
 
