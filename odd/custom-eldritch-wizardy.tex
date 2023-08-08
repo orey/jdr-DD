@@ -1313,17 +1313,15 @@ Le voyageur est capable d'entrer en communion avec des pouvoirs amicaux, par exe
 \phantomsection\subsubsection*{\textit{Conséquences du gain d'aptitude psionique}}
 \addcontentsline{toc}{subsubsection}{Conséquences du gain d'aptitude psionique}
 
-A chaque niveau %reprendre ici
-
 Acquérir une aptitude psionique peut avoir 2 impacts :
 \begin{itemize}
 \item Un impact sur les modes d'attaques et les modes de défenses (voir la section sur le combat psionique),
 \item Un impact sur la baisse des caractéristiques ou avantages du personnage.
 \end{itemize}
 
-%----------------------------------------------------- SUB SECTION
-\phantomsection\subsection*{Pertes de caractéristiques}
-\addcontentsline{toc}{subsection}{Pertes de caractéristiques}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{Pertes de caractéristiques}
+\addcontentsline{toc}{subsubsection}{Pertes de caractéristiques}
 
 Au fur et à mesure que le personnage acquiert des aptitudes psioniques, un certain nombre de désavantages vont lui être imposés, comme des pertes de points de caractéristiques ou des pertes de niveaux de sorts.
 
@@ -1333,21 +1331,49 @@ La table suivante recense ces pertes par classe de personnage.
 
 \bigskip
 
-\begin{tabular}{lcp{10cm}}
-\textbf{Classe} & \textbf{Fréquence de la perte} & \textbf{Nature de la perte}\\
-Guerrier & 4 aptitudes psioniques & 1 pt de Force \\
-Magicien & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitudes psioniques*, soit : \\
+\begin{tabular}{lcp{12cm}}
+& \textbf{Fréquence} & \\
+\textbf{Classe} & \textbf{de la perte} & \textbf{Nature de la perte}\\
+Guerrier & 4 aptitudes & 1 pt de Force \\
+Magicien & 1 aptitude & Des niveaux de sort correspondant au nombre d'aptitudes psioniques*, soit : \\
 && $\bullet$ 1\textsuperscript{ère} aptitude : 1 niveau de sorts (un sort de niveau 1), \\
 && $\bullet$ 2\textsuperscript{ème} aptitude : 2 niveaux de sorts (un sort de niveau 2 ou deux sorts de niveau 1), \\
 && $\bullet$ Etc. \\
-Clerc & 1 aptitude psionique & Des niveaux de sort correspondant au nombre d'aptitudes psioniques + un rang dans la table de retournement des morts-vivants \\
+Clerc & 1 aptitude & Des niveaux de sort correspondant au nombre d'aptitudes psioniques + un rang dans la table de retournement des morts-vivants \\
 && Exemple : un clerc de niveau 5 avec une aptitude psionique repoussera les morts vivants comme un clerc de niveau 4. \\
-Voleur & 4 aptitudes psioniques & 1 pt de Force + 1 point de Dextérité \\
+Voleur & 4 aptitudes & 1 pt de Force + 1 point de Dextérité \\
 \end{tabular}
 
 \bigskip
 
 * Jamais le magicien ne doit se souvenir de plus de sorts de haut niveau que de sorts de bas niveau, et s'il est capable d'utiliser des sorts du sixième niveau, il doit être capable de se souvenir d'au moins un sort de tous les autres cinq niveaux.
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{Liens entre aptitudes psioniques et sorts}
+\addcontentsline{toc}{subsubsection}{Liens entre aptitudes psioniques et sorts}
+\label{custom-liens-aptitudes-sorts}
+
+La table ci-dessous présente la liste des aptitudes psioniques reliées avec un sort. Cette table est utile dans le cadre des attaques psioniques sur créature non psionique (voir page \pageref{custom-attaque-non-psionique}).
+
+\bigskip
+
+\begin{tabular}{llcc}
+\textbf{Aptitude psionique} & \textbf{Sort relié} & \textbf{Livre} & \textbf{Page} \\
+Clairaudience               & Clairaudience & D\&D vol. 1   & \pageref{sort-clairaudience} \\
+Clairvoyance                & Clairvoyance  & D\&D vol. 1   & \pageref{sort-clairvoyance} \\
+Projection astrale          & Sort astral   & Greyhawk      & \pageref{sort-astral} \\
+Perception extrasensorielle & Perception extrasensorielle   & D\&D vol. 1 & \pageref{sort-esp} \\
+Hypnose                     & Suggestion    & Greyhawk      & \pageref{sort-suggestion} \\
+Agitation moléculaire       & Chauffer le métal & Eldritch Wizardry & \pageref{sort-chauffe-metal} \\
+Porte dimensionnelle        & Porte dimensionnelle & D\&D vol. 1 & \pageref{sort-porte-dimensionnelle} \\
+Téléportation & Téléporter & D\&D vol. 1 & \pageref{sort-teleporter} \\
+Altération de la forme & Métamorphose & D\&D vol. 1 & \pageref{sort-metamorphose} \\
+Altération de l'aura & Délivrance des malédictions & D\&D vol. 1 & \pageref{sort-delivrance-malediction} \\
+\end{tabular}
+
+
+
+
 
 \bigskip
 
@@ -1375,6 +1401,7 @@ De la même façon que le personnage psionique peut obtenir des aptitudes, il va
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Modes d'attaques et de défense psioniques}}
 \addcontentsline{toc}{subsubsection}{Modes d'attaques et de défense psioniques}
+\label{custom-attaques}
 
 La liste des modes d'attaques et de défense psionique est donnée ci-dessous.
 
@@ -1438,8 +1465,13 @@ Le personnage gagne des modes d'attaques et de défense psioniques dans un des d
 
 \begin{itemize}
 \item Il vient de calculer son potentiel psychique et vient de gagner sa première aptitude psionique : il gagne "Onde de choc psionique" automatiquement ;
-\item Il vient de gagner une ou deux nouvelles aptitudes psioniques à l'occasion d'un changement de niveau (voir page \pageref{aptitudes-gain}) : il doit consulter la table ci-dessous. Si le personnage n'a pas assez d'aptitudes, il devra attendre le prochain changement de niveau pour réestimer sa capacité à gagner de nouveaux modes d'attaques ou de défense.
+\item Il vient de gagner une ou deux nouvelles aptitudes psioniques à l'occasion d'un changement de niveau (voir page \pageref{aptitudes-gain}) : il doit consulter la table ci-dessous.
 \end{itemize}
+
+\bigskip
+
+ Si le personnage n'a pas assez d'aptitudes pour gagner un nouveau mode d'attaques ou de défenses, il devra attendre le prochain changement de niveau pour réestimer sa capacité à en gagner. En revanche sa progression en niveau (relativement à sa classe de personnage) augmentera son niveau de maîtrise des aptitudes et des modes d'attaques et de défenses (voir exemple complet page \pageref{exemple-complet}).
+
 
 \bigskip
 
@@ -1475,6 +1507,8 @@ La force de défense psionique est égale à la force d'attaque psionique.
 
 \bigskip
 
+Les forces d'attaque psionique des monstres sont exposées dans les paragraphes traitant des monstres dotés de pouvoirs psioniques.
+
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Force psionique}}
 \addcontentsline{toc}{subsubsection}{Force psionique}
@@ -1485,29 +1519,267 @@ La force psionique est égale à deux fois la force d'attaque psionique (ou à l
 
 A noter que le heaume de télépathie accroît la force psionique totale de 40 points (utile pour les combats psioniques, voir plus loin), tout en conservant le pouvoir décrit dans la section "Divers objets magiques" (page \pageref{heaume-telepathie}).
 
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{\textit{Utilisation des pouvoirs psioniques}}
+\addcontentsline{toc}{subsubsection}{Utilisation des pouvoirs psioniques}
+
+Utiliser des pouvoirs psioniques (aptitudes, attaques et défenses) consomme généralement des points de force psionique. Tous les pouvoirs sont donnés avec leur coût.
+
 \bigskip
 
-Utiliser des pouvoirs psioniques (aptitudes, attaques et défenses) consomme généralement des points de force psionique (voir la description de chaque pouvoir pour son coût).
+Le comptage des points consommés se fait de la manière suivante :
+
+\bigskip
+
+\begin{tabular}{lccc}
+& \textbf{Points de force} & \textbf{Points de force} & \textbf{Points de force} \\
+& \textbf{psionique} & \textbf{psionique d'attaque} & \textbf{psionique de défense} \\
+Aptitude psionique & 100\%  & 50\%  & 50\%  \\
+Attaque psionique & 100\%   & 100\% & 0\% \\
+défense psionique & 100\%   & 0\%   & 100\% \\
+\end{tabular}
+
+\bigskip
+
+Sachant que nous avons toujours à tout moment : points de force psionique = points de force psionique d'attaque + points de force psionique de défense.
 
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Attaques sur les non psioniques}}
 \addcontentsline{toc}{subsubsection}{Attaques sur les non psioniques}
-
-
-
-
-
-
+\label{custom-attaque-non-psionique}
 
 Les attaques psioniques sur les créatures non-psioniques ne peuvent être faites que si l'attaquant a une force d'attaque psionique de plus de 120.
 
+\bigskip
 
+Une créature non psionique attaquée par une attaque psionique doit faire un jet de sauvegarde dépendant :
 
-La force d'attaque psionique est déterminée en additionnant le \textbf{potentiel psychique} au nombre d'aptitudes psioniques multiplié par deux et le nombres de modes d'\textbf{attaques psioniques} et de \textbf{défenses psioniques} multiplié par cinq. Par exemple, un personnage avec un potentiel psychique de 37, 6 aptitudes psioniques et 5 modes d'attaques et de défenses aurait une force d'attaque psionique de 73 (37 + 12 (6x2) + 25 (5x5)). Les dépenses précédentes en points de force psionique sont considérées avec un ratio de 50\%, ce qui fait qu'un usage de 12 points réduit la force d'attaque de 6 points. Les forces d'attaque psionique des monstres sont exposées dans les paragraphes traitant des monstres dotés de pouvoirs psioniques.
+\bigskip
+
+\begin{itemize}
+\item De son intelligence,
+\item De sa classe de personnage,
+\item De sa race,
+\item Du port d'un éventuel heaume télépathique (voir page \pageref{heaume-telepathie}),
+\item De son état, potentiellement le fruit d'une attaque précédente.
+\end{itemize}
+
+\bigskip
+
+\begin{tabular}{c>{\centering\arraybackslash}p{2.6cm}>{\centering\arraybackslash}p{2.6cm}>{\centering\arraybackslash}p{2.6cm}l}
+\textbf{Intelligence} & \multicolumn{3}{c}{\textbf{Jet de sauvegarde par portée d'attaque}} & \textbf{EFFET SI SAUVE-} \\
+\textbf{du défenseur} & \textbf{Courte} & \textbf{Moyenne} & \textbf{Longue} & \textbf{GARDE ECHOUEE} \\
+3--4    & 19 & 18 & 17 & Mort \\
+5--7    & 17 & 16 & 15 & Coma 1--4 jours \\
+8--10   & 15 & 14 & 13 & Sommeil 20--120 min. \\
+11-12   & 13 & 12 & 11 & Etourdi 1--4 tours \\
+13-14   & 11 & 10 &  9 & Confus 1--6 tours \\
+15-16   &  9 &  8 &  7 & Furieux 1--8 tours \\
+17      &  7 &  6 &  5 & Esprit affaibli \\
+18      &  5 &  4 &  3 & Folie permanente \\
+19      &  3 &  2 &  1 & Folie 1--4 semaines \\
+20 \& + &  1 &  0 & -1 & Folie 2--12 jours \\
+\end{tabular}
+
+\bigskip
+
+La table ci-dessous propose des ajustements au jet de sauvegarde.
+
+\bigskip
+
+\begin{tabular}{lcclc}
+\multicolumn{2}{c}{\textbf{Bonus}} && \multicolumn{2}{c}{\textbf{Malus}} \\
+\textbf{Classe}     &       && \textbf{Objet}   & \\
+Magicien            & +1    && Médaillon de perception extrasensorielle (voir p. \pageref{medaillon-esp})     & -5 \\
+Clerc               & +2    && Sort relié aux pouvoirs psioniques** & -4 \\
+\textbf{Races}      &       && \textbf{Etat}     & \\
+Elfe                & +2    && Etourdi           & -3 \\
+Nain                & +4    && Confus            & -2 \\
+Halfling            & +4    && Enragé            & -1 \\
+\textbf{Objets}     &       && Esprit affaibli   & *** \\
+Heaume télépathique* & +4    && Fou             & **** \\
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{rp{15cm}}
+\multicolumn{1}{r}{*}       & Un heaume de télépathie porté par le défenseur étourdira l'attaquant pour trois tours si le défenseur réussit son jet de sauvegarde. \\
+\multicolumn{1}{r}{**}      & Voir la liste page \pageref{custom-liens-aptitudes-sorts}. \\
+\multicolumn{1}{r}{***}     & Traiter un esprit affaibli comme une personne à l'intelligence de 3--4 \\
+\multicolumn{1}{r}{****}    & Les individus fous ne peuvent être attaqués psioniquement que par l'\textit{Imposition d'identité} (voir la section sur les attaques psioniques page \pageref{custom-attaques}).
+\end{tabular}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{\textit{Initiative}}
+\addcontentsline{toc}{subsubsection}{Initiative}
+\label{custom-surprise}
+
+Si un des individus participant au combat est surpris, l'attaque psionique est gérée dans la table ci-dessous.
 
 \medskip
 
-Après avoir fait la première attaque, ou dans le cas où les opposants annoncent simultanément qu'ils attaquent de manière psionique (ou dans le cas où le monstre le fait automatiquement et le personnage annonce qu'il le fait), la séquence d'attaque est déterminée comme suit : chaque opposant fait un jet de pourcentage et ajoute le résultat à sa force d'attaque psionique. Le plus haut score attaque en premier.
+\begin{tabular}{c>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}}
+\textbf{Force} &&&&&& \\
+\textbf{d'attaque} & \multicolumn{7}{c}{\textbf{Potentiel psionique du défenseur}} \\
+\textbf{psionique} & \textbf{01--10} & \textbf{11--25} & \textbf{26--50} & \textbf{51--75} & \textbf{76--90} & \textbf{91--99} & \textbf{00} \\
+01--20      & E & E & 40 & 30 & 20 & 10 & 5 \\
+21--40      & E & E & E  & 40 & 30 & 20 & 10 \\
+41--60      & B & E & E  & E  & 40 & 30 & 20 \\
+61--80      & B & E & E  & E  & E  & 40 & 30 \\
+81--90      & H & B & E  & E  & E  & E  & 40 \\
+91--00      & H & H & B  & E  & E  & E  & E \\
+101--110    & M & H & H  & B  & E  & E  & E \\
+111--120    & M & M & H  & H  & B  & B  & E \\
+121 et plus & M & M & M  & H  & H  & H  & B \\
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{lp{14.5cm}}
+E = & Etourdi pour 5--20 tours, pas d'attaque psionique \\
+B = & Blessure psychique, récupération en 1--6 mois, pas d'attaque psionique \\
+H = & Handicapé psionique de manière permanente, perd toutes ses aptitudes \\
+M = & Mort \\
+5--40 = & Nombre de points d'attaque psionique perdus -- récupérés en 1--6 jours \\
+Note : & L'attaque \textit{Coup de fouet sur l'ego} qui donne un résultat "M" veut dire stupidité et le résultat "H" doit être considéré comme "B". L'attaque \textit{Imposition psychique} avec un résultat de "B", "H", ou "M" signifie que le défenseur est sous le contrôle de l'attaquant jusqu'à ce qu'il soit libéré. \\
+\end{tabular}
+
+\bigskip
+
+Si aucun individu n'est surpris et que les opposants annoncent simultanément qu'ils attaquent de manière psionique (ou dans le cas où le monstre le fait automatiquement et le personnage annonce qu'il le fait), la séquence d'attaque est déterminée comme suit : chaque opposant fait un jet de pourcentage et ajoute le résultat à sa force d'attaque psionique. Le plus haut score attaque en premier.
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
+\phantomsection\subsubsection*{\textit{Combat psionique complet avec dommages}}
+\addcontentsline{toc}{subsubsection}{Combat psionique complet avec dommages}
+\label{custom-combat}
+
+La table ci-dessous propose la table complète de combat avec dommages.
+
+\medskip
+
+\begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
+\small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
+\small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
+\small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
+21 & Onde       &    3 & 7    & 4 & 2 & 0 \\
+   & Poussée    &   12 & 5    & 1 & 0 & 3 \\
+à  & Fouet      &    8 & 4    & 0 & 0 & 0 \\
+   & Imposition &    2 & 5    & 8 & 1 & 2 \\
+40 & Écrasement & 02\% & 01\% & - & - & - \\
+
+41 & Onde       &    4 & 9    & 5    & 3 & 0 \\
+   & Poussée    &   14 & 7    & 02   & 1 & 4 \\
+à  & Fouet      &   10 & 6    & 0    & 0 & 0 \\
+   & Imposition &    3 & 7    & 10   & 3 & 4 \\
+60 & Écrasement & 04\% & 02\% & 01\% & - & - \\
+
+61 & Onde       &    6 & 11   & 7    & 4    & 0 \\
+   & Poussée    &   16 & 9    & 4    & 2    & 5 \\
+à  & Fouet      &   13 & 9    & 1    & 0    & 1 \\
+   & Imposition &    4 & 9    & 13   & 5    & 7 \\
+80 & Écrasement & 08\% & 04\% & 02\% & 01\% & - \\
+
+81 & Onde       &    9 & 14   & 9    & 5    & 0  \\
+   & Poussée    &   18 & 11   & 6    & 3    & 6  \\
+à  & Fouet      &   17 & 13   & 2    & 0    & 2  \\
+   & Imposition &    6 & 11   & 16   & 8    & 10 \\
+90 & Écrasement & 10\% & 06\% & 04\% & 01\% & -  \\
+\end{tabular}
+
+\begin{tabular}{cl>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
+\small\textbf{Force} & & \multicolumn{5}{c}{\small\textbf{Mode défensif}} \\
+\small\textbf{psionique} & \small\textbf{Mode} & \small\textbf{Esprit} & \small\textbf{Bouclier} & \small\textbf{Barrière} & \small\textbf{Forteresse} & \small\textbf{Tour de vo-} \\
+\small\textbf{totale} & \small\textbf{offensif} & \small\textbf{vide} & \small\textbf{de pensées} & \small\textbf{mentale} & \small\textbf{intellectuelle} & \small\textbf{lonté de fer} \\
+
+91  & Onde       &   13 & 17   & 11   & 7    & 1    \\
+    & Poussée    &   20 & 13   & 8    & 4    & 7    \\
+à   & Fouet      &   22 & 17   & 4    & 1    & 3    \\
+    & Imposition &    8 & 14   & 19   & 11   & 13   \\
+100 & Écrasement & 12\% & 08\% & 06\% & 02\% & 01\% \\
+
+101 & Onde       &   18 & 20   & 13   & 9    & 2    \\
+    & Poussée    &   23 & 15   & 10   & 5    & 8    \\
+à   & Fouet      &   28 & 21   & 6    & 2    & 4 \\
+    & Imposition &   10 & 17   & 23   & 15   & 18   \\
+110 & Écrasement & 15\% & 10\% & 08\% & 03\% & 02\% \\
+
+111 & Onde       &   24 & 23   & 15   & 11   & 3    \\
+    & Poussée    &   26 & 18   & 13   & 7    & 10   \\
+à   & Fouet      &   35 & 27   & 8    & 3    & 6    \\
+    & Imposition &   13 & 21   & 27   & 19   & 24   \\
+120 & Écrasement & 20\% & 14\% & 10\% & 05\% & 03\% \\
+
+121  & Onde       &   30 & 27   & 18   & 14   & 5    \\
+     & Poussée    &   29 & 22   & 17   & 10   & 12   \\
+à    & Fouet      &   43 & 33   & 11   & 5    & 8    \\
+     & Imposition &   17 & 25   & 31   & 23   & 30   \\
+plus & Écrasement & 25\% & 18\% & 13\% & 07\% & 04\% \\
+\end{tabular}
+
+%reprendre ici
+
+\bigskip
+
+Un heaume de télépathie porté par le défenseur \textbf{étourdira} l'attaquant pour trois tours si le défenseur réussit son jet de sauvegarde.
+
+\bigskip
+
+Un heaume de télépathie augmente la force psionique de 40.
+
+\bigskip
+
+La table indique le nombre de points de dommages encaissés par les aptitudes psioniques de l'opposant, excepté la ligne concernant l'ECRASEMENT PSYCHIQUE. Quand cette attaque est tentée, les seules défenses pouvant être utilisées sont BOUCLIER DE PENSEES ou l'ABSENCE de défense, mais si le jet de pourcentage est réussi, l'attaque tue instantanément le défenseur.
+
+\bigskip
+
+Quand un guerrier en est réduit à ne plus avoir de capacités défensives, alors toutes les attaques sur lui sont considérées comme devant utiliser la \textbf{Matrice des attaques psioniques spéciales} ci-dessous\footnote{Cette matrice est, de fait, au dessus (NdT).}.
+
+\bigskip
+
+Les capacités psioniques de défense sont les mêmes que la force d'attaque psionique.
+
+\bigskip
+
+La portée courte augmente de 0.3m (et les autres portées augmentent de la même façon proportionnellement) avec chaque niveau de maîtrise d'une capacité d'attaque.
+
+\bigskip
+
+Les attaques à portée moyenne font seulement 80\% des dommages précisés. Les attaques à longue portée font seulement 50\% des dommages précisés.
+
+\bigskip
+
+Les attaques sur un individu surpris sont gérées dans la MATRICE DES ATTAQUES PSIONIQUES SPECIALES.
+
+\bigskip
+
+L'utilisation des pouvoirs psioniques alertera toute créature douée de pouvoirs psioniques dans la portée du pouvoir utilisé, que quelque chose impliquant des pouvoirs psioniques est en train d'arriver. Si le pouvoir est utilisé de manière continue, la probabilité croît que la direction et le pouvoir lui-même soient identifiés.La chance de base est de 10\% pour chaque pouvoir, et la chance augmente de 10\% pour chaque tour d'utilisation de la même aptitude. L'usage d'une aptitude différente rendra l'identification impossible mais pas la direction. Quand la direction est trouvée, la force relative du pouvoir peut être déterminée au tour suivant.
+
+\bigskip
+
+Les aptitudes supérieures alertent les autres créatures psioniques sur une portée double de celle de l'aptitude. Le combat psionique (modes d'attaques) alertent les créatures psioniques sur une portée triple de la capacité psionique (exception faite de Poussée de l'esprit et Imposition d'identité où la détection ne se fait au maximum qu'à la portée de la capacité).
+
+\bigskip
+
+Noter que les sorts qui dupliquent les pouvoirs psioniques ou y sont similaires attireront de même l'attention des créatures psioniques. Cela inclut aussi les objets magiques qui tombent dans cette catégorie.
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+\medskip
+
+
 
 
 
@@ -1523,6 +1795,7 @@ Après avoir fait la première attaque, ou dans le cas où les opposants annonce
 %----------------------------------------------------- SUB SECTION
 \phantomsection\subsection*{Exemple complet}
 \addcontentsline{toc}{subsection}{Exemple complet}
+\label{exemple-complet}
 
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - SUB SUB SECTION
 \phantomsection\subsubsection*{\textit{Accession aux pouvoirs psioniques}}
