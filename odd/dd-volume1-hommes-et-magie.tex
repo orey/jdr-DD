@@ -35,14 +35,18 @@ GARY GYGAX \& DAVE ARNESON}
 \end{center}
 
 %----------------------------------------------------- SUB SECTION
-\phantomsection\subsection*{SYSTEME DE COMBAT ALTERNATIF\footnote{Alternatif à Chainmail, mais devenu le système standard de OD\&D (NdT).}}
+\phantomsection\subsection*{SYSTEME DE COMBAT ALTERNATIF\footnote{Alternatif à Chainmail, mais devenu le système standard de \texttt{OD\&D}. Cette section a été remise en page différemment du livret original mais tout en reprenant strictement le même contenu (NdT).}}
 \addcontentsline{toc}{subsection}{SYSTEME DE COMBAT ALTERNATIF}
 
 Ce système est basé sur les capacités offensives et défensives des combattants ; des choses comme la vitesse, la férocité ou les armes employées par les monstres attaquant sont incluses dans les matrices. Deux tableaux sont proposés : un pour les hommes contre les hommes ou les monstres, et un pour les monstres (incluant les kobolds, les gobelins, les orcs, et.) contre les hommes.
 
 \bigskip
 
-\textbf{MATRICE D'ATTAQUE 1 : HOMMES ATTAQUANT}\footnote{Les tables présentées possèdent le même contenu que la table originale (et ses commentaires) mais la première permet de voir les niveaux de progression directement par classe de personnages (NdT).}
+\textbf{MATRICE D'ATTAQUE I. : HOMMES ATTAQUANT}
+
+\bigskip
+
+Score du dé à 20 faces pour toucher par niveau :
 
 \bigskip
 
@@ -83,6 +87,67 @@ Les hommes normaux équivalent à des guerriers de niveau 1.
 
 Toutes les attaques font 1d6 points de dommages sauf indication contraire.
 
+\bigskip
+
+\textbf{MATRICE D'ATTAQUE II. : MONSTRES ATTAQUANT}
+
+\bigskip
+
+Score du dé à 20 faces pour toucher par nombre de dés de monstre :
+
+\bigskip
+
+\begin{tabular}{cccccccccc}
+\textbf{Nombre de dés} & \multicolumn{8}{c}{\textbf{Classe d'armure du défenseur}} \\
+\textbf{de vie du monstre}  & \textbf{9} & \textbf{8} & \textbf{7} & \textbf{6} & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} \\
+\textbf{Jusqu'à 1}          & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\
+\textbf{1 + 1}              &  9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\
+\textbf{2--3}               &  8 &  9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+\textbf{3--4}               &  6 &  7 &  8 &  9 & 10 & 11 & 12 & 13 \\
+\textbf{4--6}               &  5 &  6 &  7 &  8 &  9 & 10 & 11 & 12 \\
+\textbf{6--8}               &  4 &  5 &  6 &  7 &  8 &  9 & 10 & 11 \\
+\textbf{9--10}              &  2 &  3 &  4 &  5 &  6 &  7 &  8 &  9 \\
+\textbf{11 et plus}         &  0 &  1 &  2 &  3 &  4 &  5 &  6 &  7 \\
+\end{tabular}
+
+\bigskip
+
+Tous les scores de base au toucher seront modifiés par les armures et les armes magiques.
+
+\bigskip
+
+Les scores des touchers aux armes de jet sont déterminés avec les tables ci-dessus pour les portées longues, et en enlevant 1 à la classe d'armure pour la portée moyenne et 2 pour la portée courte.
+
+\bigskip
+
+\textbf{MATRICE DES JETS DE SAUVEGARDE :}
+
+\bigskip
+
+\begin{tabular}{lcrrrrr}
+&&& \textbf{Toutes baguettes} &&&\\
+&&& \textbf{magiques incluant} &&& \\
+\textbf{Classe \&} &  & \textbf{Rayon de la mort}   & \textbf{métamorphose} &                   & \textbf{Souffle du}   & \textbf{Bâtons} \\
+\textbf{niveau}    & & \textbf{ou poison}          & \textbf{ou paralysie} & \textbf{Pierre}   & \textbf{Dragon}       & \textbf{\& sorts} \\
+Guerriers   & 1--3   & 12 & 13 & 14 & 15 & 16 \\
+Guerrier    & 4--6   & 10 & 11 & 12 & 13 & 14 \\
+Guerrier    & 7--9   &  8 &  9 & 10 & 10 & 12 \\
+Guerrier    & 10--12 &  6 &  7 &  8 &  8 & 10 \\
+Guerrier    & 13+    &  4 &  5 &  5 &  5 &  8 \\
+Magicien    & 1--5   & 13 & 14 & 13 & 16 & 15 \\
+Magicien    & 6--10  & 11 & 12 & 11 & 14 & 12 \\
+Magicien    & 11--15 &  8 &  9 &  8 & 11 &  8 \\
+Magicien    & 16+    &  5 &  6 &  5 &  8 &  3 \\
+Clerc       & 1--4   & 11 & 12 & 14 & 16 & 15 \\
+Clerc       & 5--8   &  9 & 10 & 12 & 14 & 12 \\
+Clerc       & 9--12  &  6 &  7 &  9 & 11 &  9 \\
+Clerc       & 13+    &  3 &  5 &  7 &  8 &  7 \\
+\end{tabular}
+
+\bigskip
+
+Un échec à obtenir le total indiqué ci-dessus implique subir les effets complets de l'arme, ce qui signifie que vous êtes changé en pierre, prenez les dommages complets du souffle du dragon, etc. Obtenir le total indiqué ci-dessus (ou obtenir un total plus haut) signifie que l'arme n'a pas d'effet (rayon de la mort, métamorphose, paralysie, pierre ou sort) ou la moitié des effets (le poison donnera la moitié des dommages totaux possibles et le souffle du dragon donnera la moitié de ses dommages complets). Les baguettes de froid, les boules de feu, les éclairs, etc. et les bâtons sont traités comme indiqué mais un jet de sauvegarde réussi résulte en la moitié des dommages.
+
 %----------------------------------------------------- SUB SECTION
 \phantomsection\subsection*{EXPLICATION DES SORTS}
 \addcontentsline{toc}{subsection}{EXPLICATION DES SORTS}
@@ -101,22 +166,17 @@ Toutes les attaques font 1d6 points de dommages sauf indication contraire.
 
 \phantomsection\label{sort-esp}\textbf{Perception extrasensorielle} : un sort qui permet à l'utilisateur de détecter les pensées (s'il y en a) de tout ce qui rode derrière les portes ou dans les ténèbres. Le sort peut pénétrer de la roche jusqu'à environ 2/3m d'épaisseur mais une fine couche de plomb empêchera sa pénétration. Durée : 12 tours. Portée : 2m.
 
-% Reprendre ici
-
-
-
-
 \bigskip
 
 \textbf{Troisième niveau :}
 
 \bigskip
 
-\phantomsection\label{sort-clairvoyance}\textbf{Clairvoyance} : comme le sort Perception extrasensorielle excepté que le lanceur du sort peut visualiser au lieu de détecter des pensées.
+\phantomsection\label{sort-clairvoyance}\textbf{Clairvoyance} : comme le sort \uline{Perception extrasensorielle} excepté que le lanceur du sort peut simplement visualiser au lieu de détecter des pensées.
 
 \bigskip
 
-\phantomsection\label{sort-clairaudience}\textbf{Clairaudience} : comme le sort de Clairvoyance excepté qu'il permet d'entendre plutôt que de voir. C'est un des rares sorts qui peut être lancé au travers d'une boule de cristal.
+\phantomsection\label{sort-clairaudience}\textbf{Clairaudience} : comme le sort de \uline{Clairvoyance} excepté qu'il permet d'entendre plutôt que de voir. C'est un des rares sorts qui peut être lancé au travers d'une boule de cristal\footnote{Voir page \pageref{objet-boule-cristal} (NdT).}.
 
 \bigskip
 
@@ -132,7 +192,7 @@ Toutes les attaques font 1d6 points de dommages sauf indication contraire.
 
 \bigskip
 
-\phantomsection\label{sort-porte-dimensionnelle}\textbf{Porte dimensionnelle} : un sort de téléportation limitée qui permet à un objet d'être instantanément transporté jusqu'à 11m dans toutes les directions (incluant en haut et en bas). Il n'y a pas de risque de mauvaise évaluation quand on utilise une Porte Dimensionnelle, ainsi l'utilisateur arrive toujours où il souhaite, par exemple 4m au dessus, 11m à l'est, etc. Portée : 30cm.
+\phantomsection\label{sort-porte-dimensionnelle}\textbf{Porte dimensionnelle} : un sort de \uline{téléportation} limitée qui permet à un objet d'être instantanément transporté jusqu'à 12m dans toutes les directions (incluant en haut et en bas). Il n'y a pas de risque de mauvaise évaluation quand on utilise une \uline{Porte dimensionnelle}, ainsi l'utilisateur arrive toujours où il souhaite, par exemple 4m au dessus, 11m à l'est, etc. Portée : 1/3m.
 
 \bigskip
 
@@ -145,5 +205,5 @@ Toutes les attaques font 1d6 points de dommages sauf indication contraire.
 \bigskip
 
 %++++++++APTITUDE
-\phantomsection\label{sort-urne-magique}\textbf{Urne magique} : par l'utilisation de cet objet, le magicien héberge sa force de vie dans un objet inanimé (même une pierre) et tente de posséder le corps de n'importe quelle créature dans un rayon de 4m autour de l'urne magique. Le récipient contenant sa force de vie doit être à moins de 1m de son corps au moment où il prononce son sort. La possession de l'autre corps se produit lorsque la créature en question échoue ton jet de sauvegarde contre la magie. Si le corps possédé est détruit, l'esprit du magicien retourne dans l'urne magique et, de ce fait, il peut tenter une nouvelle possession ou retourner dans son propre corps. L'esprit du magicien peut retourner dans l'urne magique dès qu'il le souhaite. Noter que si le corps du magicien est détruit, la force de vie doit rester dans un corps possédé ou une urne magique. Si l'une magique est détruite, le magicien est totalement annihilé.
+\phantomsection\label{sort-urne-magique}\textbf{Urne magique} : par l'utilisation de cet objet, le magicien héberge sa force de vie dans un objet inanimé (même une pierre) et tente de posséder le corps de n'importe quelle créature dans un rayon de 4m autour de l'\uline{urne magique}. Le récipient contenant sa force de vie doit être à moins de 1m de son corps au moment où il prononce son sort. La possession de l'autre corps se produit lorsque la créature en question échoue ton jet de sauvegarde contre la magie. Si le corps possédé est détruit, l'esprit du magicien retourne dans l'urne magique et, de ce fait, il peut tenter une nouvelle possession ou retourner dans son propre corps. L'esprit du magicien peut retourner dans l'urne magique dès qu'il le souhaite. Noter que si le corps du magicien est détruit, la force de vie doit rester dans un corps possédé ou une urne magique. Si l'une magique est détruite, le magicien est totalement \uline{annihilé}.
 
