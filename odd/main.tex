@@ -51,6 +51,7 @@
 
 \usepackage{hyperref}
 \hypersetup{
+bookmarksdepth=4, % Merveilleux !
 pdfauthor={Olivier Rey},
 pdftitle={OD\&D -- Eldritch Wizardry -- Pouvoirs psioniques},
 pdfkeywords={jdr,D\&D,0e,ODD,Gygax,Blume,TTRPG},
@@ -120,11 +121,16 @@ bookmarksopenlevel=2,
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{document}
 
+%+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-= COVER
 \includepdf[scale=0.9]{pagedegarde.pdf}
+
+%+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-= PAGE VIDE
 \newpage
 
-{\color{white}-}
+%{\color{white}-}
+\phantom{-}
 
+%+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-= PAGE DE GARDE
 \newpage
 
 \thispagestyle{empty}
@@ -187,11 +193,11 @@ Couverture par Deborah Larson}
 
 \newpage
 %====================================================
-{\color{white}a}
+\phantom{-}
 
 \vfill
 
-\noindent{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (\href{https://rouboudou.itch.io}{rouboudou.itch.io}) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan. Elle est soumise à la licence OGL que vous trouverez page \pageref{OGL}.}}
+\noindent{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (\href{https://rouboudou.itch.io}{rouboudou.itch.io}) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan ne pouvant pas être vendue. Elle est soumise à la licence OGL que vous trouverez page \pageref{OGL}.}}
 
 \newpage
 
@@ -428,6 +434,8 @@ Une fois éclairci, le système se montre très intéressant, non seulement parc
 \textbf{Treant} : ent, arbre géant vivant. Monstre.
 
 \textbf{Umber Hulk} : mastodonte des ombres. Monstre.
+
+\textbf{Wight} : nécrophage. Monstre.
 
 \textbf{Will O’ Wisp} ou \textbf{will-o'-the-wisp} : feu follet. Monstre.
 
