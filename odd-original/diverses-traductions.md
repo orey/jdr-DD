@@ -46,45 +46,12 @@ Héros : 19 ; 01 ; 16 ; 09. Deux coups ratés sur 4 coups frappés. 8 Orcs peuve
 
 Les tentatives de maîtriser le Héros continuent, et pas moins de quatre Orcs sont capables d'attaquer le Héros depuis des positions pour lesquelles le bouclier ne peut pas être utilisé, et donc sa classe d'armure est donc considérée comme étant de 5 et les Orcs qui attaquent pas derrière ajoutent +2 à leurs dés pour toucher. Dans ce cas, il est vraisemblable que les Orcs captureront le Héros.
 
-Les jets de sauvegarde pour les monstres sont les mêmes que pour les types et niveaux appropriés humains, ce qui signifie qu'un balrog gagnerait le jet de sauvegarde le plus favorable pour le balrog, soit d'un guerrier du 10ème niveau, soit d'un magicien du 12ème niveau (la deuxième solution s'appuie sur la résistance magique du balrog). Un troll serait égal à un guerrier du 7ème niveau comme il a 6 dés +3, virtuellement sept dés.
+Les jets de sauvegarde pour les monstres sont les mêmes que pour les types et niveaux appropriés humains, ce qui signifie qu'un balrog gagnerait le jet de sauvegarde le plus favorable pour lui, soit celui d'un guerrier du 10ème niveau, soit celui d'un magicien du 12ème niveau (la deuxième solution s'appuyant sur la résistance magique du balrog). Un troll serait l'égal d'un guerrier du 7ème niveau comme il a 6 dés +3 de vie, donc virtuellement sept dés.
 
 Moral : ce facteur est rarement considéré. Les joueurs, représentant basiquement seulement leur propre personnage et quelques autres, ont leur propre moral personnel en réalité. Les monstres stupides combattent jusqu'à la mort. Occasionnellement cependant, il est nécessaire de vérifier soit les troupes servant le groupe (à n'importe quel propos), soit le moral des monstres stupides. C'est une décision dépendant strictement de l'arbitre. Le système utilisé est aussi à la discrétion de l'arbitre, bien qu'il y en ait un dans CHAINMAIL qui puisse être utilisé, ou il peut simplement jeter 2 dés -- un 2 étant un moral au plus bas et un 12 étant un très bon moral. Avec des ajustements de situations, ce score pourra servir comme une indication sur les actions que prendront la partie dont le moral aura été vérifié.
 
-Expérience : une faible valeur devrait être placée sur les objets magiques en ce qui concerne l'espérience
+Expérience : une faible valeur devrait être placée sur les objets magiques en ce qui concerne l'expérience, comme ces objets seront très utiles pour gagner de nouveaux trésors. Ainsi, dans la campagne Greyhawk, une flèche magique (+1) vaut au maximum 100 points d'expérience, une épée magique +1 sans caractéristiques spéciales vaut au maximum 1000 points, un rouleau de parchemin de sorts vaudra soit 500 points ou 100 points par niveau par sort (soit un sort du sixième niveau vaudra au maximum 600 points d'expérience), une potion vaut entre 250 et 500 points, et même un anneau avec un génie ne vaudra pas plus d'environ 5000 points. Les métaux de valeur et les pierres cependant sont récompensés en points d'expérience à hauteur du ratio 1 pièce d'or vaut 1 point d'expérience, ajusté par les circonstance -- comme expliqué dans D & D, un guerrier du 10ème niveau ne peut pas expédier une bande de kobolds et ne s'attendre à gagner qu'environ 1-/10ème d'expérience, à moins que le nombre de kobolds et les circonstances du combat soient telles qu'ils aient sérieusement mis en difficulté ledit guerrier en mettant véritablement sa vie en danger. Pour des raisons de détermination d'expérience, le niveau du monstre est équivalent à ses dés de vie, et des compétences additionnelles s'ajoutent au niveau dans ce cas. Une gorgone vaut certainement environ niveaux, une tête de  balrog moins de 12, le plus gros des dragons rouges, pas moins de 16 ou 17, et ainsi de suite. Le jugement de l'arbitre doit être utilisé pour statuer sur ce sujets, mais avec les exemples ci-dessus, cela ne devrait pas poser de difficultés.
 
+_Sorts_: un magicien ne peut utiliser un sort qu'une seule fois durant une journée, quelle qu'elle soit, même s'il transporte ses livres avec lui. Cela ne veut pas dire qu'il ne peut pas s'équiper d'une multiplicité du même sort, de sorte à pouvoir l'utiliser plus qu'une seule fois. Par conséquent, un magicien pourrait, par exemple, s'équiper de trois sorts de sommeil, chacun d'entre eux ne serait utilisable qu'une seule fois. Il pourrait aussi avoir un rouleau de parchemin de, disons, deux sorts, chacun d'entre eux étant aussi des sorts des sommeil. A mesure que les sorts seraient lus dans le parchemins, ils disparaîtraient, ce qui veut dire qu'au total, ce magicien aurait un maximum de cinq sorts de sommeil utiliser ce jour. S'ils n'avait pas de livres avec lui, il ne pourrait pas renouveler les sorts le jour suivant, comme le jeu suppose que le magicien gagne ses sorts via une préparation comme la mémorisation des incantations, et une fois que le sort a été prononcé, le schéma dans la mémoire a complètement disparu. De la même manière, les sorts sont inscrits sur un rouleau de parchemin et, dès que les mots sont proférés, ils s'effacent du parchemin.
 
-Experience: Low value should be placed upon magical items as far
-as experience is concerned, as such items will be highly useful in gain-
-ing stilI more treasure. Thus, in the Greyhawk campaign a magic arrow
-(+1) is worth a maximum of 100 points experience, a +1 magic sword
-with no special abilities is valued at a maximum of 1,000 points, a
-scroll of spells at either 500 or at 100 points per level per spell ( so a
-6th level spell is worth a maximum of 600 experience points), a potion
-is worth between 250 and 500 points, and even a genie ring is worth no
-more than about 5,000 points maximum. Valuable metals and stones,
-however, are awarded experience points on a 1 gold piece to 1 exper-
-ience point ratio, adjusted for circumstances -- as explained in D & D,
-a 10th level fighter cannot roust a bunch of kobolds and expect to gain
-anything but about 1/1Oth experience unless the number of the kobolds
-and the circumstances of the combat were such as to seriously challenge
-the fighter and actually jeopardize his life. For purposes of experience
-determination the level, of the monster is equivalent to its hit dice, and
-additional abilities add to the level in this case. A gorgon is certainly
-worth about 10 level factors, a balrog nut less than 12, the largest red
-dragon not less than 16 or 17, and so on. The referees judgement must
-be used to determine such matters, but with the foregoing examples it
-should prove to be no difficulty.
-Spells: A magic-user can use a given spell but once during any
-given day, even if he is carrying his books with him. This is not to say
-that he cannot equip himself with a multiplicity of the same spell so as
-to have its use more than a single time. Therefore, a magic-user could,
-for example, equip himself with three sleep spells, each of which would
-be usable but once. He could also have a scroll of let us say two spells,
-both of which are also sleep spells. As the spelIs were read from the
-scrolls they would disappear, so in total that magic-user would have a
-maximum of five sleep spells to use that day. If he had no books with
-him there would be no renewal of spells on the next day, as the game
-assumes that the magic-use gains spells by preparations such as memor-
-izing incantations, and once the spell is spoken that particular memory
-pattern is gone completely. ln a similar manner spells are inscribed on
-a scroll, and as the words are uttered they vanish from the scroll.
+---
