@@ -1,0 +1,576 @@
+% A compiler avec xelatex
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\hyphenation{person-nage person-nages-joueurs}
+
+\usepackage{comment}
+
+% Pour inclure la page de garde
+\usepackage{pdfpages}
+
+%geometry of the page
+%TODO Enlever le cadre une fois le document terminé
+\usepackage[vmargin=0.6in,hmargin=1in]{geometry}
+%\usepackage[vmargin=0.6in,hmargin=1in,showframe]{geometry}
+
+\setlength{\parindent}{1cm}
+
+%========================================= FONTS
+\usepackage{fontspec}
+
+
+%TODO désactiver la police Méga
+% Test de police Méga
+%\newcommand{\MEGA}{\fontsize{110}{-30}\fontspec{Mega:style=JDR-ORey}\selectfont}
+
+
+% Police de caractères OD&D Saloon Girl Inline
+%\newcommand{\ODDtitlefont}{\fontsize{38}{40}\fontspec{QuentinCaps}\selectfont}
+\newcommand{\ODDtitlefont}{\fontsize{60}{40}\fontspec{Saloon Girl Inline}\selectfont}
+
+% Police de caractères OD&D OPTIChisel-Normal:style=Regular
+\newcommand{\ODDtitlebisfont}{\fontsize{52}{70}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
+\newcommand{\ODDsectionfont}{\fontsize{42}{50}\fontspec{OPTIChisel-Normal:style=Regular}\selectfont}
+
+%TODO Choisir pour le PC 32 ou 64 bits
+% Pour le PC 64 bits
+\newcommand{\ODDtimes}{\fontspec{Times New Roman}\selectfont}
+% Pour le PC 32 bits
+%\newcommand{\ODDtimes}{\fontspec{Linux Libertine O}\selectfont}
+
+%- \usepackage{xcolor}
+\usepackage{titlesec}
+\defaultfontfeatures{Ligatures=TeX}
+% Set sans serif font to Calibri
+%- \setsansfont{Calibri}
+
+% Set main font
+\setmainfont{Futura Std}
+
+\usepackage{hyperref}
+\hypersetup{
+bookmarksdepth=4, % Merveilleux !
+pdfauthor={Gary Gygax, Brian Blume, Olivier "Rouboudou" Rey},
+pdftitle={OD\&D -- Strategic Review},
+pdfkeywords={jdr,D\&D,0e,ODD,Gygax,Blume,TTRPG, strategic review},
+pdfsubject={OD\&D -- Strategic review},
+pdfcreator={TexStudio for xetex},
+pdflang={French},
+colorlinks=true,
+linkcolor={teal},
+urlcolor={teal},
+bookmarksopen=true,
+bookmarksopenlevel=2,
+}
+
+% Define light and dark Microsoft blue colours
+%- \definecolor{MSBlue}{rgb}{.204,.353,.541}
+%- \definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+% Define a new fontfamily for the subsubsection font
+% Don't use \fontspec directly to change the font
+%- \newfontfamily\subsubsectionfont[Color=MSLightBlue]{Times New Roman}
+% Set formats for each heading level
+%\titleformat*{\section}{\normalfont\fontsize{12}\ttfamily{QuentinCaps}}
+
+%\titleformat{\section}{\fontspec{QuentinCaps}\selectfont}{\thesection}{1em}{}
+
+\titleformat{\section}{\centering\ODDsectionfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection}{1em}{}
+
+
+%- \titleformat*{\subsection}{\large\bfseries\sffamily\color{MSLightBlue}}
+%- \titleformat*{\subsubsection}{\itshape\subsubsectionfont}
+
+% pour le (R)
+\usepackage{fontspec}
+
+% Pour les images
+\usepackage{graphicx}
+\graphicspath{{./yed/}{./images/}{./maps/}}
+
+% Array stretch pour avoir un peu plus de vertical spacing dans les tabular
+\usepackage{tabularx}
+\renewcommand{\arraystretch}{1.2}
+\usepackage{multirow}
+
+% Place les footnotes en bas et supprimer l'indentation dans la footnote
+\usepackage[bottom]{footmisc}
+
+% Pur résoudre les problèmes de underline avec la ligne qui varie en hauteur
+\newcommand{\uline}[1]{\underline{\smash{#1}\vphantom{T}}\vphantom{#1}}
+
+% Macro pour réduire l'espace sous le titre
+\newcommand{\myunderline}[1]{\underline{\smash{#1}}}
+
+% Renommer la table des matières en Index
+\addto\captionsfrench{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Index}%
+}
+
+% En fait le \label dans le texte ne fonctionne pas toujours avec \pageref
+% Cette commande permet de fixer le sujet
+\newcommand\pagelabel{\phantomsection\label}
+
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%                               DOCUMENT
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+{\Huge \ODDtitlefont{DONJONS \& DRAGONS}}{\normalsize \textsuperscript{\sffamily\textregistered}}
+
+\vspace{1.8cm}
+
+{\Large \textbf{Articles}}
+
+\vspace{1.3cm}
+
+{\Huge \ODDtitlebisfont{REVUE}}
+
+\vspace{0.3cm}
+
+{\Huge \ODDtitlebisfont{STRATEGIQUE}}
+
+\vspace{2.0cm}
+
+{\Large \textbf{(STRATEGIC REVIEW)}}
+
+\vspace{1cm}
+
+{\large PAR
+
+\vspace{0.1cm}
+
+GARY GYGAX \& BRIAN BLUME
+
+\vspace{3cm}
+
+Remerciements spéciaux à l'aîné Steve Marsh, Dennis Sustare (le Super Druide),
+
+Jim Ward \& Tim Kask pour leurs suggestions et contributions !
+
+\vspace{0.8cm}
+
+Illustrations de Dave Sutherland, Tracy Lesch \& Gary Kwapisz
+
+Couverture par Deborah Larson}
+
+\vspace{1.3cm}
+
+\textbf{\ODDtimes{2023}}
+
+\vspace{0.5cm}
+
+\ODDtimes{\textbf{\textcopyright\ 1976 - TSR GAMES}
+
+\textbf{9\textsuperscript{ème} impression, novembre 1979}
+
+\textbf{Imprimé aux U.S.A}}
+\end{center}
+
+\vfill
+
+{\small \noindent LES QUESTIONS SUR LES REGLES DOIVENT ETRE ACCOMPAGNEES D'UNE ENVELOPPE RETOUR TIMBREE ET ENVOYEES A TACTICAL STUDIES RULES, POB 756, LAKE GENEVA, WISCONSIN 53147}
+
+
+\newpage
+%====================================================
+\phantom{-}
+
+\vfill
+
+\noindent{\scriptsize \textit{Ce fascicule est une adaptation par Rouboudou (\href{https://rouboudou.itch.io}{rouboudou.itch.io}) de la partie pouvoirs psioniques du livret original. Cette adaptation est une œuvre de fan qui ne peut pas être vendue. Elle est soumise à la licence OGL que vous trouverez page \pageref{OGL}.}}
+
+\newpage
+
+\phantomsection\section*{Préface}
+\addcontentsline{toc}{section}{Préface}
+
+Le livre que vous tenez maintenant dans vos mains présente de nouvelles dimensions à un système de jeu déjà fascinant. Il s'agit du troisième supplément à DONJONS \& DRAGONS, produit comme conséquence à une demande toujours croissante de matériel nouveau.
+
+Ce livre présente aussi une nouvelle mode dans l'art subtil d'être Maître de Donjon. Fidèle à sa conception d'origine, D\&D n'était limité dans son périmètre que par l'imagination et la dévotion des Maîtres de Donjons où qu'ils soient. Les suppléments ont répondu au besoin d'idées nouvelles et de mécanismes de simulation additionnels. Mais progressivement, D\&D a perdu un peu de sa saveur, et a commencé à devenir prévisible. Cela était dû à la prolifération d'ensembles de règles ; alors que c'était très bien pour nous en tant de compagnie, c'était compliqué pour le MD. Quand tous les joueurs avaient toutes les règles en face d'eux, il devenait presque qu'impossible de les séduire à affronter le danger ou les pièges.
+
+Le nouveau concept innovant présenté dans ces pages devrait faire long feu en réintroduisant un peu de mystère, d'incertitude et de danger, qui refont de D\&D le défi sans équivalent qu'il a toujours été. La légende retrouve sa magie inestimable originale. On ne verra plus d'aventurier imprudent descendre dans un donjon, trouver quelque chose et savoir immédiatement ce que cela fait et comment cela fonctionne. De même, les joueurs ne pourront plus envoyer un de leurs infortunés serviteurs à une mort précoce en le forçant à expérimenter à la place de son maître.
+
+L'introduction du combat psionique est destiné à revivifier des parties devenues stagnantes. Il ouvre de nouvelles possibilités à la fois aux joueurs et au MD, tout en intégrant un des sujets favoris des auteurs de science-fiction et de fantastique : les pouvoirs inconnus de l'esprit.
+
+Comme pour les deux précédents suppléments, le matériel contenu dans ce livret propose le même format que les trois livrets originaux de D\&D. Les corrections et les ajouts sont indiqués dans le texte de sorte qu'ils puissent être intégrés facilement dans les règles originales.
+
+Comme vous pourrez le noter sur la page de titre, ce supplément est le fruit de plusieurs contributeurs. Telle est la nature de la chose que vous tenez entre vos mains. D\&D a été conçu pour être un jeu libre, lié aux règles de manière souple. Nous pensons que ELDRITCH WIZARDRY favorise les principes originaux de danger, d'excitation et d'incertitude. Que vous réussissiez toujours vos jets de sauvegarde.
+
+\vspace{1cm}
+
+\noindent Timothy J. Kask
+
+\noindent TSR Publications Editor
+
+\noindent Lake Geneva, Wisconsin
+
+\noindent 23 avril 1976
+
+\newpage
+\phantom{-}
+\newpage
+
+\phantomsection\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+Le terme anglais \texttt{psionic} a été utilisé la première fois en 1951 dans une nouvelle de science-fiction écrite par Jack Williamson, \texttt{The Greatest Invention}, publié dans le magazine \texttt{Astounding Science Fiction}. Il est la compression de deux termes : \texttt{psi} dans le sens de phénomène psychique, et \texttt{electronics}. \texttt{Psionics} devient un terme décrivant la discipline qui étudie les phénomènes psychiques avec les moyens de l'ingénierie moderne de l'époque, soit l'électronique. Malgré la promotion de personnes comme John W. Campbell, le terme restera utilisé uniquement dans le monde de la science-fiction, avant d'être intégré dans le monde des jeux de rôles.
+
+La version originale de Donjons \& Dragons, dite \texttt{OD\&D}, est publiée en 1974 sous la forme de trois livrets à la couverture marron. On trouve dans le premier livret, \texttt{Men \& Magic}, un certain nombre de sorts ressemblant à des pouvoirs psychiques, et dans le deuxième, \texttt{Monsters \& Treasures}, les premières références à des pouvoirs psychiques, dans la section traitant des épées magiques. A l'époque, le terme \texttt{psionic} n'est pas utilisé.
+
+En 1976, dans le troisième supplément \texttt{Eldritch Wizardry} cosigné par Gary Gygax et Brian Blume, publié après \texttt{Greyhawk} et \texttt{Blackmoor}, les pouvoirs psychiques arrivent dans le monde des personnages-joueurs et des personnages-non-joueurs. Les règles sont présentées de manière assez chaotique, ce qui générera vite la réputation d'un système injouable dans le monde des joueurs. Derrière la juste critique sur la présentation, beaucoup de joueurs semblent avoir rejeté le supplément en raison du fait même de proposer, en extension à un jeu médiéval-fantastique, une gestion des pouvoirs mentaux, habituellement présents dans les univers de science-fiction.
+
+Nous proposons ici une double présentation des règles psioniques du supplément \texttt{Eldritch Wizardry}, supplément qui contient d'autres choses non traduites en ces pages (notamment le Druide, des monstres, etc.) :
+
+\begin{itemize}
+\item La première partie propose une traduction complète, la plus fidèle possible, des règles originales relatives aux pouvoirs psioniques. En effet, le texte original étant touffu, nous avons veillé à traduire le plus fidèlement possible ses nuances (ce qui donne un style parfois un peu lourd, proche du style original). Dans cette partie, nous avons tenté de respecter l'aspect original des règles (polices, alignements, etc.).
+\item Cette première partie a été, en quelque sorte, \og augmentée \fg{} : en effet, \texttt{Eldritch Wizardry} étant une extension de \texttt{OD\&D}, le texte pointe vers les références présentes dans les livrets précédents ; nous avons extrait ces références pour en proposer une traduction au sein même de ce livre, de sorte que cette compilation devrait se suffire à elle-même et ne pas nécessiter d'ouvrir les ouvrages précédents de la série.
+\item La seconde partie propose une réorganisation complète de ces règles visant à les présenter de manière plus claire et plus logique ; nous espérons que nous aurons été à la hauteur du chantier, plus complexe qu'il n'y paraissait au départ.
+\end{itemize}
+
+La consultation de certains sites américains a été nécessaire pour s'assurer de la bonne compréhension de certaines règles ambiguës qui, encore aujourd'hui, provoquent des commentaires et des incompréhensions.
+
+Une fois éclairci, le système se montre très intéressant, non seulement parce qu'il est très \og gygaxien \fg{} (on le voit notamment au travers de l'utilisation de règles gigognes), mais aussi parce qu'il est le premier système complet de pouvoirs psychiques, très différent de la magie de \texttt{OD\&D}, et qu'il inspirera beaucoup d'autres systèmes de pouvoirs basés sur la consommation de points d'énergie psionique.
+
+\vspace{0.7cm}
+
+\noindent Rouboudou
+
+\noindent https://orey.github.io/blog
+
+\noindent Août 2023
+
+\newpage
+
+%\phantomsection\section*{Index}
+%\addcontentsline{toc}{section}{Index}
+
+\phantomsection\tableofcontents
+\addcontentsline{toc}{section}{Index}
+
+
+\input{strat-rev-1-1.tex}
+
+
+
+%================================================Test
+%TODO Désactiver la police Méga
+\begin{comment}
+\newpage
+\begin{center}
+{\color{orange}\MEGA{NEOMEGA}}
+\end{center}
+\end{comment}
+
+%==========================================================================SECTION
+\newpage
+\phantomsection\section*{Glossaire anglais-français}
+\addcontentsline{toc}{section}{Glossaire anglais-français}
+
+{\parindent0cm
+
+
+%-------------------------------------------------------SUBSECTION
+\phantomsection\subsection*{Nouveau glossaire}
+\addcontentsline{toc}{section}{Nouveau glossaire}
+
+
+
+%-------------------------------------------------------SUBSECTION
+\phantomsection\subsection*{Ancien glossaire}
+\addcontentsline{toc}{section}{Ancien glossaire}
+
+\textbf{Amulet vs. Crystal Balls and ESP} : amulette de captation. Objet magique.
+
+\textbf{Animal Telepathy} : télépathie avec les animaux. Aptitude psionique.
+
+\textbf{Astral projection} : projection astrale. Aptitude psionique.
+
+\textbf{Aura Alteration} : altération de l'aura. Aptitude psionique.
+
+\textbf{Blink Dog} : chien esquiveur. Monstre.
+
+\textbf{Body control} : contrôle du corps. Aptitude psionique.
+
+\textbf{Body Equilibrium} : changer le poids du corps. Aptitude psionique.
+
+\textbf{Body Weaponry} : corps comme arme. Aptitude psionique. %fait dans DD-glossay de github
+
+\textbf{Carrion Crawler} : charognard rampant. Monstre.
+
+\textbf{Cell adjustment} : ajustement cellulaire. Aptitude psionique.
+
+\textbf{Clairaudience} : clairaudience. Aptitude psionique.
+
+\textbf{Clairvoyance} : clairvoyance. Aptitude psionique.
+
+\textbf{Control Weather} : contrôle du climat. Sort.
+
+\textbf{Detection of Evil/Good} : détection du Mal/du Bien. Aptitude psionique.
+
+\textbf{Detection of Magic} : détection de la magie. Aptitude psionique.
+
+\textbf{Dimension Door} : porte dimensionnelle. Aptitude psionique.
+
+\textbf{Dimension Walking} : marche dimensionnelle. Aptitude psionique.
+
+\textbf{Dire Wolf} : Canis Dirus (littéralement \og loup sinistre \fg) est un canidé qui a habité l'Amérique du Nord et la Sibérie au Pléistocène et s’est éteint il y a environ 10 000 ans (source : Wikipedia).
+
+\textbf{Displacer Beast} : bête éclipsante. Monstre.
+
+\textbf{Domination} : domination. Aptitude psionique.
+
+\textbf{Dungeon} : la traduction devrait être \textit{souterrain} et non pas \textit{donjon} qui, en français, désigne la tour principale d'un château où vit le seigneur. Pour autant, l'usage dans D\&D est de traduire \textit{dungeon} par \textit{donjon}. C'est donc ce que nous avons fait.
+
+\textbf{Ego Whip} : coup de fouet sur l'ego. Mode d'attaque psionique.
+
+\textbf{Empathy} : empathie. Aptitude psionique.
+
+\textbf{Energy control} : contrôle de l'énergie. Aptitude psionique.
+
+\textbf{ESP, ExtraSensory Perception} : perception extrasensorielle. Aptitude psionique.
+
+\textbf{Etherealness} : forme éthérée. Aptitude psionique.
+
+\textbf{Expansion} : expansion. Aptitude psionique.
+
+\textbf{Fighting-man, fighting-men} : guerrier, guerriers. Certaines traductions proposent \og combattant \fg{} à la place, mais la traduction de \textit{guerrier} nous a semblé plus proche des traductions habituelles de D\&D.
+
+\textbf{Foot, feet} : pied, pieds. Unité de mesure anglo-saxonne valant 30cm. Cette traduction a pris le parti de traduire les distances en mètres avec la convention suivante : 1 pied = 1/3 mètre.
+
+\textbf{Heat Metal} : chauffer le métal. Sort.
+
+\textbf{Hell Hound} : chien de chasse infernal. Monstre
+
+\textbf{Hireling} : suivant. Un PNJ suivant le PJ.
+
+\textbf{Horse bow} : arc monté. Arme.
+
+\textbf{Hypnosis} : hypnose. Aptitude psionique.
+
+\textbf{Id Insinuation} : imposition d'identité. Mode d'attaque psionique.
+
+\textbf{Inch} : pouce, unité de mensure anglo-saxonne valant 2.54cm. Cette traduction a pris le parti de traduire les distances originellement en pouces en centimètres.
+
+\textbf{Intellect Fortress} : forteresse intellectuelle.
+
+\textbf{Invisibility} : invisibilité. Aptitude psionique.
+
+\textbf{Levitation} : lévitation. Aptitude psionique.
+
+\textbf{Magic jar} : urne magique, utilisée dans les possessions. Parfois traduit possession en référence au sort.
+
+\textbf{Mass Domination} : domination des masses. Aptitude psionique.
+
+\textbf{Mental Barriers} : barrières mentales. Mode de défense psionique.
+
+\textbf{Mile} : un mile américain vaut 1.6 km. Cette traduction a pris le parti de traduire les distances originellement en miles en kilomètres.
+
+\textbf{Military pick} : piolet. Arme.
+
+\textbf{Mind Bar} : barrière de l'esprit. Aptitude psionique.
+
+\textbf{Mind Blank} : esprit vide. Mode de défense psionique.
+
+\textbf{Mind Over Body} : contrôle de l'esprit sur le corps. Aptitude psionique.
+
+\textbf{Mind Thrust} : poussée de l'esprit. Mode d'attaque psionique.
+
+\textbf{Molecular Agitation} : agitation moléculaire. Aptitude psionique.
+
+\textbf{Molecular Manipulation} : manipulation moléculaire. Aptitude psionique.
+
+\textbf{Molecular Rearrangement} : réarrangement moléculaire. Aptitude psionique.
+
+\textbf{Morning star} : masse à pointes. Arme.
+
+\textbf{Mtd Lance, Mounted Lance} : lance de tournoi. Arme.
+
+\textbf{Ochre Jelly} : gelée ocre. Monstre.
+
+\textbf{Phase Spider} : araignée de phase. Monstre.
+
+\textbf{Polymorphing self} : métamorphose. Sort de magicien.
+
+\textbf{Power Word Blind} : mot de pouvoir aveuglant. Sort de magicien.
+
+\textbf{Precognition} : prémonition. Aptitude psionique.
+
+\textbf{Probability Travel} : voyage probabiliste. Aptitude psionique.
+
+\textbf{Psionic Blast} : onde de choc psionique. Mode d'attaque psionique.
+
+\textbf{Psychic Crush} : écrasement psychique. Mode d'attaque psionique.
+
+\textbf{Reduction} : réduction. Aptitude psionique.
+
+\textbf{Remove curse} : délivrance des malédictions. Sort.
+
+\textbf{Roc} : Rokh, oiseau fabuleux des contes d'origine persane et indienne écrit en langue arabe. Monstre.
+
+\textbf{Rust Monster} : oxydeur. Monstre.
+
+\textbf{Shape Alteration} : altération de la forme. Aptitude psionique.
+
+\textbf{Suspend Animation} : hibernation. Aptitude psionique.
+
+\textbf{Telekinesis} : télékinésie. Aptitude psionique.
+
+\textbf{Telepathic Projection} : projection télépathique. Aptitude psionique.
+
+\textbf{Teleportation} : téléportation. Aptitude psionique.
+
+\textbf{Thought Shield} : bouclier de pensées. Mode de défense psionique.
+
+\textbf{Tower of Iron Will} : tour de volonté de fer. Mode de défense psionique.
+
+\textbf{Treant} : ent, arbre géant vivant. Monstre.
+
+\textbf{Umber Hulk} : mastodonte des ombres. Monstre.
+
+\textbf{Wight} : nécrophage. Monstre.
+
+\textbf{Will O’ Wisp} ou \textbf{will-o'-the-wisp} : feu follet. Monstre.
+
+\textbf{Wiverne} : vouivre. Monstre.
+
+\textbf{Yard} : un yard américain vaut 0.9m (3 feets), mais le parti de cette traduction est de considérer un yard comme 1m (soit 3 fois 1/3m).
+
+}% parindent
+
+
+%==========================================================================SECTION
+\newpage
+\phantomsection\section*{Licence OGL}
+\addcontentsline{toc}{section}{Licence OGL}
+\label{OGL}
+
+OPEN GAME LICENSE Version 1.0a
+
+\bigskip
+
+The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights Reserved.
+
+\bigskip
+
+1. Definitions:
+
+\bigskip
+
+(a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content;
+
+\bigskip
+
+(b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted;
+
+\bigskip
+
+(c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute;
+
+\bigskip
+
+(d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity.
+
+\bigskip
+
+(e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content;
+
+\bigskip
+
+(f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor
+
+\bigskip
+
+(g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content.
+
+\bigskip
+
+(h) "You" or "Your" means the licensee in terms of this agreement.
+
+\bigskip
+
+2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License.
+
+\bigskip
+
+3. Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.
+
+\bigskip
+
+4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.
+
+\bigskip
+
+5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.
+
+\bigskip
+
+6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.
+
+\bigskip
+
+7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.
+
+\bigskip
+
+8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.
+
+\bigskip
+
+9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.
+
+\bigskip
+
+10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.
+
+\bigskip
+
+11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.
+
+\bigskip
+
+12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.
+
+\bigskip
+
+13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License.
+
+\bigskip
+
+14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
+
+\bigskip
+
+15. COPYRIGHT NOTICE
+
+\bigskip
+
+Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.
+
+\bigskip
+
+System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson.
+
+\bigskip
+
+Les sources de ce document sont les 3 premiers livrets de \texttt{OD\&D} et les trois premiers suppléments, à commencer bien sûr par \texttt{Eldritch Wizardry}. Ce contenu est Copyright Wizards of the Coast, Inc.
+
+\bigskip
+
+\textcopyright\ Traduction, adaptation et compléments par Olivier (rouboudou) Rey, rey.olivier@gmail.com, \linebreak \href{https://orey.github.io/blog}{orey.github.io/blog}.
+
+\bigskip
+
+END OF LICENSE
+
+
+
+
+\end{document}
