@@ -1,5 +1,24 @@
 # Origin Dungeons & Dragons
 
+![GW-timeline.jpg](GW-timeline.jpg "GW-timeline.jpg")
+
+*Image from <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>*
+
+
+## Forums
+
+* <https://odd74.proboards.com>
+* 
+
+## Links to be investigated
+
+* <https://playingattheworld.blogspot.com/2013/12/gary-gygaxs-1973-d-working-draft.html>
+* <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>
+* <https://deltasdnd.blogspot.com/2018/08/btpbd-missile-fire.html>
+* <https://boggswood.blogspot.com/2012/05/beyond-this-point-be-dragons-d.html>
+* <http://playingattheworld.blogspot.com/2017/07/the-dalluhn-manuscript-and-contax.html>
+
+
 ## Chainmail
 
 * Une explication de Chainmail pour OD&D : <https://www.grey-elf.com/compleat-chainmail.pdf>
