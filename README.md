@@ -31,6 +31,7 @@ Le document PDF peut être trouvé ici : <https://playingattheworld.blogspot.com
 ![1973-gamesletter 01JUN.jpg](1973-gamesletter 01JUN.jpg)
 
 Autres liens :
+
 * Timeline de création du jeu avec annonce en juin 1973 pour trouver des joueurs : <http://playingattheworld.blogspot.com/2013/12/when-dungeons-dragons-turns-40.html>
 * <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>
 * <https://deltasdnd.blogspot.com/2018/08/btpbd-missile-fire.html>
