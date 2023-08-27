@@ -1,18 +1,37 @@
 # Origin Dungeons & Dragons
 
+Ce repository contient des articles et textes relatifs à ODD et à la création de ce jeu. La section `bibliothèque` contient quelques PDF significatifs glanés sur Internet et expliquant les origines de ODD.
+
+Les documents présents dans la bibliothèque sont copiés pour une conservation historique. En effet, ils sont soit importants dans l'histoire des jeux, soit ce sont des commentaires importants qui méritent d'être conservés sur le long terme.
+
 ![GW-timeline.jpg](GW-timeline.jpg "GW-timeline.jpg")
 
 *Image from <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>*
 
+## 1972 : le Manuscrit Dalluhn
+
+Dans les recherches sur les origines de ODD, les différents bloggueurs américains ont retrouvé, avec l'aide des premiers joueurs notamment du groupe de Dave Arneson, un manuscrit datant manifestement de 1972 dit *Manuscrit Dalluhn*, dont le titre est *Beyond This Point be Dragons* ou *BTPbD*.
+
+Le titre du manuscrit est un clin d'œil à une indication qui figurait sur les cartes américaines depuis le XVIIIème siècle : *Here be Dragons*. Cette indication figurait sur les coins de la carte et indiquait que la carte ne couvrait pas les zones en question, et donc que ces zones pouvaient être potentiellement dangereuses.
 
 ## Forums
 
+Les forums ci-dessous ont pour objet de discuter tout ce qui est relatif à ODD, ses origines mais aussi les règles qui sont, par moment, relativement obscures voire incohérentes.
+
 * <https://odd74.proboards.com>
-* 
 
-## Links to be investigated
+## Blogs
 
-* <https://playingattheworld.blogspot.com/2013/12/gary-gygaxs-1973-d-working-draft.html>
+### Playing at the World
+
+Un des blogs les plus intéressants sur l'origine de ODD. Dans la section bibliothèque, j'ai reproduit l'analyse détaillée de Jon Peterson sur le *Manuscrit Dalluhn*.
+
+Le document PDF peut être trouvé ici : <https://playingattheworld.blogspot.com/2013/12/gary-gygaxs-1973-d-working-draft.html>.
+
+![1973-gamesletter 01JUN.jpg](1973-gamesletter 01JUN.jpg)
+
+Autres liens :
+* Timeline de création du jeu avec annonce en juin 1973 pour trouver des joueurs : <http://playingattheworld.blogspot.com/2013/12/when-dungeons-dragons-turns-40.html>
 * <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>
 * <https://deltasdnd.blogspot.com/2018/08/btpbd-missile-fire.html>
 * <https://boggswood.blogspot.com/2012/05/beyond-this-point-be-dragons-d.html>
