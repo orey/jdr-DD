@@ -34,20 +34,28 @@ Autres liens :
 
 * Timeline de création du jeu avec annonce en juin 1973 pour trouver des joueurs : <http://playingattheworld.blogspot.com/2013/12/when-dungeons-dragons-turns-40.html>
 * <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>
+* Le plus vieux JDR du monde ? <https://playingattheworld.blogspot.com/2021/02/western-gunfight-1970-first-rpg.html>
+
+### Autres liens
+
 * <https://deltasdnd.blogspot.com/2018/08/btpbd-missile-fire.html>
 * <https://boggswood.blogspot.com/2012/05/beyond-this-point-be-dragons-d.html>
 * <http://playingattheworld.blogspot.com/2017/07/the-dalluhn-manuscript-and-contax.html>
 
 
-## Chainmail
+## A propos de Chainmail
 
-* Une explication de Chainmail pour OD&D : <https://www.grey-elf.com/compleat-chainmail.pdf>
+Une explication de Chainmail pour OD&D, <https://www.grey-elf.com/compleat-chainmail.pdf> contenant notamment une remise en contexte des 3 systèmes de combat présents dans la troisième édition :
+
+* Le système normal de bataille,
+* Le combat homme-à-homme,
+* Le combat fantastique.
 
 Certains points me laissent encore perplexe.
 
 ## Strategic Review
 
-<https://archive.org/details/TheStrategicReviewDec1975>
+A voir dans le répertoire *strategic-review*, une traduction de l'article de Gary Gygax sur le système de combat de ODD : <https://archive.org/details/TheStrategicReviewDec1975>
 
 ## OD&D
 
