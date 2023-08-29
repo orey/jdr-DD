@@ -1,8 +1,8 @@
-# Origin Dungeons & Dragons
+# Original Dungeons & Dragons (OD&D)
 
-Ce repository contient des articles et textes relatifs à ODD et à la création de ce jeu. La section `bibliothèque` contient quelques PDF significatifs glanés sur Internet et expliquant les origines de ODD.
+Ce repository contient des articles et textes relatifs à OD&D (les trois petits livres bruns ou *three little brown books* ou *3 LBB*) et à la création de ce jeu.
 
-Les documents présents dans la bibliothèque sont copiés pour une conservation historique. En effet, ils sont soit importants dans l'histoire des jeux, soit ce sont des commentaires importants qui méritent d'être conservés sur le long terme.
+La section `bibliothèque` contient quelques PDF significatifs glanés sur Internet datant des années 70 ou expliquant les origines de OD&D et méritant d'être conservés et groupés.
 
 ![GW-timeline.jpg](GW-timeline.jpg "GW-timeline.jpg")
 
@@ -10,21 +10,21 @@ Les documents présents dans la bibliothèque sont copiés pour une conservation
 
 ## 1972 : le Manuscrit Dalluhn
 
-Dans les recherches sur les origines de ODD, les différents bloggueurs américains ont retrouvé, avec l'aide des premiers joueurs notamment du groupe de Dave Arneson, un manuscrit datant manifestement de 1972 dit *Manuscrit Dalluhn*, dont le titre est *Beyond This Point be Dragons* ou *BTPbD*.
+Dans les recherches sur les origines de OD&D, les différents bloggueurs américains ont retrouvé, avec l'aide des premiers joueurs notamment du groupe de Dave Arneson, un manuscrit datant manifestement de 1972 dit *Manuscrit Dalluhn*, dont le titre est *Beyond This Point be Dragons* ou *BTPbD*.
 
 Le titre du manuscrit est un clin d'œil à une indication qui figurait sur les cartes américaines depuis le XVIIIème siècle : *Here be Dragons*. Cette indication figurait sur les coins de la carte et indiquait que la carte ne couvrait pas les zones en question, et donc que ces zones pouvaient être potentiellement dangereuses.
 
 ## Forums
 
-Les forums ci-dessous ont pour objet de discuter tout ce qui est relatif à ODD, ses origines mais aussi les règles qui sont, par moment, relativement obscures voire incohérentes.
+Les forums ci-dessous ont pour objet de discuter tout ce qui est relatif à OD&D, ses origines mais aussi les règles qui sont, par moment, relativement obscures voire incohérentes.
 
-* <https://odd74.proboards.com>
+* <https://odd74.proboards.com> : sans doute le plus complet des forums sur OD&D.
 
 ## Blogs
 
 ### Playing at the World
 
-Un des blogs les plus intéressants sur l'origine de ODD. Dans la section bibliothèque, j'ai reproduit l'analyse détaillée de Jon Peterson sur le *Manuscrit Dalluhn*.
+Un des blogs les plus intéressants sur l'origine de OD&D. Dans la section bibliothèque, j'ai reproduit l'analyse détaillée de Jon Peterson sur le *Manuscrit Dalluhn*.
 
 Le document PDF peut être trouvé ici : <https://playingattheworld.blogspot.com/2013/12/gary-gygaxs-1973-d-working-draft.html>.
 
@@ -34,7 +34,7 @@ Autres liens :
 
 * Timeline de création du jeu avec annonce en juin 1973 pour trouver des joueurs : <http://playingattheworld.blogspot.com/2013/12/when-dungeons-dragons-turns-40.html>
 * <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>
-* Le plus vieux JDR du monde ? <https://playingattheworld.blogspot.com/2021/02/western-gunfight-1970-first-rpg.html>
+* Le plus vieux JDR du monde pourrait ne pas être OD&D :  <https://playingattheworld.blogspot.com/2021/02/western-gunfight-1970-first-rpg.html>
 
 ### Autres liens
 
@@ -55,7 +55,7 @@ Certains points me laissent encore perplexe.
 
 ## Strategic Review
 
-A voir dans le répertoire *strategic-review*, une traduction de l'article de Gary Gygax sur le système de combat de ODD : <https://archive.org/details/TheStrategicReviewDec1975>
+A voir dans le répertoire *strategic-review*, une traduction de l'article de Gary Gygax sur le système de combat de OD&D : <https://archive.org/details/TheStrategicReviewDec1975>
 
 ## OD&D
 
