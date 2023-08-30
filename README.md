@@ -36,6 +36,10 @@ Autres liens :
 * <http://playingattheworld.blogspot.com/2021/10/game-wizards-d-development-timeline.html>
 * Le plus vieux JDR du monde pourrait ne pas être OD&D :  <https://playingattheworld.blogspot.com/2021/02/western-gunfight-1970-first-rpg.html>
 
+### Le défunt blog Philotomy
+
+Dans la bibliothèque en PDF par [Grey-Elf](https://www.grey-elf.com/).
+
 ### Autres liens
 
 * <https://deltasdnd.blogspot.com/2018/08/btpbd-missile-fire.html>
