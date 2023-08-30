@@ -28,7 +28,7 @@ Un des blogs les plus intéressants sur l'origine de OD&D. Dans la section bibli
 
 Le document PDF peut être trouvé ici : <https://playingattheworld.blogspot.com/2013/12/gary-gygaxs-1973-d-working-draft.html>.
 
-![1973-gamesletter 01JUN.jpg](1973-gamesletter 01JUN.jpg)
+![1973-gamesletter-01JUN.jpg](1973-gamesletter-01JUN.jpg)
 
 Autres liens :
 
