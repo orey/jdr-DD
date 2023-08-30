@@ -67,6 +67,8 @@ A voir dans le répertoire *strategic-review*, une traduction de l'article de Ga
 
 <https://osr.smolderingwizard.com/downloads/odd/odd_ref_sheets.pdf>
 
+## Partie en chantier
+
 ### Swords and Spells
 
 <https://www.drivethrurpg.com/product/17175/Swords--Spells-0e>
